@@ -1,0 +1,15 @@
+{
+  "white": "#FFFFFF",
+  "black": "#000000",
+  "neutral100": "#FBFBFB",
+  "neutral200": "#C2BDBD",
+  "neutral300": "#BABABA",
+  "neutral400": "#767676",
+  "neutral500": "#232222",
+  "neutral700": "#171515",
+  "primary100": "#FFC16E",
+  "primary200": "#FFBD65",
+  "primary300": "#F89D24",
+  "primary400": "#CC7500",
+  "primary500": "#B16500"
+}
