@@ -23,8 +23,11 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/pages/index.tsx", "src/context/useTheme.jsx"  ],
   "exclude": [
     "node_modules"
+  ],
+  "files": [
+    "src/styles/theme/styled.d.ts"
   ]
 }

@@ -1,9 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-:root {
-  // Variaveis 
-}
 * {
   margin: 0;
   padding: 0;
@@ -29,7 +26,8 @@ h1, h2, h3, h4, h5, h6, strong {
 }
 
 body {
-  background: var(---background);
+  background: ${props => props.theme.colors.background};
+  color: ${props => props.theme.colors.text};
   -webkit-font-smoothing: antialiased;
 }
 
