@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/pages/index.tsx", "src/context/useTheme.jsx"  ],
+, "src/pages/index.tsx", "src/context/useTheme.jsx", "src/utils/useWidth.jsx"  ],
   "exclude": [
     "node_modules"
   ],
