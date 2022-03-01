@@ -5,9 +5,6 @@ import f from '../../styles/typography.json'
 export const Container = styled.header`
   height: 60px;
 
-  padding: 0 5%;
-
-
   background: ${c.neutral500};
   color: ${c.neutral200};
 
@@ -17,10 +14,11 @@ export const Container = styled.header`
 `
 
 export const Content = styled.div`
-  max-width: 1024px;
+  max-width: 1240px;
   height: 100%;
 
   margin: 0 auto;
+  padding: 0 20px;
 
   display: flex;
   align-items: center;
