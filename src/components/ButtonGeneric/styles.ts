@@ -5,7 +5,7 @@ import { PropsStyled } from "./interface";
 
 export const Container = styled.button<PropsStyled>`
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
   padding: 5px 20px;
 
   background: ${props => props.types ? 'transparent' : `${c.primary300}`};
