@@ -8,6 +8,7 @@ export default {
     secundary: `${c.neutral200}`,
 
     background: `${c.neutral100}`,
+    title: `${c.neutral700}`,
     text: `${c.neutral500}`,
   },
 };
