@@ -11,10 +11,16 @@ export const Container = styled.button<PropsStyled>`
   background: ${props => props.types ? 'transparent' : `${c.primary300}`};
   border: ${props => props.types ? `1px solid ${c.primary300}` : 0};
 
-  color:  ${props => props.types ? `${c.white}` : `${c.neutral700}`};
+  color:  ${props => props.types ? `${props.theme.colors.title};` : `${c.neutral700}`};
   font-family: "Montserrat", sans-serif;
   font-size: ${f.paragraphLarge.fontSize};
   line-height: ${f.paragraphLarge.lineHeight};
 
   border-radius: 2px;
+
+  transition: all 0.2s;
+
+  &:hover {
+    background: ${props => props.types ? 'transparent' : `${c.primary400}`};
+  }
 `
