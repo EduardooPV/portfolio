@@ -2,10 +2,9 @@ import styled from "styled-components";
 import c from '../../styles/pallete.json'
 import f from '../../styles/typography.json'
 
-export const Container = styled.main`
+export const Container = styled.div`
   width: fit-content;
 
-  margin: 0 auto;
   padding: 1rem 0.5rem;
   position: relative;
 
@@ -15,7 +14,7 @@ export const Container = styled.main`
     font-family: "Roboto", sans-serif;
     font-size: ${f.h1.fontSize};
     line-height: ${f.h1.lineHeight};
-    color: ${c.neutral100};
+    color: ${props => props.theme.colors.title};
 
     z-index: 1;
 
