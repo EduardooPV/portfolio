@@ -14,16 +14,7 @@ export function Navbar({ toggleTheme, theme }: NavbarProps) {
   const width = useWidth();
 
   return (
-    <Container 
-    initial={{
-      opacity: 0,
-    }}
-    animate={{
-      opacity: 1,
-    }}
-    transition={{
-      duration: 1,
-    }}>
+    <Container>
       <Content>
         <Switch
           onChange={toggleTheme}
