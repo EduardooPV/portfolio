@@ -1,27 +1,29 @@
+import { Container, Content, MenuHamburguer, NavLinks } from "./styles";
 import React, { useContext } from "react";
-import { ThemeContext } from "styled-components";
-import Switch from "react-switch";
-import { bubble as Menu } from "react-burger-menu";
 
-import { Container, MenuHamburguer, NavLinks, Content } from "./styles";
-
-import MenuImg from "../../assets/menu.svg";
 import CloseImg from "../../assets/close.svg";
+import { bubble as Menu } from "react-burger-menu";
+import MenuImg from "../../assets/menu.svg";
+import { NavbarProps } from "./interface";
+import Switch from "react-switch";
+import { ThemeContext } from "styled-components";
 import { useWidth } from "../../utils/useWidth";
-
-interface NavbarProps {
-  toggleTheme: () => void;
-  theme: {
-    title: string;
-  };
-}
 
 export function Navbar({ toggleTheme, theme }: NavbarProps) {
   const { colors } = useContext(ThemeContext);
   const width = useWidth();
 
   return (
-    <Container>
+    <Container 
+    initial={{
+      opacity: 0,
+    }}
+    animate={{
+      opacity: 1,
+    }}
+    transition={{
+      duration: 1,
+    }}>
       <Content>
         <Switch
           onChange={toggleTheme}
