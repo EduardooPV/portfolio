@@ -1,9 +1,7 @@
 import { Container, Content, MenuHamburguer, NavLinks } from "./styles";
 import React, { useContext } from "react";
 
-import CloseImg from "../../assets/close.svg";
 import { bubble as Menu } from "react-burger-menu";
-import MenuImg from "../../assets/menu.svg";
 import { NavbarProps } from "./interface";
 import Switch from "react-switch";
 import { ThemeContext } from "styled-components";
@@ -42,8 +40,8 @@ export function Navbar({ toggleTheme, theme }: NavbarProps) {
             <Menu
               right
               noOverlay
-              customBurgerIcon={<img src={MenuImg.src} />}
-              customCrossIcon={<img src={CloseImg.src} />}
+              customBurgerIcon={<img src="/assets/menu.svg" />}
+              customCrossIcon={<img src="/assets/close.svg" />}
             >
               <a className="menu-item">Início</a>
               <a className="menu-item">Sobre</a>

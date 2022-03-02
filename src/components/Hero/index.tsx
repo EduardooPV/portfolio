@@ -5,9 +5,6 @@ import { useWidth } from "../../utils/useWidth";
 
 import { Container, Content, BackHome, Figure, ContainerButton } from "./styles";
 
-import BackImg from "../../assets/back.svg";
-import Fig from "../../assets/fig01.png";
-
 export function Hero() {
   const width = useWidth();
 
@@ -16,7 +13,7 @@ export function Hero() {
       <Content>
         <BackHome>
           <a href="#">
-            <img src={BackImg.src} alt="Voltar para o ínicio" />
+            <img src="/assets/back.svg" alt="Voltar para o ínicio" />
           </a>
         </BackHome>
 
@@ -39,7 +36,7 @@ export function Hero() {
       </Content>
       {width >= 768 ? 
         <Figure>
-          <img src={Fig.src} alt="Ilustração" />
+          <img src="/assets/ilustration.png" alt="Ilustração" />
         </Figure> 
       : null}
     </Container>
