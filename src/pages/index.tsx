@@ -7,6 +7,7 @@ import React from "react";
 import { ThemeProvider } from "styled-components";
 import { WidthProvider } from "../utils/useWidth";
 import usePersistedState from '../utils/usePersistedState'
+import { Diviser } from "../components/Diviser";
 
 export default function Home() {
   const [theme, setTheme] = usePersistedState('theme', combineTheme(dark));
@@ -21,6 +22,9 @@ export default function Home() {
         <GlobalStyle />
         <Navbar toggleTheme={toggleTheme} theme={theme}/>
         <Hero />
+
+        <Diviser /> 
+
       </WidthProvider>
     </ThemeProvider>
   )

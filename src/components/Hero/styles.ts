@@ -6,6 +6,8 @@ export const BackHome = styled.div`
   position: fixed;
   right: 5%;
   bottom: 1rem;
+
+  z-index: 2;
   
   &:hover {
     animation: toping 0.2s alternate infinite;
