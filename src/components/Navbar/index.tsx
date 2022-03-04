@@ -1,4 +1,4 @@
-import { Container, Content, MenuHamburguer, NavLinks } from "./styles";
+import { Container, Content, MenuHamburguer, NavLinks, ContainerImage} from "./styles";
 import React, { useContext } from "react";
 
 import { bubble as Menu } from "react-burger-menu";
@@ -14,6 +14,9 @@ export function Navbar({ toggleTheme, theme }: NavbarProps) {
   return (
     <Container>
       <Content>
+
+        <img src="assets/logo.svg" alt="Logo" />
+        
         <Switch
           onChange={toggleTheme}
           checked={theme.title === "light"}
