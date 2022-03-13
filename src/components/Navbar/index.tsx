@@ -1,4 +1,4 @@
-import { Container, Content, MenuHamburguer, NavLinks, ContainerImage} from "./styles";
+import { Container, Content, MenuHamburguer, NavLinks } from "./styles";
 import React, { useContext } from "react";
 
 import { bubble as Menu } from "react-burger-menu";

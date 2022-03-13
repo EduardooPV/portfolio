@@ -4,9 +4,16 @@ import f from '../../styles/typography.json'
 
 export const Container = styled.header`
   height: 60px;
+  width: 100%;
+  position: fixed;
 
-  background: ${c.neutral500};
+  background: rgb(9, 9, 10, .6);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(114, 114, 126, 0.5);
+
   color: ${c.neutral200};
+
+  z-index: 5;
 
   @media (min-width: 768px) {
     height: 80px;
