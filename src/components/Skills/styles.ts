@@ -15,14 +15,15 @@ export const Container = styled.section`
 export const ContainerCard = styled.div`
   width: 100%;
 
-  margin-top: 6rem;
+  margin-top: 3rem;
+  padding: 1rem;
 
   display: flex;
   flex-direction: column;
 
   border: 1px solid ${c.neutral200};
-
-  div {
+  
+  > div {
     width: 80%;
 
     margin: 0 auto;
@@ -41,6 +42,7 @@ export const ContainerCard = styled.div`
   }
 
   @media (min-width: 768px) {
+    margin-top: 8rem;
     flex-direction: row;
     padding: 2rem 0;
 
@@ -52,3 +54,36 @@ export const ContainerCard = styled.div`
     }
   }
 `;
+
+export const ModalHover = styled.div`
+  overflow: hidden;
+  width: 100%;
+  height: 300px;
+  
+  padding: 1rem;
+
+  position: absolute;
+  bottom: 0;
+  background: ${c.neutral500};
+  transition: all 0.4s;
+  opacity: 0;
+
+  border: 1px solid ${c.neutral200};
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    p {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 768px) {
+    width: 80%;
+  }
+`
