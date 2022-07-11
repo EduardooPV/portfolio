@@ -17,7 +17,7 @@ html {
 }
 
 body, button, textarea, input {
-  font-family: 'Font', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
 }
 

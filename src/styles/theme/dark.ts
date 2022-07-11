@@ -7,7 +7,7 @@ export default {
     primary: `${c.primary300}`,
     secundary: `${c.neutral200}`,
 
-    background: `${c.neutral500}`,
+    background: `${c.neutral700}`,
     title: `${c.white}`,
     text: `${c.neutral200}`,
   },

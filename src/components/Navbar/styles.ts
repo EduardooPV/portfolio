@@ -13,7 +13,7 @@ export const Container = styled.header`
 
   color: ${c.neutral200};
 
-  z-index: 5;
+  z-index: 999;
 
   @media (min-width: 768px) {
     height: 80px;

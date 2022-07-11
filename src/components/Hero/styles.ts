@@ -26,12 +26,14 @@ export const BackHome = styled.div`
 
 export const Container = styled.main`
   max-width: 1240px;
-  height: 90vh;
+  height: 100vh;
 
   margin: 0 auto;
   padding: 40px 20px;
 
   @media (min-width: 768px) {
+    height: 90vh;
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -39,15 +41,18 @@ export const Container = styled.main`
 `;
 
 export const Content = styled.div`
+  height: 100%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+  justify-content: center;
+
   p {
     max-width: 500px;
     margin: 3rem auto;
 
-    color: ${props => props.theme.colors.text};
+    color: ${(props) => props.theme.colors.text};
     font-size: ${f.paragraphSmall.fontSize};
     line-height: ${f.paragraphSmall.lineHeight};
     text-align: center;
