@@ -2,11 +2,11 @@ import React from "react";
 import { AppProps } from "next/app";
 
 import { ThemeProvider } from "styled-components";
-import { WidthProvider } from "../utils/useWidth";
 import { GlobalStyle } from "../styles/GlobalStyle";
 import { Navbar } from "../components/Navbar";
 import { combineTheme, dark, light } from "../styles/theme";
 import usePersistedState from "../utils/usePersistedState";
+import { MediaContextProvider } from "../components/MediaScreen";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [theme, setTheme] = usePersistedState("theme", combineTheme(dark));
@@ -20,11 +20,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <WidthProvider>
-          <GlobalStyle />
-          <Navbar toggleTheme={toggleTheme} theme={theme} />
-          <Component {...pageProps} />
-        </WidthProvider>
+        <MediaContextProvider>
+            <GlobalStyle />
+            <Navbar toggleTheme={toggleTheme} theme={theme} />
+            <Component {...pageProps} />
+        </MediaContextProvider>
       </ThemeProvider>
     </>
   );

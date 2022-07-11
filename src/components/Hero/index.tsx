@@ -1,12 +1,17 @@
 import React from "react";
 import { TextSection } from "../TextSection";
 import { ButtonGeneric } from "../ButtonGeneric";
-import { useWidth } from "../../utils/useWidth";
 
-import { Container, Content, BackHome, Figure, ContainerButton } from "./styles";
+import {
+  Container,
+  Content,
+  BackHome,
+  Figure,
+  ContainerButton,
+} from "./styles";
+import { Media } from "../MediaScreen";
 
 export function Hero() {
-  const width = useWidth();
 
   return (
     <Container>
@@ -34,11 +39,11 @@ export function Hero() {
           <ButtonGeneric invisible>Sobre mim</ButtonGeneric>
         </ContainerButton>
       </Content>
-      {width >= 768 ? 
+      <Media greaterThan="sm">
         <Figure>
           <img src="/assets/ilustration.png" alt="Ilustração" />
-        </Figure> 
-      : null}
+        </Figure>
+      </Media>
     </Container>
   );
 }

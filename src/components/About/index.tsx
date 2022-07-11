@@ -1,13 +1,17 @@
 import React from "react";
 import { TextSection } from "../TextSection";
 import { ButtonGeneric } from "../ButtonGeneric";
-import { useWidth } from "../../utils/useWidth";
 
-import { Container, Content, Figure, ContainerIcons, ContainerButton } from "./styles";
+import {
+  Container,
+  Content,
+  Figure,
+  ContainerIcons,
+  ContainerButton,
+} from "./styles";
+import { Media } from "../MediaScreen";
 
 export function About() {
-  const width = useWidth();
-
   return (
     <Container>
       <Content>
@@ -43,11 +47,11 @@ export function About() {
           <ButtonGeneric>Entre em contato</ButtonGeneric>
         </ContainerButton>
       </Content>
-      {width >= 768 ? 
+      <Media greaterThan="sm">
         <Figure>
           <img src="/assets/person.png" alt="Ilustração" />
-        </Figure> 
-      : null}
+        </Figure>
+      </Media>
     </Container>
   );
 }
