@@ -10,7 +10,8 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
+
+  `;
 
 export const ContainerCard = styled.div`
   width: 100%;
@@ -20,8 +21,9 @@ export const ContainerCard = styled.div`
 
   display: flex;
   flex-direction: column;
-
+  
   border: 1px solid ${c.neutral200};
+  z-index: 99;
   
   > div {
     width: 80%;
@@ -69,8 +71,8 @@ export const ModalHover = styled.div`
   opacity: 0;
 
   border: 1px solid ${c.neutral200};
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 
   div {
     display: flex;

@@ -26,8 +26,9 @@ export const BackHome = styled.div`
 
 export const Container = styled.main`
   max-width: 1240px;
-  margin: 0 auto;
+  height: 90vh;
 
+  margin: 0 auto;
   padding: 40px 20px;
 
   @media (min-width: 768px) {

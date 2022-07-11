@@ -61,15 +61,16 @@ export const MenuHamburguer = styled.div`
   height: 35px;
 
   position: relative;
-  
+
   .bm-menu-wrap {
-    width: 100vw!important;
+    width: 100vw !important;
+    height: 100vh;
     top: 0;
   }
 
   .bm-cross-button {
-    width: 50px!important;
-    height: 50px!important;
+    width: 50px !important;
+    height: 50px !important;
   }
 
   .bm-morph-shape {
@@ -81,9 +82,8 @@ export const MenuHamburguer = styled.div`
   }
 
   .bm-item-list {
-    width: 100%; 
+    width: 100%;
     height: 100%;
-
 
     display: flex;
     flex-direction: column;
@@ -110,4 +110,4 @@ export const MenuHamburguer = styled.div`
       border: 2px solid ${c.neutral100};
     }
   }
-`
+`;
