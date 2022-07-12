@@ -1,7 +1,12 @@
 import React from "react";
-import Document, { Html, Head, Main, NextScript, DocumentContext } from "next/document";
+import Document, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+  DocumentContext,
+} from "next/document";
 import { ServerStyleSheet } from "styled-components";
-
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -46,7 +51,12 @@ class MyDocument extends Document {
 
           <title>Portifólio | Luiz Eduardo</title>
 
-          <meta name="description" content="Portifólio do Luiz Eduardo Prado Veltroni, contando um pouco sobre mim, meus conhecimentos e alguns dos meus projetos." />
+          <meta
+            name="description"
+            content="Portifólio do Luiz Eduardo Prado Veltroni, contando um pouco sobre mim, meus conhecimentos e alguns dos meus projetos."
+          />
+
+          <link rel="shortcut icon" href="/favicon.png" />
         </Head>
         <body>
           <Main />
