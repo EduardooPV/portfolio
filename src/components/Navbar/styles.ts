@@ -49,23 +49,24 @@ export const NavLinks = styled.nav`
     &:hover {
       text-decoration: underline;
     }
+  }
 
-    &:last-child {
-      padding: 4px 18px;
+  a:nth-child(4) {
+    margin-right: 2rem;
+    padding: 4px 18px;
 
-      border-radius: 0.25rem;
-      background-color: ${c.primary300};
-      font-weight: ${f.paragraphLarge.fontWeight.bold};
-      color: ${c.neutral700};
-      text-decoration: none;
-      border: 1px solid transparent;
-      transition: all 0.2s;
+    border-radius: 0.25rem;
+    background-color: ${c.primary300};
+    font-weight: ${f.paragraphLarge.fontWeight.bold};
+    color: ${c.neutral700};
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: all 0.2s;
 
-      &:hover {
-        background-color: transparent;
-        color: ${c.primary300};
-        border: 1px solid ${c.primary300};
-      }
+    &:hover {
+      background-color: transparent;
+      color: ${c.primary300};
+      border: 1px solid ${c.primary300};
     }
   }
 `;

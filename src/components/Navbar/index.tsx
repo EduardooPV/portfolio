@@ -17,62 +17,60 @@ export function Navbar({ toggleTheme, theme }: NavbarProps) {
           <img src="assets/logo.svg" alt="Logo" />
         </a>
 
-        <Switch
-          onChange={toggleTheme}
-          checked={theme.title === "light"}
-          checkedIcon={false}
-          uncheckedIcon={false}
-          height={10}
-          width={40}
-          handleDiameter={20}
-          offColor={colors.primary}
-          onColor="#fff"
-          onHandleColor={colors.primary}
-        />
-        <Media greaterThan="sm">
-          <NavLinks>
-            <a href="#hero">Início</a>
-            <a href="#about">Sobre</a>
-            <a href="#skills">Conhecimento</a>
-            <a href="#projects">Projetos</a>
-            <a
-              href="/CV-Luiz-Eduardo-Front-End.pdf/"
-              download="CV-Luiz-Eduardo-Front-End"
-            >
-              Curriculo
-            </a>
-          </NavLinks>
-        </Media>
-        <Media at="sm">
-          <MenuHamburguer>
-            <Menu
-              right
-              noOverlay
-              customBurgerIcon={<img src="/assets/menu.svg" />}
-              customCrossIcon={<img src="/assets/close.svg" />}
-            >
-              <a className="menu-item" href="#hero">
-                Início
-              </a>
-              <a className="menu-item" href="#about">
-                Sobre
-              </a>
-              <a className="menu-item" href="#skills">
-                Conhecimento
-              </a>
-              <a className="menu-item" href="#projects">
-                Projetos
-              </a>
+        <div>
+          <Media greaterThan="sm">
+            <NavLinks>
+              <a href="/">Início</a>
+              <a href="/projetos">Projetos</a>
+              <a href="/contato">Contato</a>
               <a
-                className="menu-item"
                 href="/CV-Luiz-Eduardo-Front-End.pdf/"
                 download="CV-Luiz-Eduardo-Front-End"
               >
-                Download CV
+                Curriculo
               </a>
-            </Menu>
-          </MenuHamburguer>
-        </Media>
+              <Switch
+                onChange={toggleTheme}
+                checked={theme.title === "light"}
+                checkedIcon={false}
+                uncheckedIcon={false}
+                height={10}
+                width={40}
+                handleDiameter={20}
+                offColor={colors.primary}
+                onColor="#fff"
+                onHandleColor={colors.primary}
+              />
+            </NavLinks>
+          </Media>
+          <Media at="sm">
+            <MenuHamburguer>
+              <Menu
+                right
+                noOverlay
+                customBurgerIcon={<img src="/assets/menu.svg" />}
+                customCrossIcon={<img src="/assets/close.svg" />}
+              >
+                <a className="menu-item" href="/">
+                  Início
+                </a>
+                <a className="menu-item" href="/projetos">
+                  Projetos
+                </a>
+                <a className="menu-item" href="/contato">
+                  Contato
+                </a>
+                <a
+                  className="menu-item"
+                  href="/CV-Luiz-Eduardo-Front-End.pdf/"
+                  download="CV-Luiz-Eduardo-Front-End"
+                >
+                  Download CV
+                </a>
+              </Menu>
+            </MenuHamburguer>
+          </Media>
+        </div>
       </Content>
     </Container>
   );

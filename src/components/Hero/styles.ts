@@ -5,9 +5,13 @@ import f from "../../styles/typography.json";
 export const BackHome = styled.div`
   position: fixed;
   right: 5%;
-  bottom: 1rem;
+  bottom: 3rem;
 
   z-index: 2;
+
+  path {
+    fill: ${(props) => props.theme.colors.icon};
+  }
   
   &:hover {
     animation: toping 0.2s alternate infinite;
