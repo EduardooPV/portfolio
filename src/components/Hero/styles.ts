@@ -32,8 +32,6 @@ export const Container = styled.main`
   padding: 40px 20px;
 
   @media (min-width: 768px) {
-    height: 90vh;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;

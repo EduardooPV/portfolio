@@ -3,7 +3,7 @@ import c from "../../styles/pallete.json";
 import f from "../../styles/typography.json";
 
 export const Container = styled.footer`
-  background: ${c.primary300};
+  background: ${(props) => props.theme.colors.footer};
 `;
 
 export const Content = styled.div`
@@ -32,7 +32,7 @@ export const Content = styled.div`
     gap: 10px;
 
     font-size: ${f.paragraphLarge.fontSize};
-    color: ${c.neutral700};
+    color: ${(props) => props.theme.colors.footerText};
     text-decoration: none;
 
     &:hover {
@@ -42,6 +42,6 @@ export const Content = styled.div`
 
   span {
     font-size: ${f.caption.fontSize};
-    color: ${c.black};
+    color: ${(props) => props.theme.colors.footerText};
   }
 `;

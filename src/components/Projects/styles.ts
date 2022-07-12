@@ -39,8 +39,12 @@ export const CardUIUX = styled.div`
   flex-direction: column;
   gap: 30px;
 
-  background: ${c.neutral500};
-  border: 1px solid ${c.neutral200};
+  background: ${(props) => props.theme.colors.backgroundCards};
+  border: 2px solid ${c.neutral200};
+
+  path {
+    fill: ${(props) => props.theme.colors.icon};
+  }
 
   @media (min-width: 768px) {
     padding: 40px;
@@ -56,9 +60,10 @@ export const CardUIUX = styled.div`
     width: fit-content;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 0px;
 
-    img {
+    svg {
       max-width: 40px;
       margin: 0 auto;
 
@@ -86,8 +91,8 @@ export const CardUIUX = styled.div`
   > div:last-child {
     p {
       font-size: ${t.h3.fontSize};
-      font-weight: ${t.h2.fontWeight.bold};
-      color: ${c.white};
+      font-weight: ${t.h3.fontWeight.bold};
+      color: ${(props) => props.theme.colors.title};
 
       word-break: break-all;
 
@@ -97,7 +102,7 @@ export const CardUIUX = styled.div`
     span {
       font-size: ${t.paragraphSmall.fontSize};
       line-height: ${t.paragraphSmall.lineHeight};
-      color: ${c.neutral200};
+      color: ${(props) => props.theme.colors.text};
     }
 
     @media (min-width: 768px) {
@@ -121,8 +126,12 @@ export const CardDev = styled.div`
   flex-direction: column;
   gap: 30px;
 
-  background: ${c.neutral500};
+  background: ${(props) => props.theme.colors.backgroundCards};
   border: 1px solid ${c.neutral200};
+
+  path {
+    fill: ${(props) => props.theme.colors.icon};
+  }
 
   @media (min-width: 768px) {
     padding: 40px;
@@ -138,9 +147,10 @@ export const CardDev = styled.div`
     width: fit-content;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 0px;
 
-    img {
+    svg {
       max-width: 40px;
       margin: 0 auto;
 
@@ -159,6 +169,7 @@ export const CardDev = styled.div`
 
       font-size: ${t.paragraphLarge.fontSize};
     }
+
     @media (min-width: 768px) {
       gap: 30px;
     }
@@ -168,7 +179,7 @@ export const CardDev = styled.div`
     p {
       font-size: ${t.h3.fontSize};
       font-weight: ${t.h2.fontWeight.bold};
-      color: ${c.white};
+      color: ${(props) => props.theme.colors.title};
 
       word-break: break-all;
 
@@ -178,7 +189,7 @@ export const CardDev = styled.div`
     span {
       font-size: ${t.paragraphSmall.fontSize};
       line-height: ${t.paragraphSmall.lineHeight};
-      color: ${c.neutral200};
+      color: ${(props) => props.theme.colors.text};
     }
 
     @media (min-width: 768px) {

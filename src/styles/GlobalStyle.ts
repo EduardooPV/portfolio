@@ -8,12 +8,18 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 html {
+  scroll-behavior: smooth;
+
   @media (max-width: 1080px) {
     font-size: 93.75%; // 15px
   }
   @media (max-width: 720px) {
     font-size: 87.5% // 14px
   }
+}
+
+:target {
+  scroll-margin-top: 4rem;
 }
 
 body, button, textarea, input {
@@ -26,8 +32,8 @@ h1, h2, h3, h4, h5, h6, strong {
 }
 
 body {
-  background: ${props => props.theme.colors.background};
-  color: ${props => props.theme.colors.text};
+  background: ${(props) => props.theme.colors.background};
+  color: ${(props) => props.theme.colors.text};
   -webkit-font-smoothing: antialiased;
 }
 

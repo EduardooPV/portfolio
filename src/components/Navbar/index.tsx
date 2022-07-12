@@ -1,6 +1,6 @@
-import { Container, Content, MenuHamburguer, NavLinks } from "./styles";
 import React, { useContext } from "react";
 
+import { Container, Content, MenuHamburguer, NavLinks } from "./styles";
 import { bubble as Menu } from "react-burger-menu";
 import { NavbarProps } from "./interface";
 import Switch from "react-switch";
@@ -13,7 +13,9 @@ export function Navbar({ toggleTheme, theme }: NavbarProps) {
   return (
     <Container>
       <Content>
-        <img src="assets/logo.svg" alt="Logo" />
+        <a href="/">
+          <img src="assets/logo.svg" alt="Logo" />
+        </a>
 
         <Switch
           onChange={toggleTheme}
@@ -29,12 +31,16 @@ export function Navbar({ toggleTheme, theme }: NavbarProps) {
         />
         <Media greaterThan="sm">
           <NavLinks>
-            <a>Início</a>
-            <a>Sobre</a>
-            <a>Conhecimento</a>
-            <a>Projetos</a>
-            <a>Contato</a>
-            <a>Curriculo</a>
+            <a href="#hero">Início</a>
+            <a href="#about">Sobre</a>
+            <a href="#skills">Conhecimento</a>
+            <a href="#projects">Projetos</a>
+            <a
+              href="/CV-Luiz-Eduardo-Front-End.pdf/"
+              download="CV-Luiz-Eduardo-Front-End"
+            >
+              Curriculo
+            </a>
           </NavLinks>
         </Media>
         <Media at="sm">
@@ -45,12 +51,25 @@ export function Navbar({ toggleTheme, theme }: NavbarProps) {
               customBurgerIcon={<img src="/assets/menu.svg" />}
               customCrossIcon={<img src="/assets/close.svg" />}
             >
-              <a className="menu-item">Início</a>
-              <a className="menu-item">Sobre</a>
-              <a className="menu-item">Conhecimento</a>
-              <a className="menu-item">Projetos</a>
-              <a className="menu-item">Contato</a>
-              <a className="menu-item">Download CV</a>
+              <a className="menu-item" href="#hero">
+                Início
+              </a>
+              <a className="menu-item" href="#about">
+                Sobre
+              </a>
+              <a className="menu-item" href="#skills">
+                Conhecimento
+              </a>
+              <a className="menu-item" href="#projects">
+                Projetos
+              </a>
+              <a
+                className="menu-item"
+                href="/CV-Luiz-Eduardo-Front-End.pdf/"
+                download="CV-Luiz-Eduardo-Front-End"
+              >
+                Download CV
+              </a>
             </Menu>
           </MenuHamburguer>
         </Media>

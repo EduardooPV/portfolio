@@ -1,13 +1,13 @@
 import styled from "styled-components";
-import c from '../../styles/pallete.json'
-import f from '../../styles/typography.json'
+import c from "../../styles/pallete.json";
+import f from "../../styles/typography.json";
 
 export const Container = styled.header`
   height: 60px;
   width: 100%;
   position: fixed;
 
-  background: rgb(9, 9, 10, .6);
+  background: rgb(9, 9, 10, 0.6);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(114, 114, 126, 0.5);
 
@@ -18,7 +18,7 @@ export const Container = styled.header`
   @media (min-width: 768px) {
     height: 80px;
   }
-`
+`;
 
 export const Content = styled.div`
   max-width: 1240px;
@@ -30,31 +30,45 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-`
+`;
 
 export const NavLinks = styled.nav`
   height: 100%;
   display: flex;
   align-items: center;
   gap: 10px;
-  
-  a { 
+
+  a {
     padding: 5px 10px;
     font-family: montserrat, sans-serif;
     font-size: ${f.paragraphLarge.fontSize};
     line-height: ${f.paragraphLarge.lineHeight};
-    color: ${c.neutral200};
-    
+    color: ${c.neutral100};
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
     &:last-child {
-      padding: 5px 20px;
+      padding: 4px 18px;
 
       border-radius: 0.25rem;
       background-color: ${c.primary300};
       font-weight: ${f.paragraphLarge.fontWeight.bold};
       color: ${c.neutral700};
+      text-decoration: none;
+      border: 1px solid transparent;
+      transition: all 0.2s;
+
+      &:hover {
+        background-color: transparent;
+        color: ${c.primary300};
+        border: 1px solid ${c.primary300};
+      }
     }
   }
-`
+`;
 
 export const MenuHamburguer = styled.div`
   width: 35px;
@@ -64,7 +78,7 @@ export const MenuHamburguer = styled.div`
 
   .bm-menu-wrap {
     width: 100vw !important;
-    height: 100vh;
+    height: 100vh !important;
     top: 0;
   }
 

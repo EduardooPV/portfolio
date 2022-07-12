@@ -17,7 +17,7 @@ import { Media } from "../MediaScreen";
 
 export function About() {
   return (
-    <Container>
+    <Container id="about">
       <Content>
         <TextSection tag="<h2>">Luiz Eduardo</TextSection>
 
@@ -36,23 +36,23 @@ export function About() {
             target="_blank"
             rel="noreferrer"
           >
-            <AiFillLinkedin size={40} color="#C2BDBD" />
+            <AiFillLinkedin size={40}  />
           </a>
           <a
             href="mailto:eduardoveltroni@hotmail.com"
             target="_blank"
             rel="noreferrer"
           >
-            <HiOutlineMail size={40} color="#C2BDBD" />
+            <HiOutlineMail size={40} />
           </a>
           <a href="https://dev.to/eduardoopv" target="_blank" rel="noreferrer">
-            <FaDev size={30} color="#C2BDBD" />
+            <FaDev size={30} />
           </a>
           <a
             href="/CV-Luiz-Eduardo-Front-End.pdf/"
             download="CV-Luiz-Eduardo-Front-End"
           >
-            <BiCloudDownload size={40} color="#C2BDBD" />
+            <BiCloudDownload size={40} />
           </a>
         </ContainerIcons>
 

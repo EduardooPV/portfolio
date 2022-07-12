@@ -22,11 +22,11 @@ export const Content = styled.div`
   align-items: center;
   gap: 2rem;
   grid-column: 2;
-  
+
   p {
     max-width: 500px;
 
-    color: ${props => props.theme.colors.text};
+    color: ${(props) => props.theme.colors.text};
     font-size: ${f.paragraphSmall.fontSize};
     line-height: ${f.paragraphSmall.lineHeight};
     text-align: center;
@@ -53,12 +53,13 @@ export const ContainerIcons = styled.div`
   a {
     line-height: 0;
     transition: all 0.2s;
+    color: ${(props) => props.theme.colors.text};
   }
 
   a:hover {
     filter: brightness(0.8);
   }
-`
+`;
 
 export const ContainerButton = styled.div`
   width: 100%;
