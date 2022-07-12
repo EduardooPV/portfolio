@@ -14,6 +14,7 @@ import {
   ContainerButton,
 } from "./styles";
 import { Media } from "../MediaScreen";
+import Link from "next/link";
 
 export function About() {
   return (
@@ -36,7 +37,7 @@ export function About() {
             target="_blank"
             rel="noreferrer"
           >
-            <AiFillLinkedin size={40}  />
+            <AiFillLinkedin size={40} />
           </a>
           <a
             href="mailto:eduardoveltroni@hotmail.com"
@@ -57,9 +58,17 @@ export function About() {
         </ContainerIcons>
 
         <ContainerButton>
-          <ButtonGeneric invisible>Meus projetos</ButtonGeneric>
+          <Link href="/projetos" passHref>
+            <a>
+              <ButtonGeneric invisible>Meus projetos</ButtonGeneric>
+            </a>
+          </Link>
 
-          <ButtonGeneric>Entre em contato</ButtonGeneric>
+          <Link href="/contato">
+            <a>
+              <ButtonGeneric>Entre em contato</ButtonGeneric>
+            </a>
+          </Link>
         </ContainerButton>
       </Content>
       <Media greaterThan="sm">

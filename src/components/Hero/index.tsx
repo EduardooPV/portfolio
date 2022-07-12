@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { TextSection } from "../TextSection";
 import { ButtonGeneric } from "../ButtonGeneric";
 
@@ -46,9 +47,15 @@ export function Hero() {
         </p>
 
         <ContainerButton>
-          <ButtonGeneric>Entre em contato</ButtonGeneric>
+          <Link href="/contato" passHref>
+            <a>
+              <ButtonGeneric>Entre em contato</ButtonGeneric>
+            </a>
+          </Link>
 
-          <ButtonGeneric invisible>Sobre mim</ButtonGeneric>
+          <a href="#about">
+            <ButtonGeneric invisible>Sobre mim</ButtonGeneric>
+          </a>
         </ContainerButton>
       </Content>
       <Media greaterThan="sm">

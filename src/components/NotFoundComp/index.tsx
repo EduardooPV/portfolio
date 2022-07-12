@@ -3,6 +3,7 @@ import { Container } from "./styles";
 import Image from "next/image";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 export function NotFoundComp() {
   const { asPath } = useRouter();
@@ -28,10 +29,12 @@ export function NotFoundComp() {
         </>
       )}
 
-      <a href="/">
-        <AiOutlineArrowLeft />
-        Voltar para o início
-      </a>
+      <Link href="/" passHref>
+        <a>
+          <AiOutlineArrowLeft />
+          Voltar para o início
+        </a>
+      </Link>
     </Container>
   );
 }

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { ButtonGeneric } from "../ButtonGeneric";
 import { Media } from "../MediaScreen";
@@ -22,7 +23,11 @@ export function Projects() {
             </svg>
 
             <Media greaterThan="sm">
-              <button>Ver projetos</button>
+              <Link href="/projetos" passHref>
+                <a>
+                  <button>Ver projetos</button>
+                </a>
+              </Link>
             </Media>
           </div>
 
@@ -48,7 +53,11 @@ export function Projects() {
             </svg>
 
             <Media greaterThan="sm">
-              <button>Ver projetos</button>
+              <Link href="/projetos" passHref>
+                <a>
+                  <button>Ver projetos</button>
+                </a>
+              </Link>
             </Media>
           </div>
 
@@ -63,7 +72,11 @@ export function Projects() {
         </CardDev>
       </Content>
       <Media at="sm">
-        <ButtonGeneric>Ver projetos</ButtonGeneric>
+        <Link href="/projetos" passHref>
+          <a>
+            <ButtonGeneric>Ver projetos</ButtonGeneric>
+          </a>
+        </Link>
       </Media>
     </Container>
   );

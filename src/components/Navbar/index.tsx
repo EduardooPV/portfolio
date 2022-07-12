@@ -6,6 +6,7 @@ import { NavbarProps } from "./interface";
 import Switch from "react-switch";
 import { ThemeContext } from "styled-components";
 import { Media } from "../MediaScreen";
+import Link from "next/link";
 
 export function Navbar({ toggleTheme, theme }: NavbarProps) {
   const { colors } = useContext(ThemeContext);
@@ -20,9 +21,15 @@ export function Navbar({ toggleTheme, theme }: NavbarProps) {
         <div>
           <Media greaterThan="sm">
             <NavLinks>
-              <a href="/">Início</a>
-              <a href="/projetos">Projetos</a>
-              <a href="/contato">Contato</a>
+              <Link href="/" passHref>
+                <a>Início</a>
+              </Link>
+              <Link href="/projetos" passHref>
+                <a>Projetos</a>
+              </Link>
+              <Link href="/contato" passHref>
+                <a>Contato</a>
+              </Link>
               <a
                 href="/CV-Luiz-Eduardo-Front-End.pdf/"
                 download="CV-Luiz-Eduardo-Front-End"
@@ -51,15 +58,15 @@ export function Navbar({ toggleTheme, theme }: NavbarProps) {
                 customBurgerIcon={<img src="/assets/menu.svg" />}
                 customCrossIcon={<img src="/assets/close.svg" />}
               >
-                <a className="menu-item" href="/">
-                  Início
-                </a>
-                <a className="menu-item" href="/projetos">
-                  Projetos
-                </a>
-                <a className="menu-item" href="/contato">
-                  Contato
-                </a>
+                <Link href="/" passHref>
+                  <a className="menu-item">Início</a>
+                </Link>
+                <Link href="/projetos" passHref>
+                  <a className="menu-item">Projetos</a>
+                </Link>
+                <Link href="/contato" passHref>
+                  <a className="menu-item">Contato</a>
+                </Link>
                 <a
                   className="menu-item"
                   href="/CV-Luiz-Eduardo-Front-End.pdf/"
