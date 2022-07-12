@@ -14,7 +14,7 @@ import { Media } from "../MediaScreen";
 
 export function Hero() {
   return (
-    <Container id="hero">
+    <Container id="hero" data-aos="fade-left" data-aos-duration="1500">
       <Content>
         <BackHome>
           <a href="#">

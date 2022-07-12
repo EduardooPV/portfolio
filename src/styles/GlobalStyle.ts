@@ -45,4 +45,15 @@ button {
   opacity: 0.6;
   cursor: not-allowed;
 }
+
+::-webkit-scrollbar-track {
+  background: rgba(50, 50, 50, 0.8);  
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-thumb {
+  background: #F89D24; 
+  border-radius: 10px;
+}
 `;

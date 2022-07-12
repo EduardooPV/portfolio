@@ -12,7 +12,7 @@ export function Navbar({ toggleTheme, theme }: NavbarProps) {
   const { colors } = useContext(ThemeContext);
 
   return (
-    <Container>
+    <Container data-aos="fade-down" data-aos-duration="1000">
       <Content>
         <a href="/">
           <img src="assets/logo.svg" alt="Logo" />
@@ -55,8 +55,18 @@ export function Navbar({ toggleTheme, theme }: NavbarProps) {
               <Menu
                 right
                 noOverlay
-                customBurgerIcon={<img src="/assets/menu.svg" alt="Icone abrir menu hamburguer"/>}
-                customCrossIcon={<img src="/assets/close.svg" alt="Icone fechar menu hamburguer"/>}
+                customBurgerIcon={
+                  <img
+                    src="/assets/menu.svg"
+                    alt="Icone abrir menu hamburguer"
+                  />
+                }
+                customCrossIcon={
+                  <img
+                    src="/assets/close.svg"
+                    alt="Icone fechar menu hamburguer"
+                  />
+                }
               >
                 <Link href="/" passHref>
                   <a className="menu-item">Início</a>

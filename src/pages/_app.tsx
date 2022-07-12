@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { AppProps } from "next/app";
 
 import { ThemeProvider } from "styled-components";
@@ -7,6 +7,8 @@ import { Navbar } from "../components/Navbar";
 import { combineTheme, dark, light } from "../styles/theme";
 import usePersistedState from "../utils/usePersistedState";
 import { MediaContextProvider } from "../components/MediaScreen";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [theme, setTheme] = usePersistedState("theme", combineTheme(dark));
@@ -17,13 +19,17 @@ function MyApp({ Component, pageProps }: AppProps) {
     );
   };
 
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <>
       <ThemeProvider theme={theme}>
         <MediaContextProvider>
-            <GlobalStyle />
-            <Navbar toggleTheme={toggleTheme} theme={theme} />
-            <Component {...pageProps} />
+          <GlobalStyle />
+          <Navbar toggleTheme={toggleTheme} theme={theme} />
+          <Component {...pageProps} />
         </MediaContextProvider>
       </ThemeProvider>
     </>

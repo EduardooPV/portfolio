@@ -11,7 +11,11 @@ export function Skills() {
     <Container id="skills">
       <TextSection tag="<h2>">Conhecimento</TextSection>
 
-      <ContainerCard>
+      <ContainerCard
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-duration="1000"
+      >
         <div
           onMouseEnter={() => setHoverOne(true)}
           onMouseLeave={() => setHoverOne(false)}

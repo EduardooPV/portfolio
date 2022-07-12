@@ -11,7 +11,11 @@ export function Projects() {
       <TextSection tag="<h2>">Projetos</TextSection>
 
       <Content>
-        <CardUIUX>
+        <CardUIUX
+          data-aos="fade-down-right"
+          data-aos-offset="100"
+          data-aos-duration="1000"
+        >
           <div>
             <svg
               width="70"
@@ -41,7 +45,11 @@ export function Projects() {
           </div>
         </CardUIUX>
 
-        <CardDev>
+        <CardDev
+          data-aos="fade-up-left"
+          data-aos-offset="200"
+          data-aos-duration="1000"
+        >
           <div>
             <svg
               width="70"

@@ -18,7 +18,12 @@ import Link from "next/link";
 
 export function About() {
   return (
-    <Container id="about">
+    <Container
+      id="about"
+      data-aos="fade-up"
+      data-aos-offset="200"
+      data-aos-duration="800"
+    >
       <Content>
         <TextSection tag="<h2>">Luiz Eduardo</TextSection>
 
