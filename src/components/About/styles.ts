@@ -47,6 +47,7 @@ export const Content = styled.div`
 
 export const ContainerIcons = styled.div`
   display: flex;
+  align-items: center;
   gap: 2rem;
 
   a {

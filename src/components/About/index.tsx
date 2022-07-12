@@ -1,6 +1,10 @@
 import React from "react";
 import { TextSection } from "../TextSection";
 import { ButtonGeneric } from "../ButtonGeneric";
+import { AiFillLinkedin } from "react-icons/ai";
+import { HiOutlineMail } from "react-icons/hi";
+import { FaDev } from "react-icons/fa";
+import { BiCloudDownload } from "react-icons/bi";
 
 import {
   Container,
@@ -27,17 +31,28 @@ export function About() {
         </p>
 
         <ContainerIcons>
-          <a href="#" target="_blank">
-            <img src="/assets/icon-linkedin.svg" alt="LinkedIn" />
+          <a
+            href="https://www.linkedin.com/in/luiz-veltroni/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <AiFillLinkedin size={40} color="#C2BDBD" />
           </a>
-          <a href="#" target="_blank">
-            <img src="/assets/icon-email.svg" alt="Email" />
+          <a
+            href="mailto:eduardoveltroni@hotmail.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <HiOutlineMail size={40} color="#C2BDBD" />
           </a>
-          <a href="#" target="_blank">
-            <img src="/assets/icon-devto.svg" alt="Dev.to" />
+          <a href="https://dev.to/eduardoopv" target="_blank" rel="noreferrer">
+            <FaDev size={30} color="#C2BDBD" />
           </a>
-          <a href="#" target="_blank">
-            <img src="/assets/icon-download.svg" alt="Download Curriculo" />
+          <a
+            href="/CV-Luiz-Eduardo-Front-End.pdf/"
+            download="CV-Luiz-Eduardo-Front-End"
+          >
+            <BiCloudDownload size={40} color="#C2BDBD" />
           </a>
         </ContainerIcons>
 
