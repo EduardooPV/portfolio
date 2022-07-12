@@ -55,8 +55,8 @@ export function Navbar({ toggleTheme, theme }: NavbarProps) {
               <Menu
                 right
                 noOverlay
-                customBurgerIcon={<img src="/assets/menu.svg" />}
-                customCrossIcon={<img src="/assets/close.svg" />}
+                customBurgerIcon={<img src="/assets/menu.svg" alt="Icone abrir menu hamburguer"/>}
+                customCrossIcon={<img src="/assets/close.svg" alt="Icone fechar menu hamburguer"/>}
               >
                 <Link href="/" passHref>
                   <a className="menu-item">Início</a>

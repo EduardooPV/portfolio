@@ -32,7 +32,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="pt-BR">
         <Head>
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
@@ -43,6 +43,10 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
             rel="stylesheet"
           />
+
+          <title>Portifólio | Luiz Eduardo</title>
+
+          <meta name="description" content="Portifólio do Luiz Eduardo Prado Veltroni, contando um pouco sobre mim, meus conhecimentos e alguns dos meus projetos." />
         </Head>
         <body>
           <Main />
