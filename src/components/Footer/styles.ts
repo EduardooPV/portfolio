@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import c from "../../styles/pallete.json";
 import f from "../../styles/typography.json";
 
 export const Container = styled.footer`

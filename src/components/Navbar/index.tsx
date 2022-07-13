@@ -138,7 +138,7 @@ export function Navbar({ toggleTheme, theme }: NavbarProps) {
                 href="/CV-Luiz-Eduardo-Front-End.pdf/"
                 download="CV-Luiz-Eduardo-Front-End"
               >
-                Download CV
+                Curriculo
               </a>
             </Menu>
           </Media>

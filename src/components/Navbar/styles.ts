@@ -116,6 +116,7 @@ export const MenuIcon = styled.div`
   &::after {
     position: absolute;
     top: 8px;
+    right: 0;
 
     width: 28px;
     height: 4px;
@@ -185,6 +186,7 @@ export const Menu = styled.div`
   display: none;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   flex-wrap: nowrap;
 
   width: 100%;
@@ -198,25 +200,27 @@ export const Menu = styled.div`
   line-height: ${f.h4.lineHeight};
   color: white;
 
-  li {
-    margin: 20px 0;
-
-    cursor: pointer;
-  }
-
-  ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    width: 80%;
-  }
-
   animation: ${slideOut} 0.5s linear;
-  background: ${c.primary500};
 
   @media (orientation: landscape) {
     top: -200%;
+  }
+
+  a {
+    width: 80%;
+    text-decoration: none;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: ${f.h2.fontSize};
+    line-height: ${f.h2.lineHeight};
+    font-weight: ${f.h2.fontWeight.bold};
+    color: ${c.neutral500};
+  }
+
+  a:last-child {
+    color: ${c.white};
+    background: ${c.neutral500};
+    border-radius: 4px;
   }
 
   &.menuOpen {
@@ -225,24 +229,13 @@ export const Menu = styled.div`
 
     width: 100vw;
     height: 100vh;
-    padding: 40px 0;
+    padding: 60px 0;
     z-index: 4;
     top: 0;
     left: 0;
     overflow: auto;
 
     animation: ${slide} 0.5s linear;
-
-    ul {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      width: 80%;
-
-      z-index: 5;
-
-      padding-bottom: 40px;
-    }
+    background: ${c.primary300};
   }
 `;
