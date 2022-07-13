@@ -33,7 +33,6 @@ export const Container = styled.main`
     font-family: montserrat, sans-serif;
     font-size: ${f.h4.fontSize};
     color: ${(props) => props.theme.colors.title};
-    text-decoration: none;
     transition: all 0.2;
 
     display: flex;

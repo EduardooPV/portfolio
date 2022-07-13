@@ -25,7 +25,16 @@ export const Container = styled.button<PropsStyled>`
   transition: all 0.2s;
 
   &:hover {
-    filter: brightness(0.7);
+    background: ${(props) => (props.types ? "transparent" : `${c.primary400}`)};
+    color: ${(props) => (props.types ? c.primary400 : "")};
+    border: 2px solid ${c.primary400};
+  }
+
+  &:active {
+    color: ${(props) => (props.types ? c.primary300 : c.white)};
+    background: ${(props) => (props.types ? "transparent" : `${c.primary500}`)};
+    color: ${(props) => (props.types ? c.primary500 : "")};
+    border: 2px solid ${c.primary500};
   }
 
   @media (min-width: 768px) {

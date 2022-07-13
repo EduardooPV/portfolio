@@ -73,6 +73,10 @@ export const NavLinks = styled.nav`
         width: 100%;
       }
     }
+
+    &:active {
+      color: ${c.primary300};
+    }
   }
 
   a:nth-child(4) {
@@ -161,23 +165,12 @@ export const MenuIcon = styled.div`
 
 const slide = keyframes`
   0% {
-    top: -100%;
+    top: -900%;
     opacity: 0;
   }
   100% {
     top: 5%;
     opacity: 1;
-  }
-`;
-
-const slideOut = keyframes`
-  0% {
-    top: 5%;
-    opacity: 1;
-  }
-  100% {
-    top: -100%;
-    opacity: 0;
   }
 `;
 
@@ -200,8 +193,6 @@ export const Menu = styled.div`
   line-height: ${f.h4.lineHeight};
   color: white;
 
-  animation: ${slideOut} 0.5s linear;
-
   @media (orientation: landscape) {
     top: -200%;
   }
@@ -215,12 +206,23 @@ export const Menu = styled.div`
     line-height: ${f.h2.lineHeight};
     font-weight: ${f.h2.fontWeight.bold};
     color: ${c.neutral500};
+    border: 1px solid transparent;
+  }
+
+  a:active {
+    color: ${c.white};
+    border-radius: 4px;
+    border: 1px solid ${c.white};
   }
 
   a:last-child {
     color: ${c.white};
     background: ${c.neutral500};
     border-radius: 4px;
+
+    &:active {
+      color: ${c.primary300};
+    }
   }
 
   &.menuOpen {
@@ -235,7 +237,7 @@ export const Menu = styled.div`
     left: 0;
     overflow: auto;
 
-    animation: ${slide} 0.5s linear;
+    animation: ${slide} 0.4s;
     background: ${c.primary300};
   }
 `;

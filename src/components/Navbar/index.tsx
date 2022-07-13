@@ -87,56 +87,31 @@ export function Navbar({ toggleTheme, theme }: NavbarProps) {
             </NavLinks>
           </Media>
           <Media at="sm">
-            {/* <MenuHamburguer>
-              <Menu
-                right
-                noOverlay
-                customBurgerIcon={
-                  <img
-                    src="/assets/menu.svg"
-                    alt="Icone abrir menu hamburguer"
-                  />
-                }
-                customCrossIcon={
-                  <img
-                    src="/assets/close.svg"
-                    alt="Icone fechar menu hamburguer"
-                  />
-                }
-              >
-                <Link href="/" passHref>
-                  <a className="menu-item">Início</a>
-                </Link>
-                <Link href="/projetos" passHref>
-                  <a className="menu-item">Projetos</a>
-                </Link>
-                <Link href="/contato" passHref>
-                  <a className="menu-item">Contato</a>
-                </Link>
-                <a
-                  className="menu-item"
-                  href="/CV-Luiz-Eduardo-Front-End.pdf/"
-                  download="CV-Luiz-Eduardo-Front-End"
-                >
-                  Download CV
-                </a>
-              </Menu>
-            </MenuHamburguer> */}
-            <MenuIcon className={active ? "open" : ""} onClick={Toggle} />
-            <Menu className={active ? "menuOpen" : ""}>
+            <MenuIcon
+              className={active ? "open" : "menuClose"}
+              onClick={Toggle}
+            />
+            <Menu className={active ? "menuOpen" : "menuClose"}>
               <Link href="/" passHref>
-                <a className="menu-item">Início</a>
+                <a className="menu-item" onClick={Toggle}>
+                  Início
+                </a>
               </Link>
               <Link href="/projetos" passHref>
-                <a className="menu-item">Projetos</a>
+                <a className="menu-item" onClick={Toggle}>
+                  Projetos
+                </a>
               </Link>
               <Link href="/contato" passHref>
-                <a className="menu-item">Contato</a>
+                <a className="menu-item" onClick={Toggle}>
+                  Contato
+                </a>
               </Link>
               <a
                 className="menu-item"
                 href="/CV-Luiz-Eduardo-Front-End.pdf/"
                 download="CV-Luiz-Eduardo-Front-End"
+                onClick={Toggle}
               >
                 Curriculo
               </a>

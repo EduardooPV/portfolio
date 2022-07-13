@@ -54,11 +54,15 @@ export const ContainerIcons = styled.div`
     line-height: 0;
     transition: all 0.2s;
     color: ${(props) => props.theme.colors.text};
-  }
+    
+    :hover {
+      filter: brightness(0.8);
+      transform: scale(1.1);
+    }
 
-  a:hover {
-    filter: brightness(0.8);
-    transform: scale(1.1);
+    :active {
+      color: ${c.white};
+    }
   }
 `;
 
