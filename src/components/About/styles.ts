@@ -58,6 +58,7 @@ export const ContainerIcons = styled.div`
 
   a:hover {
     filter: brightness(0.8);
+    transform: scale(1.1);
   }
 `;
 
@@ -68,14 +69,18 @@ export const ContainerButton = styled.div`
   align-items: center;
   gap: 2rem;
 
+  a {
+    width: 100%;
+  }
+
+  @media (min-width: 415px) {
+    width: fit-content;
+  }
+
   @media (min-width: 768px) {
     flex-direction: row;
     gap: 3rem;
     justify-content: start;
-
-    button {
-      max-width: 230px;
-    }
   }
 `;
 

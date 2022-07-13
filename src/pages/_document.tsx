@@ -49,14 +49,16 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
 
-          <title>Portifólio | Luiz Eduardo</title>
+          <title>Portfólio | Luiz Eduardo</title>
 
           <meta
             name="description"
-            content="Portifólio do Luiz Eduardo Prado Veltroni, contando um pouco sobre mim, meus conhecimentos e alguns dos meus projetos."
+            content="Portfólio do Luiz Eduardo Prado Veltroni, contando um pouco sobre mim, meus conhecimentos e alguns dos meus projetos."
           />
 
           <link rel="shortcut icon" href="/favicon.png" />
+
+          <meta name="theme-color" content="#232222" />
         </Head>
         <body>
           <Main />

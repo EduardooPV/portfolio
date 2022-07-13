@@ -42,7 +42,7 @@ export function About() {
             target="_blank"
             rel="noreferrer"
           >
-            <AiFillLinkedin size={40} />
+            <AiFillLinkedin size={35} />
           </a>
           <a
             href="mailto:eduardoveltroni@hotmail.com"
@@ -52,7 +52,7 @@ export function About() {
             <HiOutlineMail size={40} />
           </a>
           <a href="https://dev.to/eduardoopv" target="_blank" rel="noreferrer">
-            <FaDev size={30} />
+            <FaDev size={29} />
           </a>
           <a
             href="/CV-Luiz-Eduardo-Front-End.pdf/"

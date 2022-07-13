@@ -12,6 +12,18 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  a {
+    width: 100%;
+  }
+
+  > div:last-child {
+    width: 100%;
+
+    @media (min-width: 415px) {
+      width: fit-content;
+    }
+  }
 `;
 
 export const Content = styled.div`
@@ -81,6 +93,12 @@ export const CardUIUX = styled.div`
       padding: 10px 20px;
 
       font-size: ${t.paragraphLarge.fontSize};
+
+      transition: all 0.2s;
+
+      &:hover {
+        filter: brightness(0.7);
+      }
     }
 
     @media (min-width: 768px) {
@@ -168,6 +186,12 @@ export const CardDev = styled.div`
       padding: 10px 20px;
 
       font-size: ${t.paragraphLarge.fontSize};
+
+      transition: all 0.2s;
+
+      &:hover {
+        filter: brightness(0.7);
+      }
     }
 
     @media (min-width: 768px) {

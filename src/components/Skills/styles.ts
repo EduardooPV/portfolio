@@ -26,7 +26,7 @@ export const ContainerCard = styled.div`
   background: ${(props) => props.theme.colors.backgroundCards};
 
   border: 2px solid ${c.neutral200};
-  z-index: 99;
+  z-index: 9;
 
   > div {
     width: 80%;
@@ -73,7 +73,6 @@ export const ContainerCard = styled.div`
 
   p {
     font-size: ${t.h5.fontSize};
-    font-weight: ${t.h5.fontWeight.bold};
     color: ${(props) => props.theme.colors.title};
   }
 
@@ -96,7 +95,7 @@ export const ModalHover = styled.div`
   width: 100%;
   height: 300px;
 
-  padding: 1rem;
+  padding: 40px 20px;
 
   position: absolute;
   bottom: 0;
@@ -114,8 +113,13 @@ export const ModalHover = styled.div`
     align-items: center;
     gap: 20px;
 
-    p {
+    span {
       width: 100%;
+      line-height: ${t.paragraphSmall.lineHeight};
+    }
+
+    strong {
+      color: ${c.primary300}
     }
   }
 

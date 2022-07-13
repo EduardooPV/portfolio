@@ -2,40 +2,14 @@ import styled from "styled-components";
 import c from "../../styles/pallete.json";
 import f from "../../styles/typography.json";
 
-export const BackHome = styled.div`
-  position: fixed;
-  right: 5%;
-  bottom: 3rem;
-
-  z-index: 2;
-
-  path {
-    fill: ${(props) => props.theme.colors.icon};
-  }
-  
-  &:hover {
-    animation: toping 0.2s alternate infinite;
-
-    @keyframes toping {
-      from {
-        transform: translateY(0px);
-      }
-      
-      to {
-        transform: translateY(-10px);
-      }
-    }
-  }
-`;
-
 export const Container = styled.main`
   max-width: 1240px;
   height: 100vh;
 
   margin: 0 auto;
-  padding: 40px 20px;
+  padding-top: 60px;
 
-  @media (min-width: 768px) {
+  @media (min-width: 768px) {    
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -81,14 +55,18 @@ export const ContainerButton = styled.div`
   align-items: center;
   gap: 2rem;
 
+  a {
+    width: 100%;
+  }
+
+  @media (min-width: 415px) {
+    width: fit-content;
+  }
+
   @media (min-width: 768px) {
     flex-direction: row;
     gap: 3rem;
     justify-content: end;
-
-    button {
-      max-width: 230px;
-    }
   }
 `;
 
