@@ -20,10 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   };
 
   useEffect(() => {
-    AOS.init({
-      disable: window.innerWidth < 768,
-    });
-    AOS.refresh();
+    AOS.init();
   }, []);
   return (
     <>
