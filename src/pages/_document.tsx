@@ -49,8 +49,6 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
 
-          <title>Portfólio | Luiz Eduardo</title>
-
           <meta
             name="description"
             content="Portfólio do Luiz Eduardo Prado Veltroni, contando um pouco sobre mim, meus conhecimentos e alguns dos meus projetos."
