@@ -1,7 +1,6 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 
-import { Container, Content, MenuHamburguer, NavLinks } from "./styles";
-import { bubble as Menu } from "react-burger-menu";
+import { Container, Content, MenuIcon, Menu, NavLinks } from "./styles";
 import { NavbarProps } from "./interface";
 import Switch from "react-switch";
 import { ThemeContext } from "styled-components";
@@ -10,6 +9,10 @@ import Link from "next/link";
 
 export function Navbar({ toggleTheme, theme }: NavbarProps) {
   const { colors } = useContext(ThemeContext);
+  const [active, setActive] = useState(false);
+  function Toggle() {
+    setActive(!active);
+  }
 
   return (
     <Container data-aos="fade-down" data-aos-duration="1000">
@@ -84,7 +87,7 @@ export function Navbar({ toggleTheme, theme }: NavbarProps) {
             </NavLinks>
           </Media>
           <Media at="sm">
-            <MenuHamburguer>
+            {/* <MenuHamburguer>
               <Menu
                 right
                 noOverlay
@@ -118,7 +121,26 @@ export function Navbar({ toggleTheme, theme }: NavbarProps) {
                   Download CV
                 </a>
               </Menu>
-            </MenuHamburguer>
+            </MenuHamburguer> */}
+            <MenuIcon className={active ? "open" : ""} onClick={Toggle} />
+            <Menu className={active ? "menuOpen" : ""}>
+              <Link href="/" passHref>
+                <a className="menu-item">Início</a>
+              </Link>
+              <Link href="/projetos" passHref>
+                <a className="menu-item">Projetos</a>
+              </Link>
+              <Link href="/contato" passHref>
+                <a className="menu-item">Contato</a>
+              </Link>
+              <a
+                className="menu-item"
+                href="/CV-Luiz-Eduardo-Front-End.pdf/"
+                download="CV-Luiz-Eduardo-Front-End"
+              >
+                Download CV
+              </a>
+            </Menu>
           </Media>
         </div>
       </Content>

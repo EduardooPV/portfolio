@@ -10,7 +10,7 @@ export function Projects() {
     <Container id="projects">
       <TextSection tag="<h2>">Projetos</TextSection>
 
-      <Content data-aos="fade-up" data-aos-offset="200" data-aos-duration="800">
+      <Content>
         <CardUIUX>
           <div>
             <svg
@@ -64,9 +64,7 @@ export function Projects() {
           <div>
             <p>Implementação</p>
 
-            <span>
-              Venha ver algumas aplicações web que eu desenvolvi.
-            </span>
+            <span>Venha ver algumas aplicações web que eu desenvolvi.</span>
           </div>
         </CardDev>
       </Content>

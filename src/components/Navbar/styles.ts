@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import c from "../../styles/pallete.json";
 import f from "../../styles/typography.json";
 
@@ -34,6 +34,7 @@ export const Content = styled.div`
   > a,
   > a svg {
     height: 80%;
+    width: fit-content;
   }
 `;
 
@@ -79,58 +80,169 @@ export const NavLinks = styled.nav`
   }
 `;
 
-export const MenuHamburguer = styled.div`
-  width: 35px;
-  height: 35px;
+export const MenuIcon = styled.div`
+  position: absolute;
+  z-index: 5;
+  right: 5%;
+  top: 45%;
 
-  position: relative;
+  width: 28px;
+  height: 4px;
 
-  .bm-menu-wrap {
-    width: 100% !important;
-    min-height: 100vh !important;
-    top: 0;
+  cursor: pointer;
+
+  transition: 0.5s;
+
+  border-radius: 3px;
+
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+  &::before {
+    position: absolute;
+    top: -8px;
+
+    width: 28px;
+    height: 4px;
+    border-radius: 3px;
+    content: "";
+
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+    transition: 0.5s;
   }
 
-  .bm-cross-button {
-    width: 50px !important;
-    height: 50px !important;
+  &::after {
+    position: absolute;
+    top: 8px;
+
+    width: 28px;
+    height: 4px;
+    border-radius: 3px;
+    content: "";
+
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+    transition: all 0.5s;
   }
 
-  .bm-morph-shape {
-    fill: ${c.primary300};
+  &.open {
+    background: transparent;
+    box-shadow: 0 2px 5px transparent;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      background: white;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transform: rotate(225deg);
+      content: "";
+      width: 28px;
+      height: 4px;
+      border-radius: 3px;
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      background: white;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transform: rotate(135deg);
+      content: "";
+      width: 28px;
+      height: 4px;
+      border-radius: 3px;
+    }
+  }
+`;
+
+const slide = keyframes`
+  0% {
+    top: -100%;
+    opacity: 0;
+  }
+  100% {
+    top: 5%;
+    opacity: 1;
+  }
+`;
+
+const slideOut = keyframes`
+  0% {
+    top: 5%;
+    opacity: 1;
+  }
+  100% {
+    top: -100%;
+    opacity: 0;
+  }
+`;
+
+export const Menu = styled.div`
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  width: 100%;
+  height: 100%;
+
+  top: -100%;
+  z-index: 4;
+
+  font-size: ${f.h4.fontSize};
+  font-weight: ${f.h4.fontWeight.bold};
+  line-height: ${f.h4.lineHeight};
+  color: white;
+
+  li {
+    margin: 20px 0;
+
+    cursor: pointer;
   }
 
-  .bm-menu {
-    width: 100%;
-  }
-
-  .bm-item-list {
-    width: 100%;
-    height: 100%;
-
+  ul {
     display: flex;
     flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    gap: 2rem;
+    align-items: center;
 
-    color: #b8b7ad;
-    padding: 1rem;
+    width: 80%;
   }
 
-  .menu-item {
-    padding: 1rem;
+  animation: ${slideOut} 0.5s linear;
+  background: ${c.primary500};
 
-    font-family: "montserrat", sans-serif;
-    font-size: ${f.h4.fontSize};
-    font-weight: ${f.h4.fontWeight.bold};
-    color: ${c.neutral100};
-    text-align: center;
-    text-decoration: none;
+  @media (orientation: landscape) {
+    top: -200%;
+  }
 
-    &:last-child {
-      border-radius: 0.25rem;
-      border: 2px solid ${c.neutral100};
+  &.menuOpen {
+    display: flex;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+    padding: 40px 0;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    overflow: auto;
+
+    animation: ${slide} 0.5s linear;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      width: 80%;
+
+      z-index: 5;
+
+      padding-bottom: 40px;
     }
   }
 `;
