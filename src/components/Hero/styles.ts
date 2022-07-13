@@ -7,7 +7,7 @@ export const Container = styled.main`
   height: 100vh;
 
   margin: 0 auto;
-  padding-top: 60px;
+  padding: 60px 20px 0 20px;
 
   @media (min-width: 768px) {    
     display: grid;
