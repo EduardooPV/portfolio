@@ -21,7 +21,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     AOS.init();
-    AOS.refresh();
   }, []);
   return (
     <>

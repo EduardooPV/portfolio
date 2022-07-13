@@ -5,11 +5,14 @@ import { PropsStyled } from "./interface";
 
 export const Container = styled.button<PropsStyled>`
   width: 100%;
+  min-width: 250px;
   max-width: 400px;
+
+  margin: 0 auto;
   padding: 5px 20px;
 
   background: ${(props) => (props.types ? "transparent" : `${c.primary300}`)};
-  border: ${(props) => (props.types ? `1px solid ${c.primary300}` : 0)};
+  border: 2px solid ${c.primary300};
 
   color: ${(props) => (props.types ? c.primary300 : c.neutral500)};
   font-family: "Montserrat", sans-serif;
@@ -22,6 +25,10 @@ export const Container = styled.button<PropsStyled>`
   transition: all 0.2s;
 
   &:hover {
-    background: ${(props) => (props.types ? "transparent" : `${c.primary400}`)};
+    filter: brightness(0.7);
+  }
+
+  @media (min-width: 768px) {
+    max-width: 400px;
   }
 `;

@@ -10,12 +10,8 @@ export function Projects() {
     <Container id="projects">
       <TextSection tag="<h2>">Projetos</TextSection>
 
-      <Content>
-        <CardUIUX
-          data-aos="fade-down-right"
-          data-aos-offset="100"
-          data-aos-duration="1000"
-        >
+      <Content data-aos="fade-up" data-aos-offset="200" data-aos-duration="800">
+        <CardUIUX>
           <div>
             <svg
               width="70"
@@ -40,16 +36,12 @@ export function Projects() {
 
             <span>
               Venha ver alguns projetos que eu realizei utilizando alguns
-              conceitos de UI/UX
+              conceitos de UI/UX.
             </span>
           </div>
         </CardUIUX>
 
-        <CardDev
-          data-aos="fade-up-left"
-          data-aos-offset="200"
-          data-aos-duration="1000"
-        >
+        <CardDev>
           <div>
             <svg
               width="70"
@@ -73,8 +65,7 @@ export function Projects() {
             <p>Implementação</p>
 
             <span>
-              Venha ver alguns projetos implementados utilizando React.js e
-              Next.js
+              Venha ver algumas aplicações web que eu desenvolvi.
             </span>
           </div>
         </CardDev>

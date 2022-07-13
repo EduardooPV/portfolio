@@ -14,10 +14,6 @@ export const Container = styled.header`
   color: ${c.neutral200};
 
   z-index: 999;
-
-  @media (min-width: 768px) {
-    height: 80px;
-  }
 `;
 
 export const Content = styled.div`
@@ -30,6 +26,15 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  > a {
+    display: flex;
+    align-items: center;
+  }
+  > a,
+  > a svg {
+    height: 80%;
+  }
 `;
 
 export const NavLinks = styled.nav`
@@ -46,28 +51,31 @@ export const NavLinks = styled.nav`
     color: ${c.neutral100};
     text-decoration: none;
 
+    position: relative;
+
+    ::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 0px;
+      height: 2px;
+      background: ${c.primary300};
+
+      transition: all 0.2s;
+    }
+
     &:hover {
-      text-decoration: underline;
+      ::after {
+        left: 0;
+        width: 100%;
+      }
     }
   }
 
   a:nth-child(4) {
-    margin-right: 2rem;
-    padding: 4px 18px;
-
-    border-radius: 0.25rem;
-    background-color: ${c.primary300};
-    font-weight: ${f.paragraphLarge.fontWeight.bold};
-    color: ${c.neutral700};
-    text-decoration: none;
-    border: 1px solid transparent;
-    transition: all 0.2s;
-
-    &:hover {
-      background-color: transparent;
-      color: ${c.primary300};
-      border: 1px solid ${c.primary300};
-    }
+    margin-right: 10px;
   }
 `;
 
@@ -78,8 +86,8 @@ export const MenuHamburguer = styled.div`
   position: relative;
 
   .bm-menu-wrap {
-    width: 100vw !important;
-    height: 100vh !important;
+    width: 100% !important;
+    min-height: 100vh !important;
     top: 0;
   }
 

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import c from "../../styles/pallete.json";
 import f from "../../styles/typography.json";
 
 export const Container = styled.footer`
@@ -31,11 +32,28 @@ export const Content = styled.div`
     gap: 10px;
 
     font-size: ${f.paragraphLarge.fontSize};
+    line-height: ${f.paragraphLarge.lineHeight};
     color: ${(props) => props.theme.colors.footerText};
     text-decoration: none;
 
+    ::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 0px;
+      height: 2px;
+      background: ${(props) => props.theme.colors.footerText};
+
+      transition: all 0.2s;
+    }
+
     &:hover {
-      text-decoration: underline;
+      ::after {
+        left: 0;
+        width: 100%;
+      }
     }
   }
 

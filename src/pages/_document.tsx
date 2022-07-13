@@ -57,6 +57,8 @@ class MyDocument extends Document {
           />
 
           <link rel="shortcut icon" href="/favicon.png" />
+
+          <meta name="theme-color" content="#4285f4" />
         </Head>
         <body>
           <Main />
