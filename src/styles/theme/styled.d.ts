@@ -1,6 +1,6 @@
-import 'styled-components';
+import "styled-components";
 
-declare module 'styled-components' {
+declare module "styled-components" {
   export interface DefaultTheme {
     title: string;
     colors: {
@@ -14,6 +14,9 @@ declare module 'styled-components' {
       icon: string;
       footer: string;
       footerText: string;
+      logoEduardo: string;
+      logoDev: string;
+      logoPrado: string;
     };
   }
 
@@ -30,6 +33,9 @@ declare module 'styled-components' {
       icon: string;
       footer: string;
       footerText: string;
+      logoEduardo: string;
+      logoDev: string;
+      logoPrado: string;
     };
   }
 }

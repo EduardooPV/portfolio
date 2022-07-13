@@ -13,6 +13,10 @@ export default {
     text: c.neutral500,
     icon: c.neutral700,
     footer: c.neutral700,
-    footerText: c.neutral100
+    footerText: c.neutral100,
+
+    logoEduardo: "transparent",
+    logoDev: c.primary300,
+    logoPrado: c.neutral100,
   },
 };

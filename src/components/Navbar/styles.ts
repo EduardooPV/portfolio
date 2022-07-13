@@ -35,6 +35,16 @@ export const Content = styled.div`
   > a svg {
     height: 80%;
     width: fit-content;
+
+    path:nth-child(1) {
+      fill: ${(props) => props.theme.colors.logoEduardo};
+    }
+    path:nth-child(2) {
+      fill: ${(props) => props.theme.colors.logoDev};
+    }
+    path:nth-child(3) {
+      fill: ${(props) => props.theme.colors.logoPrado};
+    }
   }
 `;
 

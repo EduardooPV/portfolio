@@ -14,5 +14,9 @@ export default {
     icon: c.white,
     footer: c.primary300,
     footerText: c.neutral700,
+
+    logoEduardo: c.neutral100,
+    logoDev: c.primary300,
+    logoPrado: "transparent",
   },
 };
