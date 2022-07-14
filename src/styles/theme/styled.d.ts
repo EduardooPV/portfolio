@@ -17,6 +17,8 @@ declare module "styled-components" {
       logoEduardo: string;
       logoDev: string;
       logoPrado: string;
+      barCard: string;
+      descriptionCard: string;
     };
   }
 
@@ -36,6 +38,8 @@ declare module "styled-components" {
       logoEduardo: string;
       logoDev: string;
       logoPrado: string;
+      barCard: string;
+      descriptionCard: string;
     };
   }
 }

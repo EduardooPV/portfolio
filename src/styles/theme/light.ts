@@ -18,5 +18,7 @@ export default {
     logoEduardo: "transparent",
     logoDev: c.primary300,
     logoPrado: c.neutral100,
+    descriptionCard: c.neutral500,
+    barCard: "rgba(0, 0, 0, 0.1)",
   },
 };

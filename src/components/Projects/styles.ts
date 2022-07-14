@@ -15,21 +15,16 @@ export const Container = styled.section`
 
   a {
     width: 100%;
-  }
-
-  > div:last-child {
-    width: 100%;
-
-    @media (min-width: 415px) {
-      width: fit-content;
-    }
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
   }
 `;
 
 export const Content = styled.div`
   width: 100%;
 
-  margin: 4rem 0 2rem 0;
+  margin: 4rem 0;
 
   display: flex;
   flex-direction: column;
@@ -38,7 +33,7 @@ export const Content = styled.div`
 
   @media (min-width: 768px) {
     height: 100vh;
-    max-height: 400px;
+    max-height: 350px;
     position: relative;
   }
 `;
@@ -55,7 +50,7 @@ export const CardUIUX = styled.div`
   border: 2px solid ${c.neutral200};
 
   path {
-    fill: ${(props) => props.theme.colors.icon};
+    fill: ${c.primary300};
   }
 
   @media (min-width: 768px) {
@@ -68,7 +63,7 @@ export const CardUIUX = styled.div`
     left: 0;
   }
 
-  > div:first-child {
+  > div {
     width: fit-content;
     display: flex;
     flex-direction: column;
@@ -84,54 +79,19 @@ export const CardUIUX = styled.div`
       }
     }
 
-    button {
-      width: 150px;
-      color: ${c.black};
-      background: ${c.primary300};
-      border-radius: 2px;
-      border: none;
-      padding: 10px 20px;
-
-      font-size: ${t.paragraphLarge.fontSize};
-
-      transition: all 0.2s;
-
-      &:hover {
-        filter: brightness(0.7);
-      }
-    }
-
     @media (min-width: 768px) {
       gap: 30px;
     }
   }
 
-  > div:last-child {
-    p {
-      font-size: ${t.h3.fontSize};
-      font-weight: ${t.h3.fontWeight.bold};
-      color: ${(props) => props.theme.colors.title};
-
-      word-break: break-all;
-
-      margin-bottom: 10px;
-    }
-
-    span {
-      font-size: ${t.paragraphSmall.fontSize};
-      line-height: ${t.paragraphSmall.lineHeight};
-      color: ${(props) => props.theme.colors.text};
-    }
+  span {
+    font-size: ${t.paragraphSmall.fontSize};
+    line-height: ${t.paragraphSmall.lineHeight};
+    color: ${(props) => props.theme.colors.text};
 
     @media (min-width: 768px) {
-      p {
-        font-size: ${t.h2.fontSize};
-      }
-
-      span {
-        font-size: ${t.paragraphLarge.fontSize};
-        line-height: ${t.paragraphLarge.lineHeight};
-      }
+      font-size: ${t.paragraphLarge.fontSize};
+      line-height: ${t.paragraphLarge.lineHeight};
     }
   }
 `;
@@ -148,7 +108,7 @@ export const CardDev = styled.div`
   border: 1px solid ${c.neutral200};
 
   path {
-    fill: ${(props) => props.theme.colors.icon};
+    fill: ${c.primary300};
   }
 
   @media (min-width: 768px) {
@@ -161,7 +121,7 @@ export const CardDev = styled.div`
     bottom: 0;
   }
 
-  > div:first-child {
+  > div {
     width: fit-content;
     display: flex;
     flex-direction: column;
@@ -177,54 +137,19 @@ export const CardDev = styled.div`
       }
     }
 
-    button {
-      width: 150px;
-      color: ${c.black};
-      background: ${c.primary300};
-      border-radius: 2px;
-      border: none;
-      padding: 10px 20px;
-
-      font-size: ${t.paragraphLarge.fontSize};
-
-      transition: all 0.2s;
-
-      &:hover {
-        filter: brightness(0.7);
-      }
-    }
-
     @media (min-width: 768px) {
       gap: 30px;
     }
   }
 
-  > div:last-child {
-    p {
-      font-size: ${t.h3.fontSize};
-      font-weight: ${t.h2.fontWeight.bold};
-      color: ${(props) => props.theme.colors.title};
-
-      word-break: break-all;
-
-      margin-bottom: 10px;
-    }
-
-    span {
-      font-size: ${t.paragraphSmall.fontSize};
-      line-height: ${t.paragraphSmall.lineHeight};
-      color: ${(props) => props.theme.colors.text};
-    }
+  span {
+    font-size: ${t.paragraphSmall.fontSize};
+    line-height: ${t.paragraphSmall.lineHeight};
+    color: ${(props) => props.theme.colors.text};
 
     @media (min-width: 768px) {
-      p {
-        font-size: ${t.h2.fontSize};
-      }
-
-      span {
-        font-size: ${t.paragraphLarge.fontSize};
-        line-height: ${t.paragraphLarge.lineHeight};
-      }
+      font-size: ${t.paragraphLarge.fontSize};
+      line-height: ${t.paragraphLarge.lineHeight};
     }
   }
 `;
