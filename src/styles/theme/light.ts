@@ -13,6 +13,9 @@ export default {
     text: c.neutral500,
     icon: c.neutral700,
     footer: c.neutral700,
-    footerText: c.neutral100
+    footerText: c.neutral100,
+
+    descriptionCard: c.neutral500,
+    barCard: "rgba(0, 0, 0, 0.1)",
   },
 };

@@ -14,5 +14,8 @@ export default {
     icon: c.white,
     footer: c.primary300,
     footerText: c.neutral700,
+
+    descriptionCard: c.neutral200,
+    barCard: c.neutral500,
   },
 };
