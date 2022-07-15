@@ -6,7 +6,7 @@ import { Container, Content, CardUIUX, CardDev } from "./styles";
 
 export function Projects() {
   return (
-    <Container id="projects">
+    <Container data-aos="fade-up" data-aos-offset="200" data-aos-duration="800">
       <TextSection tag="<h2>">Projetos</TextSection>
 
       <Content>

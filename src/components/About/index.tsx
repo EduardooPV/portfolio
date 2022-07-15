@@ -19,7 +19,6 @@ import Link from "next/link";
 export function About() {
   return (
     <Container
-      id="about"
       data-aos="fade-up"
       data-aos-offset="200"
       data-aos-duration="800"

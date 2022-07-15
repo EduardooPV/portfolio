@@ -20,7 +20,7 @@ interface CardProps {
 
 export function CardProject(props: CardProps) {
   return (
-    <Container>
+    <Container >
       {props.loading ? (
         <SkeletonTheme baseColor="#202020" highlightColor="#444">
           <div>

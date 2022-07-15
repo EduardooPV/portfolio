@@ -13,7 +13,7 @@ export const Container = styled.header`
 
   color: ${c.neutral200};
 
-  z-index: 999;
+  z-index: 9;
 `;
 
 export const Content = styled.div`
