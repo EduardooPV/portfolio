@@ -1,6 +1,8 @@
 import React from "react";
 import { Container, Header, Description, Footer } from "./styles";
 import { AiOutlineEye, AiOutlineStar, AiFillGithub } from "react-icons/ai";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 interface CardProps {
   props: {
@@ -12,39 +14,54 @@ interface CardProps {
     stargazers_count: number;
     watchers: string;
   };
+
+  loading: boolean;
 }
 
 export function CardProject(props: CardProps) {
   return (
     <Container>
-      <Header>
-        <div>
-          <p>{props.props.name.replace(/-/g, " ")}</p>
-
+      {props.loading ? (
+        <SkeletonTheme baseColor="#202020" highlightColor="#444">
           <div>
-            <span>
-              <AiOutlineEye color="#F89D24" />
-              {props.props.watchers}
-            </span>
-
-            <span>
-              <AiOutlineStar color="#F89D24" />
-              {props.props.stargazers_count}
-            </span>
+            <Skeleton count={1} height={25} />
+            <Skeleton count={1} height={25} />
           </div>
-        </div>
+          <Skeleton count={1} height={15} />
+          <Skeleton count={5} height={20} />
+        </SkeletonTheme>
+      ) : (
+        <>
+          <Header>
+            <div>
+              <p>{props.props.name.replace(/-/g, " ")}</p>
 
-        <span>
-          Criado em:{" "}
-          {new Date(props.props.created_at).toLocaleDateString("pt-BR", {
-            day: "2-digit",
-            month: "2-digit",
-            year: "numeric",
-          })}
-        </span>
-      </Header>
+              <div>
+                <span>
+                  <AiOutlineEye color="#F89D24" />
+                  {props.props.watchers}
+                </span>
 
-      <Description>{props.props.description}</Description>
+                <span>
+                  <AiOutlineStar color="#F89D24" />
+                  {props.props.stargazers_count}
+                </span>
+              </div>
+            </div>
+
+            <span>
+              Criado em:{" "}
+              {new Date(props.props.created_at).toLocaleDateString("pt-BR", {
+                day: "2-digit",
+                month: "2-digit",
+                year: "numeric",
+              })}
+            </span>
+          </Header>
+
+          <Description>{props.props.description}</Description>
+        </>
+      )}
 
       <Footer>
         <a href={props.props.homepage} target="_blank" rel="noreferrer">

@@ -18,6 +18,7 @@ interface ProjectsProps {
 
 export function ListProjects() {
   const [projects, setProjects] = useState<ProjectsProps[]>();
+  const [loading, setLoading] = useState(true)
 
   function SortProjectsByData(a: any, b: any) {
     if (a.updated_at > b.updated_at) {
@@ -37,6 +38,8 @@ export function ListProjects() {
     )
       .then((response) => response.json())
       .then((response) => setProjects(response.items.sort(SortProjectsByData)));
+
+    setLoading(false)
   }, []);
 
   return (
@@ -46,7 +49,7 @@ export function ListProjects() {
       <Content>
         {projects?.map((project) => (
           <>
-            <CardProject props={project} key={project.id} />
+            <CardProject props={project} key={project.id} loading={loading} />
           </>
         ))}
       </Content>
