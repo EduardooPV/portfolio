@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import { Media } from "../MediaScreen";
 
 import { TextSection } from "../TextSection";
@@ -26,14 +25,8 @@ export function Hero() {
           </p>
 
           <ContainerButton>
-            <Link href="/contato" passHref>
-              <a>
-                <ButtonGeneric>Entre em contato</ButtonGeneric>
-              </a>
-            </Link>
-
             <a href="#about">
-              <ButtonGeneric invisible>Sobre mim</ButtonGeneric>
+              <ButtonGeneric>Sobre mim</ButtonGeneric>
             </a>
           </ContainerButton>
         </Content>

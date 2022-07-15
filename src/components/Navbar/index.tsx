@@ -17,7 +17,7 @@ export function Navbar({ toggleTheme, theme }: NavbarProps) {
   return (
     <Container data-aos="fade-down" data-aos-duration="800">
       <Content>
-        <a href="/">
+        <a href="/" title="Logo">
           <svg
             width="48"
             height="16"
@@ -41,6 +41,7 @@ export function Navbar({ toggleTheme, theme }: NavbarProps) {
         </a>
         <Media at="sm">
           <Switch
+            id="theme"
             onChange={toggleTheme}
             checked={theme.title === "light"}
             checkedIcon={false}
@@ -61,9 +62,6 @@ export function Navbar({ toggleTheme, theme }: NavbarProps) {
               </Link>
               <Link href="/projetos" passHref>
                 <a>Projetos</a>
-              </Link>
-              <Link href="/contato" passHref>
-                <a>Contato</a>
               </Link>
               <a
                 href="/CV-Luiz-Eduardo-Front-End.pdf/"
@@ -99,11 +97,6 @@ export function Navbar({ toggleTheme, theme }: NavbarProps) {
               <Link href="/projetos" passHref>
                 <a className="menu-item" onClick={Toggle}>
                   Projetos
-                </a>
-              </Link>
-              <Link href="/contato" passHref>
-                <a className="menu-item" onClick={Toggle}>
-                  Contato
                 </a>
               </Link>
               <a

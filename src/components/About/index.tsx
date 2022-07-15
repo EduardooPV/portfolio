@@ -44,6 +44,7 @@ export function About() {
             href="https://www.linkedin.com/in/luiz-veltroni/"
             target="_blank"
             rel="noreferrer"
+            title="Icone LinkedIn"
           >
             <AiFillLinkedin size={35} />
           </a>
@@ -51,15 +52,22 @@ export function About() {
             href="mailto:eduardoveltroni@hotmail.com"
             target="_blank"
             rel="noreferrer"
+            title="Icone E-mail"
           >
             <HiOutlineMail size={40} />
           </a>
-          <a href="https://dev.to/eduardoopv" target="_blank" rel="noreferrer">
+          <a
+            href="https://dev.to/eduardoopv"
+            target="_blank"
+            rel="noreferrer"
+            title="Icone blog Dev.to"
+          >
             <FaDev size={29} />
           </a>
           <a
             href="/CV-Luiz-Eduardo-Front-End.pdf/"
             download="CV-Luiz-Eduardo-Front-End"
+            title="Icone download curriculo"
           >
             <BiCloudDownload size={40} />
           </a>
@@ -68,13 +76,7 @@ export function About() {
         <ContainerButton>
           <Link href="/projetos" passHref>
             <a>
-              <ButtonGeneric invisible>Meus projetos</ButtonGeneric>
-            </a>
-          </Link>
-
-          <Link href="/contato">
-            <a>
-              <ButtonGeneric>Entre em contato</ButtonGeneric>
+              <ButtonGeneric>Meus projetos</ButtonGeneric>
             </a>
           </Link>
         </ContainerButton>

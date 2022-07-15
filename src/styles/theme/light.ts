@@ -10,7 +10,7 @@ export default {
     background: c.neutral100,
     backgroundCards: c.neutral100,
     title: c.neutral700,
-    text: c.neutral500,
+    text: c.black,
     icon: c.neutral700,
 
     logoEduardo: "transparent",

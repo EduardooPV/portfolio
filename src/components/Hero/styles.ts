@@ -36,6 +36,7 @@ export const Content = styled.div`
 
     > span {
       color: ${c.primary300};
+      font-weight: bold;
     }
   }
 
