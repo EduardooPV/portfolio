@@ -12,8 +12,6 @@ export default {
     title: c.white,
     text: c.neutral200,
     icon: c.white,
-    footer: c.primary300,
-    footerText: c.neutral700,
 
     logoEduardo: c.neutral100,
     logoDev: c.primary300,

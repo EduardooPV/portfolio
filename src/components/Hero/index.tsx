@@ -10,13 +10,9 @@ import { Container, Content, Figure, ContainerButton } from "./styles";
 export function Hero() {
   return (
     <>
-      <Container
-        id="hero"
-        data-aos="fade-down"
-        data-aos-duration="800"
-      >
+      <Container id="hero" data-aos="fade-down" data-aos-duration="800">
         <Content>
-          <TextSection tag="<h1>" tabIndex={6}>
+          <TextSection tag="<h1>" tabIndex={0}>
             Seja bem vindo
           </TextSection>
 
@@ -31,12 +27,12 @@ export function Hero() {
 
           <ContainerButton>
             <Link href="/contato" passHref>
-              <a tabIndex={7}>
+              <a>
                 <ButtonGeneric>Entre em contato</ButtonGeneric>
               </a>
             </Link>
 
-            <a href="#about" tabIndex={8}>
+            <a href="#about">
               <ButtonGeneric invisible>Sobre mim</ButtonGeneric>
             </a>
           </ContainerButton>

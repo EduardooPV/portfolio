@@ -16,7 +16,6 @@ export function Footer() {
             href="https://www.linkedin.com/in/luiz-veltroni/"
             target="_blank"
             rel="noreferrer"
-            tabIndex={19}
           >
             <AiFillLinkedin size={25} />
             LinkedIn
@@ -28,7 +27,6 @@ export function Footer() {
             href="mailto:eduardoveltroni@hotmail.com"
             target="_blank"
             rel="noreferrer"
-            tabIndex={20}
           >
             <HiOutlineMail size={25} />
             E-mail
@@ -36,12 +34,7 @@ export function Footer() {
         </div>
 
         <div>
-          <a
-            href="https://dev.to/eduardoopv"
-            target="_blank"
-            rel="noreferrer"
-            tabIndex={21}
-          >
+          <a href="https://dev.to/eduardoopv" target="_blank" rel="noreferrer">
             <FaDev size={25} />
             Dev.to
           </a>
@@ -51,7 +44,6 @@ export function Footer() {
           <a
             href="/CV-Luiz-Eduardo-Front-End.pdf/"
             download="CV-Luiz-Eduardo-Front-End"
-            tabIndex={22}
           >
             <BiCloudDownload size={25} />
             Curriculo

@@ -12,8 +12,6 @@ declare module "styled-components" {
       title: string;
       text: string;
       icon: string;
-      footer: string;
-      footerText: string;
       logoEduardo: string;
       logoDev: string;
       logoPrado: string;
@@ -33,8 +31,6 @@ declare module "styled-components" {
       title: string;
       text: string;
       icon: string;
-      footer: string;
-      footerText: string;
       logoEduardo: string;
       logoDev: string;
       logoPrado: string;

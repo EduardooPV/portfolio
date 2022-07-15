@@ -4,7 +4,7 @@ import { Container } from './styles';
 export function BackToHome() {
   return (
     <Container>
-      <a href="#" tabIndex={23}>
+      <a href="#" tabIndex={0}>
         <svg
           width="43"
           height="43"

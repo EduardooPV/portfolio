@@ -1,8 +1,10 @@
 import styled from "styled-components";
+
 import f from "../../styles/typography.json";
+import c from "../../styles/pallete.json";
 
 export const Container = styled.footer`
-  background: ${(props) => props.theme.colors.footer};
+  background: ${c.neutral500};
 `;
 
 export const Content = styled.div`
@@ -32,7 +34,7 @@ export const Content = styled.div`
 
     font-size: ${f.paragraphLarge.fontSize};
     line-height: ${f.paragraphLarge.lineHeight};
-    color: ${(props) => props.theme.colors.footerText};
+    color: ${c.neutral100};
     text-decoration: none;
 
     ::after {
@@ -43,7 +45,7 @@ export const Content = styled.div`
       bottom: 0;
       width: 0px;
       height: 2px;
-      background: ${(props) => props.theme.colors.footerText};
+      background: ${c.neutral100};
 
       transition: all 0.2s;
     }
@@ -58,6 +60,6 @@ export const Content = styled.div`
 
   span {
     font-size: ${f.caption.fontSize};
-    color: ${(props) => props.theme.colors.footerText};
+    color: ${c.neutral100};
   }
 `;

@@ -9,7 +9,7 @@ import { Container, Content, CardUIUX, CardDev } from "./styles";
 export function Projects() {
   return (
     <Container data-aos="fade-up" data-aos-offset="200" data-aos-duration="800">
-      <TextSection tag="<h2>" tabIndex={17}>
+      <TextSection tag="<h2>" tabIndex={0}>
         Projetos
       </TextSection>
 
@@ -53,7 +53,7 @@ export function Projects() {
         </CardDev>
       </Content>
       <Link href="/projetos" passHref>
-        <a tabIndex={18}>
+        <a>
           <ButtonGeneric>Ver projetos</ButtonGeneric>
         </a>
       </Link>

@@ -15,12 +15,9 @@ export function Navbar({ toggleTheme, theme }: NavbarProps) {
   }
 
   return (
-    <Container
-      data-aos="fade-down"
-      data-aos-duration="800"
-    >
+    <Container data-aos="fade-down" data-aos-duration="800">
       <Content>
-        <a href="/" tabIndex={1}>
+        <a href="/">
           <svg
             width="48"
             height="16"
@@ -44,7 +41,6 @@ export function Navbar({ toggleTheme, theme }: NavbarProps) {
         </a>
         <Media at="sm">
           <Switch
-            tabIndex={6}
             onChange={toggleTheme}
             checked={theme.title === "light"}
             checkedIcon={false}
@@ -61,23 +57,21 @@ export function Navbar({ toggleTheme, theme }: NavbarProps) {
           <Media greaterThan="sm">
             <NavLinks>
               <Link href="/" passHref>
-                <a tabIndex={2}>Início</a>
+                <a>Início</a>
               </Link>
               <Link href="/projetos" passHref>
-                <a tabIndex={3}>Projetos</a>
+                <a>Projetos</a>
               </Link>
               <Link href="/contato" passHref>
-                <a tabIndex={4}>Contato</a>
+                <a>Contato</a>
               </Link>
               <a
-                tabIndex={5}
                 href="/CV-Luiz-Eduardo-Front-End.pdf/"
                 download="CV-Luiz-Eduardo-Front-End"
               >
                 Curriculo
               </a>
               <Switch
-                tabIndex={6}
                 onChange={toggleTheme}
                 checked={theme.title === "light"}
                 checkedIcon={false}
@@ -98,22 +92,21 @@ export function Navbar({ toggleTheme, theme }: NavbarProps) {
             />
             <Menu className={active ? "menuOpen" : "menuClose"}>
               <Link href="/" passHref>
-                <a tabIndex={2} className="menu-item" onClick={Toggle}>
+                <a className="menu-item" onClick={Toggle}>
                   Início
                 </a>
               </Link>
               <Link href="/projetos" passHref>
-                <a tabIndex={3} className="menu-item" onClick={Toggle}>
+                <a className="menu-item" onClick={Toggle}>
                   Projetos
                 </a>
               </Link>
               <Link href="/contato" passHref>
-                <a tabIndex={4} className="menu-item" onClick={Toggle}>
+                <a className="menu-item" onClick={Toggle}>
                   Contato
                 </a>
               </Link>
               <a
-                tabIndex={5}
                 className="menu-item"
                 href="/CV-Luiz-Eduardo-Front-End.pdf/"
                 download="CV-Luiz-Eduardo-Front-End"

@@ -26,7 +26,7 @@ export function About() {
       data-aos-duration="800"
     >
       <Content>
-        <TextSection tag="<h2>" tabIndex={9}>
+        <TextSection tag="<h2>" tabIndex={0}>
           Luiz Eduardo
         </TextSection>
 
@@ -44,7 +44,6 @@ export function About() {
             href="https://www.linkedin.com/in/luiz-veltroni/"
             target="_blank"
             rel="noreferrer"
-            tabIndex={10}
           >
             <AiFillLinkedin size={35} />
           </a>
@@ -52,22 +51,15 @@ export function About() {
             href="mailto:eduardoveltroni@hotmail.com"
             target="_blank"
             rel="noreferrer"
-            tabIndex={11}
           >
             <HiOutlineMail size={40} />
           </a>
-          <a
-            href="https://dev.to/eduardoopv"
-            target="_blank"
-            rel="noreferrer"
-            tabIndex={12}
-          >
+          <a href="https://dev.to/eduardoopv" target="_blank" rel="noreferrer">
             <FaDev size={29} />
           </a>
           <a
             href="/CV-Luiz-Eduardo-Front-End.pdf/"
             download="CV-Luiz-Eduardo-Front-End"
-            tabIndex={13}
           >
             <BiCloudDownload size={40} />
           </a>
@@ -75,13 +67,13 @@ export function About() {
 
         <ContainerButton>
           <Link href="/projetos" passHref>
-            <a tabIndex={14}>
+            <a>
               <ButtonGeneric invisible>Meus projetos</ButtonGeneric>
             </a>
           </Link>
 
           <Link href="/contato">
-            <a tabIndex={15}>
+            <a>
               <ButtonGeneric>Entre em contato</ButtonGeneric>
             </a>
           </Link>
