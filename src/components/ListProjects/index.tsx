@@ -2,19 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Container, Content } from "./styles";
 import { CardProject } from "./CardProject";
 import { TextSection } from "../TextSection";
-
-interface ProjectsProps {
-  id: number;
-  name: string;
-  homepage: string;
-  created_at: string;
-  updated_at: string;
-  description: string;
-  html_url: string;
-  stargazers_count: number;
-  watchers: string;
-  topics: [];
-}
+import { ProjectsProps } from "./types";
 
 export function ListProjects() {
   const [projects, setProjects] = useState<ProjectsProps[]>();
@@ -44,7 +32,7 @@ export function ListProjects() {
 
   return (
     <Container>
-      <TextSection tag="<h1>">Projetos</TextSection>
+      <TextSection tag="<h1>" tabIndex={6}>Projetos</TextSection>
 
       <Content>
         {projects?.map((project) => (

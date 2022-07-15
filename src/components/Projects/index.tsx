@@ -1,13 +1,17 @@
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
+
 import { ButtonGeneric } from "../ButtonGeneric";
 import { TextSection } from "../TextSection";
+
 import { Container, Content, CardUIUX, CardDev } from "./styles";
 
 export function Projects() {
   return (
     <Container data-aos="fade-up" data-aos-offset="200" data-aos-duration="800">
-      <TextSection tag="<h2>">Projetos</TextSection>
+      <TextSection tag="<h2>" tabIndex={17}>
+        Projetos
+      </TextSection>
 
       <Content>
         <CardUIUX>
@@ -49,7 +53,7 @@ export function Projects() {
         </CardDev>
       </Content>
       <Link href="/projetos" passHref>
-        <a>
+        <a tabIndex={18}>
           <ButtonGeneric>Ver projetos</ButtonGeneric>
         </a>
       </Link>

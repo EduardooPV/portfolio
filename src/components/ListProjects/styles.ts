@@ -15,7 +15,7 @@ export const Container = styled.main`
   }
 `;
 
-export const Content = styled.div`
+export const Content = styled.section`
   display: flex;
   flex-direction: column;
   gap: 30px;

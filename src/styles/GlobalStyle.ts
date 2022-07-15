@@ -56,4 +56,11 @@ button {
   background: #F89D24; 
   border-radius: 10px;
 }
+
+:focus {
+  border-radius: 0.25rem;
+  border: none;
+  outline: 2px solid  #F89D24;
+  outline-offset: 4px;
+}
 `;

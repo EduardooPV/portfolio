@@ -29,7 +29,7 @@ export const ContainerCard = styled.div`
   z-index: 9;
 
   > div {
-    width: 90%;
+    width: 95%;
 
     margin: 0 auto;
     padding: 2rem;

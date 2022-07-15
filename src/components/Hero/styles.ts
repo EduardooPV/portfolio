@@ -39,7 +39,7 @@ export const AnimationPresentation = styled.div`
   }
 `;
 
-export const Container = styled.main`
+export const Container = styled.section`
   max-width: 1240px;
   height: 100vh;
 

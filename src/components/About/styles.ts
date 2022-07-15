@@ -2,7 +2,7 @@ import styled from "styled-components";
 import c from "../../styles/pallete.json";
 import f from "../../styles/typography.json";
 
-export const Container = styled.main`
+export const Container = styled.section`
   max-width: 1240px;
   margin: 0 auto;
 

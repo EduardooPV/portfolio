@@ -64,9 +64,11 @@ export const CardUIUX = styled.div`
   }
 
   > div {
+    display: flex;
+    align-items: center;
+
     svg {
       max-width: 60px;
-      margin: 0 auto;
 
       @media (min-width: 768px) {
         max-width: 70px;
@@ -78,6 +80,7 @@ export const CardUIUX = styled.div`
     font-size: ${t.paragraphSmall.fontSize};
     line-height: ${t.paragraphSmall.lineHeight};
     color: ${(props) => props.theme.colors.text};
+    text-align: justify;
 
     @media (min-width: 768px) {
       font-size: ${t.paragraphLarge.fontSize};
@@ -112,9 +115,11 @@ export const CardDev = styled.div`
   }
 
   > div {
+    display: flex;
+    align-items: center;
+
     svg {
       max-width: 60px;
-      margin: 0 auto;
 
       @media (min-width: 768px) {
         max-width: 70px;
@@ -126,6 +131,7 @@ export const CardDev = styled.div`
     font-size: ${t.paragraphSmall.fontSize};
     line-height: ${t.paragraphSmall.lineHeight};
     color: ${(props) => props.theme.colors.text};
+    text-align: justify;
 
     @media (min-width: 768px) {
       font-size: ${t.paragraphLarge.fontSize};

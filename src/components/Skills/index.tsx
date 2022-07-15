@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+
 import { TextSection } from "../TextSection";
+
 import { Container, ContainerCard, ModalHover } from "./styles";
 
 export function Skills() {
@@ -8,12 +10,10 @@ export function Skills() {
   const [hoverThree, setHoverThree] = useState(false);
 
   return (
-    <Container
-      data-aos="fade-up"
-      data-aos-offset="200"
-      data-aos-duration="800"
-    >
-      <TextSection tag="<h2>">Conhecimento</TextSection>
+    <Container data-aos="fade-up" data-aos-offset="200" data-aos-duration="800">
+      <TextSection tag="<h2>" tabIndex={16}>
+        Conhecimento
+      </TextSection>
 
       <ContainerCard>
         <div

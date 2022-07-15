@@ -1,4 +1,7 @@
 import React from "react";
+import { Media } from "../MediaScreen";
+import Link from "next/link";
+
 import { TextSection } from "../TextSection";
 import { ButtonGeneric } from "../ButtonGeneric";
 import { AiFillLinkedin } from "react-icons/ai";
@@ -13,8 +16,7 @@ import {
   ContainerIcons,
   ContainerButton,
 } from "./styles";
-import { Media } from "../MediaScreen";
-import Link from "next/link";
+
 
 export function About() {
   return (
@@ -22,9 +24,12 @@ export function About() {
       data-aos="fade-up"
       data-aos-offset="200"
       data-aos-duration="800"
+      id="about"
     >
       <Content>
-        <TextSection tag="<h2>">Luiz Eduardo</TextSection>
+        <TextSection tag="<h2>" tabIndex={9}>
+          Luiz Eduardo
+        </TextSection>
 
         <p>
           lorem ipsum lorem ipsore color dolor asudhw
@@ -40,6 +45,7 @@ export function About() {
             href="https://www.linkedin.com/in/luiz-veltroni/"
             target="_blank"
             rel="noreferrer"
+            tabIndex={10}
           >
             <AiFillLinkedin size={35} />
           </a>
@@ -47,15 +53,22 @@ export function About() {
             href="mailto:eduardoveltroni@hotmail.com"
             target="_blank"
             rel="noreferrer"
+            tabIndex={11}
           >
             <HiOutlineMail size={40} />
           </a>
-          <a href="https://dev.to/eduardoopv" target="_blank" rel="noreferrer">
+          <a
+            href="https://dev.to/eduardoopv"
+            target="_blank"
+            rel="noreferrer"
+            tabIndex={12}
+          >
             <FaDev size={29} />
           </a>
           <a
             href="/CV-Luiz-Eduardo-Front-End.pdf/"
             download="CV-Luiz-Eduardo-Front-End"
+            tabIndex={13}
           >
             <BiCloudDownload size={40} />
           </a>
@@ -63,13 +76,13 @@ export function About() {
 
         <ContainerButton>
           <Link href="/projetos" passHref>
-            <a>
+            <a tabIndex={14}>
               <ButtonGeneric invisible>Meus projetos</ButtonGeneric>
             </a>
           </Link>
 
           <Link href="/contato">
-            <a>
+            <a tabIndex={15}>
               <ButtonGeneric>Entre em contato</ButtonGeneric>
             </a>
           </Link>

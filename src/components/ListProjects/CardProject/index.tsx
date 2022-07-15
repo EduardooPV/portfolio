@@ -3,20 +3,7 @@ import { Container, Header, Description, Footer } from "./styles";
 import { AiOutlineEye, AiOutlineStar, AiFillGithub } from "react-icons/ai";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-
-interface CardProps {
-  props: {
-    name: string;
-    homepage: string;
-    created_at: string;
-    description: string;
-    html_url: string;
-    stargazers_count: number;
-    watchers: string;
-  };
-
-  loading: boolean;
-}
+import { CardProps } from "./types";
 
 export function CardProject(props: CardProps) {
   return (

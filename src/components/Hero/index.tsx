@@ -1,5 +1,7 @@
 import React from "react";
 import Link from "next/link";
+import { Media } from "../MediaScreen";
+
 import { TextSection } from "../TextSection";
 import { ButtonGeneric } from "../ButtonGeneric";
 
@@ -10,7 +12,6 @@ import {
   Figure,
   ContainerButton,
 } from "./styles";
-import { Media } from "../MediaScreen";
 
 export function Hero() {
   return (
@@ -41,7 +42,9 @@ export function Hero() {
       </AnimationPresentation>
       <Container id="hero">
         <Content>
-          <TextSection tag="<h1>">Seja bem vindo</TextSection>
+          <TextSection tag="<h1>" tabIndex={6}>
+            Seja bem vindo
+          </TextSection>
 
           <p>
             lorem ipsum lorem ipsore color dolor asudhw
@@ -54,12 +57,12 @@ export function Hero() {
 
           <ContainerButton>
             <Link href="/contato" passHref>
-              <a>
+              <a tabIndex={7}>
                 <ButtonGeneric>Entre em contato</ButtonGeneric>
               </a>
             </Link>
 
-            <a href="#about">
+            <a href="#about" tabIndex={8}>
               <ButtonGeneric invisible>Sobre mim</ButtonGeneric>
             </a>
           </ContainerButton>
