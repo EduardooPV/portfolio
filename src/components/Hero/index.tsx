@@ -5,42 +5,16 @@ import { Media } from "../MediaScreen";
 import { TextSection } from "../TextSection";
 import { ButtonGeneric } from "../ButtonGeneric";
 
-import {
-  AnimationPresentation,
-  Container,
-  Content,
-  Figure,
-  ContainerButton,
-} from "./styles";
+import { Container, Content, Figure, ContainerButton } from "./styles";
 
 export function Hero() {
   return (
     <>
-      <AnimationPresentation>
-        <svg
-          width="100%"
-          height="100%"
-          viewBox="30 -50 600 500"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlnsXlink="http://www.w3.org/1999/xlink"
-          version="1.1"
-        >
-          <path id="path">
-            <animate
-              attributeName="d"
-              from="m0,110 h0"
-              to="m0,110 h1100"
-              dur="5s"
-              begin="0.5s"
-              repeatCount="indefinite"
-            />
-          </path>
-          <text fill="#F89D24">
-            <textPath xlinkHref="#path">Seja bem vindo!</textPath>
-          </text>
-        </svg>
-      </AnimationPresentation>
-      <Container id="hero">
+      <Container
+        id="hero"
+        data-aos="fade-down"
+        data-aos-duration="800"
+      >
         <Content>
           <TextSection tag="<h1>" tabIndex={6}>
             Seja bem vindo

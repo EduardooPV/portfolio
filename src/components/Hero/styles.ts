@@ -1,43 +1,7 @@
 import styled from "styled-components";
+
 import c from "../../styles/pallete.json";
 import f from "../../styles/typography.json";
-
-export const AnimationPresentation = styled.div`
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  left: 0;
-  top: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  
-  background-color: #232222;
-  z-index: 9999;
-
-  animation: fade 4s both;
-
-  @keyframes fade {
-    0% {
-      opacity: 1;
-    }
-
-    70% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-      display: none;
-      z-index: -1;
-    }
-  }
-
-  textPath {
-    font-size: 60px;
-  }
-`;
 
 export const Container = styled.section`
   max-width: 1240px;

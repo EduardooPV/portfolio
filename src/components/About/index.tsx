@@ -17,14 +17,13 @@ import {
   ContainerButton,
 } from "./styles";
 
-
 export function About() {
   return (
     <Container
+      id="about"
       data-aos="fade-up"
       data-aos-offset="200"
       data-aos-duration="800"
-      id="about"
     >
       <Content>
         <TextSection tag="<h2>" tabIndex={9}>
