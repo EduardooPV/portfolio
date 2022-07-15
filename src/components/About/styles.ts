@@ -48,12 +48,13 @@ export const Content = styled.div`
 export const ContainerIcons = styled.div`
   display: flex;
   align-items: center;
+  flex-direction: row!important;
   gap: 2rem;
 
   a {
     line-height: 0;
     transition: all 0.2s;
-    color: ${(props) => props.theme.colors.text};
+    color: ${(props) => props.theme.colors.text}!important;
     
     :hover {
       filter: brightness(0.8);
