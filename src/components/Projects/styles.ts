@@ -40,11 +40,11 @@ export const Content = styled.div`
 
 export const CardUIUX = styled.div`
   max-width: 640px;
-  padding: 30px;
+  padding: 20px;
 
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 
   background: ${(props) => props.theme.colors.backgroundCards};
   border: 2px solid ${c.neutral200};
@@ -64,23 +64,13 @@ export const CardUIUX = styled.div`
   }
 
   > div {
-    width: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0px;
-
     svg {
-      max-width: 40px;
+      max-width: 60px;
       margin: 0 auto;
 
       @media (min-width: 768px) {
         max-width: 70px;
       }
-    }
-
-    @media (min-width: 768px) {
-      gap: 30px;
     }
   }
 
@@ -98,11 +88,11 @@ export const CardUIUX = styled.div`
 
 export const CardDev = styled.div`
   max-width: 640px;
-  padding: 30px;
+  padding: 20px;
 
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 
   background: ${(props) => props.theme.colors.backgroundCards};
   border: 1px solid ${c.neutral200};
@@ -122,23 +112,13 @@ export const CardDev = styled.div`
   }
 
   > div {
-    width: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0px;
-
     svg {
-      max-width: 40px;
+      max-width: 60px;
       margin: 0 auto;
 
       @media (min-width: 768px) {
         max-width: 70px;
       }
-    }
-
-    @media (min-width: 768px) {
-      gap: 30px;
     }
   }
 

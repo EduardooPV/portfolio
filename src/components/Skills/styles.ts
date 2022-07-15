@@ -29,7 +29,7 @@ export const ContainerCard = styled.div`
   z-index: 9;
 
   > div {
-    width: 80%;
+    width: 90%;
 
     margin: 0 auto;
     padding: 2rem;
@@ -124,6 +124,6 @@ export const ModalHover = styled.div`
   }
 
   @media (min-width: 768px) {
-    width: 80%;
+    width: 90%;
   }
 `;
