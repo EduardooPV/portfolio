@@ -6,7 +6,7 @@ import { ProjectsProps } from "./types";
 
 export function ListProjects() {
   const [projects, setProjects] = useState<ProjectsProps[]>();
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false);
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   function SortProjectsByData(a: any, b: any) {
@@ -22,13 +22,22 @@ export function ListProjects() {
 
     const searchTopic = "portfolio";
 
+    setLoading(true);
+
     fetch(
       `https://api.github.com/search/repositories?q=user%3A${searchUser}%20topic:${searchTopic}`
     )
       .then((response) => response.json())
-      .then((response) => setProjects(response.items.sort(SortProjectsByData)));
-
-    setLoading(false)
+      .then((response) => {
+        setProjects(response.items.sort(SortProjectsByData));
+        setTimeout(() => {
+          setLoading(false);
+        }, 1500);
+      })
+      .catch((error) => {
+        alert(error);
+        setLoading(false);
+      });
   }, []);
 
   return (

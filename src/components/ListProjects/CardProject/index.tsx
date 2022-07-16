@@ -5,40 +5,38 @@ import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { CardProps } from "./types";
 
-export function CardProject(props: CardProps) {
+export function CardProject({ props, loading }: CardProps) {
   return (
-    <Container >
-      {props.loading ? (
+    <Container>
+      {loading ? (
         <SkeletonTheme baseColor="#202020" highlightColor="#444">
           <div>
-            <Skeleton count={1} height={25} />
-            <Skeleton count={1} height={25} />
+            <Skeleton count={1} height={40} />
           </div>
-          <Skeleton count={1} height={15} />
-          <Skeleton count={5} height={20} />
+          <Skeleton count={1} height={110} />
         </SkeletonTheme>
       ) : (
         <>
           <Header>
             <div>
-              <p>{props.props.name.replace(/-/g, " ")}</p>
+              <p>{props.name.replace(/-/g, " ")}</p>
 
               <div>
                 <span>
                   <AiOutlineEye color="#F89D24" />
-                  {props.props.watchers}
+                  {props.watchers}
                 </span>
 
                 <span>
                   <AiOutlineStar color="#F89D24" />
-                  {props.props.stargazers_count}
+                  {props.stargazers_count}
                 </span>
               </div>
             </div>
 
             <span>
               Criado em:{" "}
-              {new Date(props.props.created_at).toLocaleDateString("pt-BR", {
+              {new Date(props.created_at).toLocaleDateString("pt-BR", {
                 day: "2-digit",
                 month: "2-digit",
                 year: "numeric",
@@ -46,15 +44,15 @@ export function CardProject(props: CardProps) {
             </span>
           </Header>
 
-          <Description>{props.props.description}</Description>
+          <Description>{props.description}</Description>
         </>
       )}
 
       <Footer>
-        <a href={props.props.homepage} target="_blank" rel="noreferrer">
+        <a href={props.homepage} target="_blank" rel="noreferrer">
           Visualizar site
         </a>
-        <a href={props.props.html_url} target="_blank" rel="noreferrer">
+        <a href={props.html_url} target="_blank" rel="noreferrer">
           <AiFillGithub />
         </a>
       </Footer>
