@@ -19,6 +19,7 @@ export const Container = styled.section`
 
 export const Content = styled.div`
   height: 100%;
+  max-width: 600px;
 
   display: flex;
   flex-direction: column;
@@ -26,7 +27,6 @@ export const Content = styled.div`
   justify-content: center;
 
   p {
-    max-width: 500px;
     margin: 3rem auto;
 
     color: ${(props) => props.theme.colors.text};

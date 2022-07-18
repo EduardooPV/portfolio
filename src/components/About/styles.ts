@@ -24,8 +24,6 @@ export const Content = styled.div`
   grid-column: 2;
 
   p {
-    max-width: 500px;
-
     color: ${(props) => props.theme.colors.text};
     font-size: ${f.paragraphSmall.fontSize};
     line-height: ${f.paragraphSmall.lineHeight};
@@ -33,6 +31,7 @@ export const Content = styled.div`
 
     > span {
       color: ${c.primary300};
+      font-weight: bold;
     }
   }
 

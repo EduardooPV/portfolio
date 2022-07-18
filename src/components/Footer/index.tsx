@@ -1,6 +1,6 @@
 import React from "react";
 
-import { AiFillLinkedin } from "react-icons/ai";
+import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { HiOutlineMail } from "react-icons/hi";
 import { FaDev } from "react-icons/fa";
 import { BiCloudDownload } from "react-icons/bi";
@@ -11,6 +11,17 @@ export function Footer() {
   return (
     <Container>
       <Content>
+        <div>
+          <a
+            href="https://github.com/EduardooPV"
+            target="_blank"
+            rel="noreferrer"
+            title="Icone Github"
+          >
+            <AiFillGithub size={30} />
+            Github
+          </a>
+        </div>
         <div>
           <a
             href="https://www.linkedin.com/in/luiz-veltroni/"

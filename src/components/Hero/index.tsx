@@ -16,12 +16,10 @@ export function Hero() {
           </TextSection>
 
           <p>
-            lorem ipsum lorem ipsore color dolor asudhw
-            <span> ai et dolor lorem </span>ipsumlorem ipsum lorem ipsore color
-            dolor asudhw ai et dolor lorem ipsumlorem ipsum lorem ipsore color
-            dolor <span>asudhw ai et dolor lorem ipsumlorem</span> ipsum lorem
-            ipsore color dolor asudhw dolor asudhw ai et dolor lorem m ipsore
-            color dolor asudhw <span>dolor asudhw</span> ai et dolor lorem{" "}
+            Oii, muito bem vindo ao meu <span>portfolio</span>, desenvolvi esse
+            projeto com o intuito de poder aplicar tudo que aprendi até hoje na
+            minha carreira <i>(curta, porém carreira)</i> de{" "}
+            <span>Desenvolvedor Front-end.</span> Sinta-se avontade para pegar algum insight ou usar como referencia.
           </p>
 
           <ContainerButton>

@@ -19,7 +19,7 @@ export const Content = styled.div`
   align-items: center;
   gap: 20px;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1000px) {
     padding: 40px;
 
     flex-direction: row;

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import { TextSection } from "../TextSection";
 import { ButtonGeneric } from "../ButtonGeneric";
-import { AiFillLinkedin } from "react-icons/ai";
+import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { HiOutlineMail } from "react-icons/hi";
 import { FaDev } from "react-icons/fa";
 import { BiCloudDownload } from "react-icons/bi";
@@ -27,19 +27,28 @@ export function About() {
     >
       <Content>
         <TextSection tag="<h2>" tabIndex={0}>
-          Luiz Eduardo
+          Quem sou?
         </TextSection>
 
         <p>
-          lorem ipsum lorem ipsore color dolor asudhw
-          <span> ai et dolor lorem </span>ipsumlorem ipsum lorem ipsore color
-          dolor asudhw ai et dolor lorem ipsumlorem ipsum lorem ipsore color
-          dolor <span>asudhw ai et dolor lorem ipsumlorem</span> ipsum lorem
-          ipsore color dolor asudhw dolor asudhw ai et dolor lorem m ipsore
-          color dolor asudhw <span>dolor asudhw</span> ai et dolor lorem
+          Muito prazer, me chamo <span>Luiz Eduardo</span> (mas todos me chamam
+          de Dudu, sou graduado em{" "}
+          <span>Analise e desenvolvimento de sistemas</span> pela Universidade
+          Norte do Paraná <span>(Unopar)</span>. Apaixonado pela arte de
+          programar, decidi seguir carreira pelo ramo do desenvolvimento web, e
+          me especializei em <span>Javascript</span> + <span>React.js</span> e
+          em todo o seu eco sistema.
         </p>
 
         <ContainerIcons>
+          <a
+            href="https://github.com/EduardooPV"
+            target="_blank"
+            rel="noreferrer"
+            title="Icone Github"
+          >
+            <AiFillGithub size={30} />
+          </a>
           <a
             href="https://www.linkedin.com/in/luiz-veltroni/"
             target="_blank"
