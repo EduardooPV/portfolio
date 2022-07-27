@@ -39,7 +39,18 @@ E por final desenvolvi o Mobile e Desktop criando algumas interações e compone
   <p> <img src="https://camo.githubusercontent.com/92ec9eb7eeab7db4f5919e3205918918c42e6772562afb4112a2909c1aaaa875/68747470733a2f2f6173736574732e76657263656c2e636f6d2f696d6167652f75706c6f61642f76313630373535343338352f7265706f7369746f726965732f6e6578742d6a732f6e6578742d6c6f676f2e706e67" width="30px"> - Next.js;</p>
   <p> <img src="https://miro.medium.com/max/816/1*mn6bOs7s6Qbao15PMNRyOA.png" width="30px"> - Typescript;</p>
   <p> <img src="https://avatars.githubusercontent.com/u/20658825?s=200&v=4" width="30px"> - Styled components <strong>(Dark/light theme);</strong> </p>
+  <p> <img src="https://yt3.ggpht.com/eH_MdhjC_DxpUtxBNXqb7fhhfKSa-nWiIQ1IqaRxD06nEbFiIRahQf5bUHE1WPpnfczXsvUdYA=s900-c-k-c0x00ffffff-no-rj" width="30px"> - Hojar</p>
 </p>
+
+---
+
+### Acompanhamento e Feedback
+
+Para realizar o acompanhamento, utilizei o [Hotjar](https://www.hotjar.com/pt-BR/behavior-analytics-software/?utm_campaign=HJ-Search-Leap-Brazil-Brand-Translated-Generic&utm_source=google&utm_medium=cpc&ads_adid=133696075850&ads_targetid=kwd-301757736238&utm_term=hotjar&keyword=hotjar&matchtype=e&geo=1001776&ads_creative=608650204545&ads_network=g&device=c&adpos=&utm_squad=leap&gclid=Cj0KCQjwof6WBhD4ARIsAOi65ahsxuDNqr43hdxZBgNFcrvOKLO4s4fhU83QKoOjhUmM09A-sMaeMJ0aAguREALw_wcB), ele permite criar Heatmaps, Recordings, Highlights entre outras ferramentas, para poder acompanhar a jornada do usuário pelo site, e encontrando possiveis bugs, ou as partes mais acessadas (Importante para conversão de Leads e outras técnicas).
+
+Adicionei um sistema de Feedback, pelo próprio Hotjar, então o usuário tem a opção de avaliar o site, comentar e até tirar uma print de uma sessão ou componente especifico.
+
+![Feedback hotjar](https://user-images.githubusercontent.com/69824782/181134082-ff17e5d0-7c51-40f7-b346-eec4600c11a5.png)
 
 ---
 

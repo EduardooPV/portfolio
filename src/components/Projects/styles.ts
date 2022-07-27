@@ -110,8 +110,8 @@ export const CardDev = styled.div`
 
     position: absolute;
 
-    right: 0;
-    bottom: 0;
+    right: 0!important;
+    bottom: 0!important;
   }
 
   > div {

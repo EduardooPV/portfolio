@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.span`
   position: fixed;
-  right: 5%;
-  bottom: 3rem;
+  right: 7%;
+  bottom: 1.5rem;
 
   z-index: 10;
 
