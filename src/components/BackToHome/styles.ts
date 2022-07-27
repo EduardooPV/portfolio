@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.span`
   position: fixed;
-  right: 7%;
-  bottom: 1.5rem;
+  right: 9%;
+  bottom: 5.5rem;
 
   z-index: 10;
 
@@ -12,6 +12,9 @@ export const Container = styled.span`
   }
 
   @media (min-width: 768px) {
+    right: 7%;
+    bottom: 1.5rem;
+    
     &:hover {
       animation: toping 0.2s alternate infinite;
 
