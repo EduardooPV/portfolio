@@ -10,7 +10,7 @@ export function Skills() {
   const [hoverThree, setHoverThree] = useState(false);
 
   return (
-    <Container data-aos="fade-up" data-aos-offset="200" data-aos-duration="800">
+    <Container>
       <TextSection tag="<h2>" tabIndex={0}>
         Conhecimento
       </TextSection>

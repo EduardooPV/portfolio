@@ -19,12 +19,7 @@ import {
 
 export function About() {
   return (
-    <Container
-      id="about"
-      data-aos="fade-up"
-      data-aos-offset="200"
-      data-aos-duration="800"
-    >
+    <Container>
       <Content>
         <TextSection tag="<h2>" tabIndex={0}>
           Quem sou?
