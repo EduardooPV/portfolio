@@ -15,12 +15,12 @@ import { ParsedUrlQuery } from "querystring";
 import { AsidePerson } from "../../components/AsidePerson";
 import { ReadingProgressiveBar } from "../../components/ReadingProgressiveBar";
 
-import { Container, Infos, ContentPost } from "./styles";
+import { Container, Infos, ContentPost } from "../../styles/postSlug";
 
 interface Post {
   updatedAt: string;
 
-  data: {
+  data?: {
     title: string;
     banner: {
       url?: string;
@@ -43,7 +43,7 @@ interface IParams extends ParsedUrlQuery {
   slug: string;
 }
 
-const Home = ({ post }: PostProps) => {
+export default function PostPage({ post }: PostProps) {
   const router = useRouter();
 
   const readTime = useMemo(() => {
@@ -55,7 +55,7 @@ const Home = ({ post }: PostProps) => {
 
     const readWordsPerMinute = 200;
 
-    post.data.content.forEach((postContent) => {
+    post.data?.content.forEach((postContent) => {
       fullText += RichText.asText(postContent.body);
     });
 
@@ -67,14 +67,14 @@ const Home = ({ post }: PostProps) => {
   return (
     <>
       <Head>
-        <title>{post.data.title}</title>
+        <title>{post.data?.title}</title>
       </Head>
 
       <ReadingProgressiveBar />
 
       <Container>
         <article>
-          <h1>{post.data.title}</h1>
+          <h1>{post.data?.title}</h1>
 
           <Infos>
             <li>
@@ -87,14 +87,14 @@ const Home = ({ post }: PostProps) => {
             </li>
             <li>
               <Tag size={20} color="#F89D24" />
-              {post.data.tag}
+              {post.data?.tag}
             </li>
           </Infos>
 
-          <img src={post.data.banner?.url} alt={post.data.banner?.alt} />
+          <img src={post.data?.banner?.url} alt={post.data?.banner?.alt} />
 
           <ContentPost>
-            {post.data.content.map((postContent: any, index) => (
+            {post.data?.content.map((postContent: any, index) => (
               <div key={index}>
                 <div
                   dangerouslySetInnerHTML={{
@@ -110,9 +110,7 @@ const Home = ({ post }: PostProps) => {
       </Container>
     </>
   );
-};
-
-export default Home;
+}
 
 export const getStaticPaths = async () => {
   const response = await client.get({
@@ -125,7 +123,7 @@ export const getStaticPaths = async () => {
 
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 };
 

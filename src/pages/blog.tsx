@@ -19,7 +19,7 @@ interface PostsProps {
   posts: Post[];
 }
 
-const Home = ({ posts }: PostsProps) => {
+export default function Blog({ posts }: PostsProps) {
   return (
     <>
       <Head>
@@ -33,9 +33,7 @@ const Home = ({ posts }: PostsProps) => {
       <ListPosts posts={posts} />
     </>
   );
-};
-
-export default Home;
+}
 
 export const getStaticProps: GetStaticProps = async () => {
   const response = await client.get({

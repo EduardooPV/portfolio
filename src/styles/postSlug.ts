@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import c from "../../styles/pallete.json";
+import c from "./pallete.json";
 
 export const Container = styled.main`
   max-width: 1120px;

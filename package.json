@@ -35,6 +35,6 @@
     "eslint-plugin-react": "^7.29.2",
     "react-hotjar": "^5.0.0",
     "styled-components": "^5.3.3",
-    "typescript": "^4.5.5"
+    "typescript": "^4.8.3"
   }
 }
