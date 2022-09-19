@@ -11,5 +11,10 @@
   "primary200": "#FFBD65",
   "primary300": "#F89D24",
   "primary400": "#CC7500",
-  "primary500": "#B16500"
+  "primary500": "#B16500",
+  "body": "#D7D7D7",
+  "heading": " #F8F8F8",
+  "info": " #BBBBBB",
+  "background": " #1A1D23",
+  "highlight": "#F89D24"
 }

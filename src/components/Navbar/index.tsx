@@ -63,6 +63,9 @@ export function Navbar({ toggleTheme, theme }: NavbarProps) {
               <Link href="/projetos" passHref>
                 <a>Projetos</a>
               </Link>
+              <Link href="/blog" passHref>
+                <a>Blog</a>
+              </Link>
               <a
                 href="/CV-Luiz-Eduardo-Front-End.pdf/"
                 download="CV-Luiz-Eduardo-Front-End"
@@ -98,6 +101,9 @@ export function Navbar({ toggleTheme, theme }: NavbarProps) {
                 <a className="menu-item" onClick={Toggle}>
                   Projetos
                 </a>
+              </Link>
+              <Link href="/blog" passHref>
+                <a>Blog</a>
               </Link>
               <a
                 className="menu-item"
