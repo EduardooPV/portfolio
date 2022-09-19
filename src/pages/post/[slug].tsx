@@ -16,6 +16,7 @@ import { AsidePerson } from "../../components/AsidePerson";
 import { ReadingProgressiveBar } from "../../components/ReadingProgressiveBar";
 
 import { Container, Infos, ContentPost } from "../../styles/postSlug";
+import { Footer } from "../../components/Footer";
 
 interface Post {
   updatedAt: string;
@@ -108,6 +109,8 @@ export default function PostPage({ post }: PostProps) {
           </ContentPost>
         </article>
       </Container>
+
+      <Footer />
     </>
   );
 }

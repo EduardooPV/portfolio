@@ -6,6 +6,7 @@ import * as prismic from "@prismicio/client";
 import { client } from "../services/prismic";
 
 import { ListPosts } from "../components/ListPosts";
+import { Footer } from "../components/Footer";
 
 interface Post {
   slug: string;
@@ -31,6 +32,8 @@ export default function Blog({ posts }: PostsProps) {
       </Head>
 
       <ListPosts posts={posts} />
+
+      <Footer />
     </>
   );
 }
