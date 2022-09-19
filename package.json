@@ -10,9 +10,13 @@
   },
   "dependencies": {
     "@artsy/fresnel": "^3.5.0",
+    "@prismicio/client": "^6.7.1",
+    "@types/prismic-dom": "^2.1.1",
     "aos": "^2.3.4",
     "framer-motion": "^6.2.8",
     "next": "12.1.0",
+    "phosphor-react": "^1.4.1",
+    "prismic-dom": "^2.2.7",
     "react": "17.0.2",
     "react-burger-menu": "^3.0.6",
     "react-dom": "17.0.2",
