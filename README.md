@@ -113,11 +113,3 @@ yarn dev
 ```
 
 _\*Irá abrir na porta 3000, ex: https://localhost:3000_
-
-
-**_Lembrete: é necessário configurar uma variavel de ambiente para o endpoint do PrismicCMS_**
-```js
-ENDPOINT_PRISMIC=<Seu endpoint aqui>
-```
-
-

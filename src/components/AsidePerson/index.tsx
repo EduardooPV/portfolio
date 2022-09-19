@@ -15,20 +15,17 @@ export function AsidePerson() {
 
       <Details>
         <p>Resumo</p>
-        <span>Apaixonado por programação e amante de Scripts.</span>
+        <span>Desenvolvedor Front-end, focado nas principais tecnologias do ecossistema do React.js.</span>
       </Details>
 
       <Details>
         <p>Formação</p>
-        <span>
-          Analise e desenvolvimento de sistemasAnalise e desenvolvimento de
-          sistemas
-        </span>
+        <span>Formado em Analise e desenvolvimento de sistemas.</span>
       </Details>
 
       <Details>
-        <p>Ocupação</p>
-        <span>Web Developer | Rocky.Monks</span>
+        <p>Organização</p>
+        <span>Web Developer | Rocky.Monks.</span>
       </Details>
     </Container>
   );

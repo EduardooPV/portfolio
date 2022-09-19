@@ -18,5 +18,11 @@ export default {
     logoPrado: "transparent",
     descriptionCard: c.neutral200,
     barCard: c.neutral500,
+
+    titlePost: c.heading,
+    descriptionPost: c.body,
+    datePost: c.info,
+    backgroundPost: "#181a1d",
+    backgroundPrePost: "#37393c",
   },
 };

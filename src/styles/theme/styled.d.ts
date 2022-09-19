@@ -17,6 +17,12 @@ declare module "styled-components" {
       logoPrado: string;
       barCard: string;
       descriptionCard: string;
+
+      titlePost: string;
+      descriptionPost: string;
+      datePost: string;
+      backgroundPost: string;
+      backgroundPrePost: string;
     };
   }
 
@@ -36,6 +42,12 @@ declare module "styled-components" {
       logoPrado: string;
       barCard: string;
       descriptionCard: string;
+
+      titlePost: string;
+      descriptionPost: string;
+      datePost: string;
+      backgroundPost: string;
+      backgroundPrePost: string;
     };
   }
 }

@@ -76,7 +76,7 @@ export const Title = styled.p`
   margin-bottom: 12px;
 
   font-weight: 700;
-  color: ${c.heading};
+  color: ${(props) => props.theme.colors.titlePost};
   font-size: 24px;
   line-height: 30px;
 
@@ -91,7 +91,7 @@ export const Description = styled.p`
 
   font-size: 16px;
   line-height: 22px;
-  color: ${c.body};
+  color: ${(props) => props.theme.colors.descriptionPost};
 
   @media (min-width: 768px) {
     font-size: 18px;
@@ -106,7 +106,7 @@ export const Date = styled.span`
 
   font-size: 14px;
   line-height: 17px;
-  color: ${c.info};
+  color: ${(props) => props.theme.colors.datePost};
 `;
 
 export const Tag = styled.p`
@@ -124,7 +124,7 @@ export const Tag = styled.p`
     font-size: 13px;
     line-height: 0;
     font-weight: bold;
-    color: ${c.body};
+    color: ${c.white};
 
     border-radius: 2px;
   }

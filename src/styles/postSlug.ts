@@ -13,7 +13,7 @@ export const Container = styled.main`
     font-weight: 700;
     font-size: 35px;
     line-height: 40px;
-    color: ${c.heading};
+    color: ${(props) => props.theme.colors.titlePost};
 
     @media (min-width: 768px) {
       font-size: 48px;
@@ -53,7 +53,7 @@ export const Infos = styled.ul`
     align-items: center;
     gap: 0.5rem;
 
-    color: ${c.info};
+    color: ${(props) => props.theme.colors.datePost};
   }
 `;
 
@@ -65,7 +65,7 @@ export const ContentPost = styled.section`
   justify-items: center;
   gap: 20px;
 
-  color: ${c.heading};
+  color: ${(props) => props.theme.colors.titlePost};
 
   @media (min-width: 768px) {
     grid-template-columns: 1fr 250px;
@@ -81,7 +81,7 @@ export const ContentPost = styled.section`
     padding: 0 1rem;
 
     border-radius: 10px;
-    background: #181a1d;
+    background: ${(props) => props.theme.colors.backgroundPost};
   }
 
   h2 {
@@ -109,10 +109,11 @@ export const ContentPost = styled.section`
   }
 
   pre {
-    background: rgb(63, 63, 63);
+    background: ${(props) => props.theme.colors.backgroundPrePost};
     font-size: 14px;
     padding: 1rem;
     border-radius: 4px;
+    font-weight: bold;
     white-space: pre-line;
   }
 

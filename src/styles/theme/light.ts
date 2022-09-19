@@ -18,5 +18,11 @@ export default {
     logoPrado: c.neutral100,
     descriptionCard: c.neutral500,
     barCard: "rgba(0, 0, 0, 0.1)",
+
+    titlePost: c.neutral700,
+    descriptionPost: c.neutral500,
+    datePost: c.neutral400,
+    backgroundPost: "#efefef",
+    backgroundPrePost: "#c3c3c3",
   },
 };

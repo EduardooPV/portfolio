@@ -13,7 +13,7 @@ export const Container = styled.aside`
   gap: 20px;
 
   border-radius: 10px;
-  background: #181a1d;
+  background: ${(props) => props.theme.colors.backgroundPost};
   position: sticky;
   top: 80px;
 `;
@@ -28,21 +28,22 @@ export const ContainerImage = styled.div`
   border-bottom: 1px solid #8b8b8b8f;
 
   > img {
-    width: 45px!important;
-    height: 45px!important;
-    border-radius: 50%;
+    width: 45px !important;
+    height: 45px !important;
+    border-radius: 50% !important;
   }
 
   p {
     font-size: 16px;
     line-height: 24px;
-    color: #e5e5e5;
+    font-weight: bold;
+    color: ${(props) => props.theme.colors.titlePost};
   }
 `;
 
 export const Details = styled.div`
   p {
-    margin: 0!important;
+    margin: 0 !important;
     font-size: 12px;
     line-height: 18px;
     color: ${c.highlight};
@@ -52,6 +53,6 @@ export const Details = styled.div`
   span {
     font-size: 16px;
     line-height: 24px;
-    color: #e5e5e5;
+    color: ${(props) => props.theme.colors.descriptionPost};
   }
 `;
