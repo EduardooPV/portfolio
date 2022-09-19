@@ -60,13 +60,12 @@ export const Post = styled.a`
   }
 
   @media (min-width: 768px) {
-    padding: 20px;
-
-    :hover {
-      background: #20242bae;
+    P {
+      transition: color 0.1s;
     }
 
     :hover p:first-child {
+      text-decoration: underline;
       color: ${c.highlight};
     }
   }

@@ -30,7 +30,7 @@ export const Container = styled.main`
     display: block;
     width: 100%;
     max-height: 300px;
-    object-fit: fill;
+    object-fit: contain;
     border-radius: 10px;
   }
 `;
@@ -113,16 +113,23 @@ export const ContentPost = styled.section`
     font-size: 14px;
     padding: 1rem;
     border-radius: 4px;
-    font-weight: bold;
     white-space: pre-line;
   }
 
   a {
-    color: ${c.info};
-    transition: color 0.1s;
+    color: ${(props) => props.theme.colors.titlePost};
+    transition: opacity 0.1s;
 
     :hover {
-      color: ${c.white};
+      opacity: 0.7;
     }
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    max-height: fit-content;
+    object-fit: contain;
+    border-radius: 10px;
   }
 `;
