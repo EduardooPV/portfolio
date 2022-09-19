@@ -1,4 +1,4 @@
 import * as prismic from "@prismicio/client";
 
-const endpoint = prismic.getEndpoint(process.env.ENDPOINT_PRISMIC);
+const endpoint = prismic.getEndpoint("blogluizeduardo");
 export const client = prismic.createClient(endpoint);
