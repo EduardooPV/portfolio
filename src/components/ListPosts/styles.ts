@@ -53,6 +53,11 @@ export const Post = styled.a`
   text-decoration: none;
   transition: background 0.2s, color 0.2s;
 
+  & + a {
+    border-top: 1px solid #BABABA50;
+    padding-top: 40px;
+  }
+
   div {
     display: flex;
     align-items: center;
