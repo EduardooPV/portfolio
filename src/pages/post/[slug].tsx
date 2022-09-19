@@ -23,10 +23,6 @@ interface Post {
 
   data?: {
     title: string;
-    banner: {
-      url?: string;
-      alt?: string;
-    };
     tag: string;
     content: {
       body: {
@@ -92,8 +88,6 @@ export default function PostPage({ post }: PostProps) {
             </li>
           </Infos>
 
-          <img src={post.data?.banner?.url} alt={post.data?.banner?.alt} />
-
           <ContentPost>
             {post.data?.content.map((postContent: any, index) => (
               <div key={index}>
@@ -147,10 +141,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
     ),
     data: {
       title: response.data.title,
-      banner: {
-        url: response.data.banner.url ? response.data.banner.url : null,
-        alt: response.data.banner.alt ? response.data.banner.alt : null,
-      },
       tag: response.data.tag,
       content: response.data.content,
     },

@@ -25,14 +25,6 @@ export const Container = styled.main`
     font-size: 0.875rem;
     line-height: 1.063rem;
   }
-
-  img {
-    display: block;
-    width: 100%;
-    max-height: 300px;
-    object-fit: contain;
-    border-radius: 10px;
-  }
 `;
 
 export const Infos = styled.ul`
