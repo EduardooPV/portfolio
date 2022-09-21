@@ -54,7 +54,7 @@ export const Header = styled.header`
     font-family: montserrat, sans-serif;
     font-size: ${f.caption.fontSize};
     line-height: ${f.caption.lineHeight};
-    color: ${c.neutral400};
+    color: ${c.neutral200};
   }
 `;
 

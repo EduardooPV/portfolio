@@ -56,7 +56,7 @@ export function CardProject({ props, loading }: CardProps) {
           </a>
         </Link>
         <Link href={props.html_url}>
-          <a target="_blank" rel="noreferrer">
+          <a target="_blank" rel="noreferrer" title="Visite o projeto no Github">
             <AiFillGithub />
           </a>
         </Link>
