@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 
 import { RichText } from "prismic-dom";
 import * as prismic from "@prismicio/client";
-import { client } from "../../services/prismic";
+import { client } from "../services/prismic";
 
 import { CalendarBlank, Clock, Tag } from "phosphor-react";
 
