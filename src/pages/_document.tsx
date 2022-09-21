@@ -55,11 +55,14 @@ class MyDocument extends Document {
 
           <meta property="og:locale" content="pt_BR" />
 
-          <meta property="og:image" content="https://files.fm/f/xbgjpzx68" />
+          <meta
+            property="og:image"
+            content="https://user-images.githubusercontent.com/69824782/191628433-3262817c-1968-49b0-aa7e-fc2ad55c53c7.png8"
+          />
 
           <meta
             name="description"
-            content="P, meus conhecimentos e alguns dos meus projetos."
+            content="Meu portfolio, contando um pouco sobre mim, projetos e carreira."
           />
 
           <meta
@@ -69,7 +72,7 @@ class MyDocument extends Document {
 
           <meta
             property="og:description"
-            content="Portfólio do Luiz Eduardo Prado Veltroni, contando um pouco sobre mim"
+            content="Meu portfolio, contando um pouco sobre mim, projetos e carreira."
           />
         </Head>
         <body>
