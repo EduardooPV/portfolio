@@ -11,9 +11,8 @@ import { BackToHome } from "../components/BackToHome";
 import { hotjar } from "react-hotjar";
 
 export default function Home() {
-
   const hjid = 3080565;
-  const hjsv = 6
+  const hjsv = 6;
 
   useEffect(() => {
     hotjar.initialize(hjid, hjsv);
@@ -22,7 +21,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Início | Luiz Eduardo </title>
+        <title>Início | Luiz Eduardo </title>        
       </Head>
       <BackToHome />
       <Hero />

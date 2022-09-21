@@ -49,14 +49,28 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
 
-          <meta
-            name="description"
-            content="Portfólio do Luiz Eduardo Prado Veltroni, contando um pouco sobre mim, meus conhecimentos e alguns dos meus projetos."
-          />
-
           <link rel="shortcut icon" href="/favicon.png" />
 
           <meta name="theme-color" content="#232222" />
+
+          <meta property="og:locale" content="pt_BR" />
+
+          <meta property="og:image" content="https://files.fm/f/xbgjpzx68" />
+
+          <meta
+            name="description"
+            content="P, meus conhecimentos e alguns dos meus projetos."
+          />
+
+          <meta
+            property="og:title"
+            content="Portfolio Luiz Eduardo Prado Veltroni"
+          />
+
+          <meta
+            property="og:description"
+            content="Portfólio do Luiz Eduardo Prado Veltroni, contando um pouco sobre mim"
+          />
         </Head>
         <body>
           <Main />
