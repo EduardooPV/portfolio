@@ -47,7 +47,7 @@ export function ListProjects() {
       data-aos-duration="800"
       data-aos-delay="800"
     >
-      <TextSection tag="<h1>" tabIndex={6}>
+      <TextSection tag="<h1>" tabIndex={0}>
         Projetos
       </TextSection>
 
