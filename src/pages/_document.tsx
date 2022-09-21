@@ -57,7 +57,7 @@ class MyDocument extends Document {
 
           <meta
             property="og:image"
-            content="https://user-images.githubusercontent.com/69824782/191628433-3262817c-1968-49b0-aa7e-fc2ad55c53c7.png8"
+            content="https://user-images.githubusercontent.com/69824782/191628795-aee4b762-9cd2-4311-bcb9-d8c8d31210f5.png"
           />
 
           <meta
