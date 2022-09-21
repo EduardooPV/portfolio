@@ -1,8 +1,14 @@
+import Head from "next/head";
 import React from "react";
 import { ListProjects } from "../components/ListProjects";
 
 export default function Projetos() {
   return (
-    <ListProjects />
-  )
+    <>
+      <Head>
+        <title>Projetos | Luiz Eduardo</title>
+      </Head>
+      <ListProjects />
+    </>
+  );
 }
