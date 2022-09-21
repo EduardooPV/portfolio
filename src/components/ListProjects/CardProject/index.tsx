@@ -4,6 +4,7 @@ import { AiOutlineEye, AiOutlineStar, AiFillGithub } from "react-icons/ai";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { CardProps } from "./types";
+import Link from "next/link";
 
 export function CardProject({ props, loading }: CardProps) {
   return (
@@ -49,12 +50,16 @@ export function CardProject({ props, loading }: CardProps) {
       )}
 
       <Footer>
-        <a href={props.homepage} target="_blank" rel="noreferrer">
-          Visualizar site
-        </a>
-        <a href={props.html_url} target="_blank" rel="noreferrer">
-          <AiFillGithub />
-        </a>
+        <Link href={props.homepage} passHref>
+          <a target="_blank" rel="noreferrer">
+            Visualizar site
+          </a>
+        </Link>
+        <Link href={props.html_url}>
+          <a target="_blank" rel="noreferrer">
+            <AiFillGithub />
+          </a>
+        </Link>
       </Footer>
     </Container>
   );
