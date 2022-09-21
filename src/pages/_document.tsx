@@ -55,10 +55,7 @@ class MyDocument extends Document {
 
           <meta property="og:locale" content="pt_BR" />
 
-          <meta
-            property="og:image"
-            content="https://user-images.githubusercontent.com/69824782/191628795-aee4b762-9cd2-4311-bcb9-d8c8d31210f5.png"
-          />
+          <meta property="og:image" content="/assets/ilustration.png" />
 
           <meta
             name="description"
