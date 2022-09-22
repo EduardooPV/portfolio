@@ -20,34 +20,12 @@ export const Header = styled.header`
   display: flex;
   flex-direction: column;
 
-  div {
-    display: flex;
-    justify-content: space-between;
-
-    p {
-      font-size: ${f.h5.fontSize};
-      line-height: ${f.h5.lineHeight};
-      font-weight: bold;
-      color: ${(props) => props.theme.colors.title};
-      text-transform: capitalize;
-    }
-
-    span {
-      font-size: ${f.paragraphSmall.fontSize};
-      line-height: ${f.paragraphSmall.lineHeight};
-      color: ${(props) => props.theme.colors.text};
-    }
-
-    div {
-      display: flex;
-      gap: 8px;
-
-      span {
-        display: flex;
-        align-items: center;
-        gap: 4px;
-      }
-    }
+  p {
+    font-size: ${f.h5.fontSize};
+    line-height: ${f.h5.lineHeight};
+    font-weight: bold;
+    color: ${(props) => props.theme.colors.title};
+    text-transform: capitalize;
   }
 
   span {

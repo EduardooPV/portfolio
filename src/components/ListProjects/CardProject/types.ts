@@ -1,13 +1,13 @@
 export interface CardProps {
   props: {
-    name: string;
-    homepage: string;
-    created_at: string;
+    slug: string;
+    title: string;
     description: string;
-    html_url: string;
-    stargazers_count: number;
-    watchers: string;
+    created_at: string;
+    preview: {
+      url: string;
+      alt: string;
+    };
+    github_url: string;
   };
-
-  loading: boolean;
 }
