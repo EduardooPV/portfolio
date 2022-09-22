@@ -31,7 +31,7 @@ export function CardProject({ props }: CardProps) {
       <Footer>
         <Link href="#" passHref>
           <a target="_blank" rel="noreferrer">
-            Visualizar site
+            Detalhes do projeto
           </a>
         </Link>
         <Link href={props.github_url}>

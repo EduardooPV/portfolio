@@ -44,6 +44,9 @@ export const Preview = styled.div`
 
   img {
     width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    object-position: center top;
   }
 `;
 
@@ -74,14 +77,14 @@ export const Footer = styled.footer`
     text-decoration: none;
     border-radius: 4px;
 
+    transition: filter 0.2s;
+
     :hover {
-      background: ${c.primary400};
-      color: ${c.white};
+      filter: brightness(0.8);
     }
 
     :active {
-      background: ${c.primary500};
-      color: ${c.white};
+      background: ${c.primary400};
     }
   }
 
