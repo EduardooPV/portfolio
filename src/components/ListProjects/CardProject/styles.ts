@@ -36,15 +36,21 @@ export const Header = styled.header`
   }
 `;
 
+export const Preview = styled.div`
+  padding-top: 20px;
+  border-top: 1px solid ${(props) => props.theme.colors.barCard};
+
+  img {
+    width: 100%;
+  }
+`;
+
 export const Description = styled.p`
   display: block;
-  padding-top: 20px;
   flex: 1;
   font-size: ${f.paragraphSmall.fontSize};
   line-height: ${f.paragraphSmall.lineHeight};
   color: ${(props) => props.theme.colors.descriptionCard};
-
-  border-top: 1px solid ${(props) => props.theme.colors.barCard};
 `;
 
 export const Footer = styled.footer`

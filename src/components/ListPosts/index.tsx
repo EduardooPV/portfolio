@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
+import { CalendarBlank, MagnifyingGlass } from "phosphor-react";
+
+import { ListPostsProps, PostProps } from "./types";
+
 import {
   Container,
   SearchBar,
@@ -11,28 +15,9 @@ import {
   Tag,
 } from "./styles";
 
-import { CalendarBlank, MagnifyingGlass } from "phosphor-react";
-
-interface Post {
-  slug: string;
-  title: string;
-  description: string;
-  tag: string;
-  updatedAt: string;
-}
-interface ListPostsProps {
-  posts: {
-    slug: string;
-    title: string;
-    description: string;
-    tag: string;
-    updatedAt: string;
-  }[];
-}
-
 export function ListPosts({ posts }: ListPostsProps) {
   const [searchInput, setSearchInput] = useState("");
-  const [filteredResults, setFilteredResults] = useState<Post[]>([]);
+  const [filteredResults, setFilteredResults] = useState<PostProps[]>([]);
 
   function searchItems(searchValue) {
     setSearchInput(searchValue);

@@ -1,14 +1,15 @@
 import React from "react";
-import { Container, Header, Description, Footer } from "./styles";
-import { AiFillGithub } from "react-icons/ai";
-import "react-loading-skeleton/dist/skeleton.css";
-import { CardProps } from "./types";
 import Link from "next/link";
 import { RichText } from "prismic-dom";
 
-export function CardProject({ props }: CardProps) {
-  console.log(props.description);
+import { AiFillGithub } from "react-icons/ai";
+import "react-loading-skeleton/dist/skeleton.css";
 
+import { CardProps } from "./types";
+
+import { Container, Header, Preview, Description, Footer } from "./styles";
+
+export function CardProject({ props }: CardProps) {
   return (
     <Container>
       <Header>
@@ -16,6 +17,10 @@ export function CardProject({ props }: CardProps) {
 
         <span>Criado em: {props.created_at}</span>
       </Header>
+
+      <Preview>
+        <img src={props.preview.url} alt={props.preview.alt} />
+      </Preview>
 
       <Description
         dangerouslySetInnerHTML={{
