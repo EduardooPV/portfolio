@@ -10,7 +10,7 @@ export const Container = styled.main`
   gap: 20px;
 
   @media (min-width: 768px) {
-    padding: 140px 20px 20px 20px;
+    padding: 120px 20px 20px 20px;
     gap: 60px;
   }
 `;
@@ -24,5 +24,6 @@ export const Content = styled.section`
 
   @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
+    gap: 40px;
   }
 `;
