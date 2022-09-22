@@ -9,7 +9,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 24px;
+  gap: 15px;
 
   border: 1px solid ${c.neutral400};
   border-radius: 4px;
@@ -18,7 +18,9 @@ export const Container = styled.div`
 export const Header = styled.header`
   font-family: montserrat, sans-serif;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 
   p {
     font-size: ${f.h5.fontSize};
@@ -37,7 +39,7 @@ export const Header = styled.header`
 `;
 
 export const Preview = styled.div`
-  padding-top: 20px;
+  padding-top: 18px;
   border-top: 1px solid ${(props) => props.theme.colors.barCard};
 
   img {
@@ -45,7 +47,7 @@ export const Preview = styled.div`
   }
 `;
 
-export const Description = styled.p`
+export const Description = styled.div`
   display: block;
   flex: 1;
   font-size: ${f.paragraphSmall.fontSize};

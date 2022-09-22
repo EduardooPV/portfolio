@@ -16,14 +16,13 @@ export const Container = styled.main`
 `;
 
 export const Content = styled.section`
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 30px;
 
   position: relative;
 
   @media (min-width: 768px) {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: 1fr 1fr;
   }
 `;
