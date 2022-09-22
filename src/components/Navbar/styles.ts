@@ -8,12 +8,12 @@ export const Container = styled.header`
   position: fixed;
 
   background: rgb(9, 9, 10, 0.6);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(114, 114, 126, 0.5);
 
   color: ${c.neutral200};
 
-  z-index: 9;
+  z-index: 99;
 `;
 
 export const Content = styled.div`

@@ -17,7 +17,7 @@ export function Navbar({ toggleTheme, theme }: NavbarProps) {
   return (
     <Container data-aos="fade-down" data-aos-duration="800">
       <Content>
-        <a href="/" title="Logo">
+        <a href="/" title="Logo" tabIndex={0}>
           <svg
             width="48"
             height="16"
