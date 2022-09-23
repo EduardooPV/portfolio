@@ -61,7 +61,7 @@ export const Post = styled.a`
   div {
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 30px;
   }
 
   @media (min-width: 768px) {

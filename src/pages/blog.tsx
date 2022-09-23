@@ -12,7 +12,7 @@ interface Post {
   slug: string;
   title: string;
   description: string;
-  tag: string;
+  tags: string[];
   updatedAt: string;
 }
 
@@ -57,6 +57,7 @@ export const getStaticProps: GetStaticProps = async () => {
           year: "numeric",
         }
       ),
+      tags: post.tags,
     };
   });
 
@@ -65,6 +66,6 @@ export const getStaticProps: GetStaticProps = async () => {
       posts,
     },
     // revalidate: 60 * 60 * 24 // 24Horas
-    revalidate: 1
+    revalidate: 1,
   };
 };

@@ -2,7 +2,7 @@ export interface PostProps {
   slug: string;
   title: string;
   description: string;
-  tag: string;
+  tags: string[];
   updatedAt: string;
 }
 
@@ -11,7 +11,7 @@ export interface ListPostsProps {
     slug: string;
     title: string;
     description: string;
-    tag: string;
+    tags: string[];
     updatedAt: string;
   }[];
 }

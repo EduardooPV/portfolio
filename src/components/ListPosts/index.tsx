@@ -62,19 +62,20 @@ export function ListPosts({ posts }: ListPostsProps) {
                 <CalendarBlank size={20} color="#F89D24" /> {post.updatedAt}
               </Date>
 
-              {post.tag && (
-                <Tag>
-                  <span
-                    style={
-                      post.tag === "Git"
-                        ? { background: "red" }
-                        : { background: "blue" }
-                    }
-                  >
-                    {post.tag}
-                  </span>
-                </Tag>
-              )}
+              {post.tags &&
+                post.tags.map((tag) => (
+                  <Tag key={tag}>
+                    <span
+                      style={
+                        tag === "Git"
+                          ? { background: "red" }
+                          : { background: "blue" }
+                      }
+                    >
+                      {tag}
+                    </span>
+                  </Tag>
+                ))}
             </div>
           </Post>
         </Link>
