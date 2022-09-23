@@ -20,10 +20,10 @@ import { Footer } from "../../components/Footer";
 
 interface Post {
   updatedAt: string;
+  tags: string[];
 
   data?: {
     title: string;
-    tag: string;
     content: {
       body: {
         text: string;
@@ -84,7 +84,7 @@ export default function PostPage({ post }: PostProps) {
             </li>
             <li>
               <Tag size={20} color="#F89D24" />
-              {post.data?.tag}
+              {post?.tags && post?.tags.map((tag) => <p key={tag}>{tag}</p>)}
             </li>
           </Infos>
 
@@ -131,6 +131,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   const post = {
     slug,
+    tags: response.tags,
     updatedAt: new Date(response.last_publication_date).toLocaleDateString(
       "pt-br",
       {
@@ -141,7 +142,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
     ),
     data: {
       title: response.data.title,
-      tag: response.data.tag,
       content: response.data.content,
     },
   };

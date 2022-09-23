@@ -43,14 +43,11 @@ export const getStaticProps: GetStaticProps = async () => {
     predicates: prismic.predicate.at("document.type", "posts"),
   });
 
-  console.log(response)
-
   const posts = response.results.map((post) => {
     return {
       slug: post.uid,
       title: post.data.title,
       description: post.data.description,
-      tag: post.data.tag,
       updatedAt: new Date(post.first_publication_date).toLocaleDateString(
         "pt-br",
         {
