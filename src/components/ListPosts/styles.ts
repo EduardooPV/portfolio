@@ -16,37 +16,6 @@ export const Container = styled.main`
   }
 `;
 
-export const SearchBar = styled.div`
-  width: 100%;
-  height: 70px;
-
-  padding: 10px 0;
-
-  display: flex;
-  align-items: center;
-
-  @media (min-width: 768px) {
-    width: 400px;
-  }
-
-  input {
-    width: 100%;
-    height: 100%;
-
-    padding: 10px;
-
-    border: 1px solid #8b8b8b8f;
-    border-radius: 6px;
-
-    color: ${c.heading};
-    background: transparent;
-  }
-
-  label {
-    margin-left: -40px;
-  }
-`;
-
 export const Post = styled.a`
   border-radius: 4px;
 
