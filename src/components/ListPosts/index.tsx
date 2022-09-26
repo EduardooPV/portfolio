@@ -8,6 +8,14 @@ import { ListPostsProps } from "./types";
 import { Container, Post, Title, Description, Date, Tag } from "./styles";
 
 export function ListPosts({ posts }: ListPostsProps) {
+  const colorsTags = {
+    Git: "red",
+    Github: "green",
+    React: "blue",
+    Jest: "brown",
+    Teste: "yellow",
+  };
+
   return (
     <Container>
       {posts
@@ -27,15 +35,7 @@ export function ListPosts({ posts }: ListPostsProps) {
                 {post.tags &&
                   post.tags.map((tag) => (
                     <Tag key={tag}>
-                      <span
-                        style={
-                          tag === "Git"
-                            ? { background: "red" }
-                            : { background: "blue" }
-                        }
-                      >
-                        {tag}
-                      </span>
+                      <span style={{ background: colorsTags[tag] }}>{tag}</span>
                     </Tag>
                   ))}
               </div>
