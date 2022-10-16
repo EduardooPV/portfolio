@@ -50,7 +50,7 @@ export function Skills() {
                 />
               </svg>
               <span>
-                Conhecimento raso sobre <strong>UI/UX</strong>, já realizei
+                Conhecimento básico em <strong>UI/UX</strong>, já realizei
                 alguns <strong>wireframes</strong> e <strong>protótipos</strong>{" "}
                 utilizando o <strong>Figma</strong> como ferramenta de
                 desenvolvimento.
@@ -127,7 +127,7 @@ export function Skills() {
               </svg>
 
               <span>
-                Alicando sempre o conceito de desenvolvimento{" "}
+                Aplicando sempre o conceito de desenvolvimento{" "}
                 <strong>Mobile first</strong>, e totalmente{" "}
                 <strong>responsivo</strong> em diversas plataformas.
               </span>
