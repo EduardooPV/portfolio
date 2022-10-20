@@ -3,10 +3,10 @@ import styled from "styled-components";
 import f from "./typography.json";
 
 export const Container = styled.main`
-  max-width: 1120px;
+  max-width: 1240px;
 
   margin: 0 auto;
-  padding: 90px 20px;
+  padding: 40px 20px;
 
   h1 {
     text-align: center;
@@ -15,12 +15,12 @@ export const Container = styled.main`
   }
 
   > div {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 30px;
 
     @media (min-width: 1024px) {
-      grid-template-columns: 1fr 300px;
+      flex-direction: row-reverse;
     }
   }
 `;
@@ -88,6 +88,7 @@ export const Section = styled.section`
 `;
 
 export const Aside = styled.aside`
+  max-width: auto;
   height: fit-content;
 
   padding: 0 1rem 1rem;
@@ -98,6 +99,7 @@ export const Aside = styled.aside`
   background: ${(props) => props.theme.colors.backgroundPost};
 
   @media (min-width: 1024px) {
+    max-width: 400px;
     margin-top: 1rem;
 
     position: sticky;

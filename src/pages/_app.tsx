@@ -4,6 +4,7 @@ import { AppProps } from "next/app";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "../styles/GlobalStyle";
 import { Navbar } from "../components/Navbar";
+import { Footer } from "../components/Footer";
 import { combineTheme, dark, light } from "../styles/theme";
 import usePersistedState from "../utils/usePersistedState";
 import { MediaContextProvider } from "../components/MediaScreen";
@@ -29,6 +30,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <GlobalStyle />
           <Navbar toggleTheme={toggleTheme} theme={theme} />
           <Component {...pageProps} />
+          <Footer />
         </MediaContextProvider>
       </ThemeProvider>
     </>

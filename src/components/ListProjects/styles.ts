@@ -3,14 +3,13 @@ import styled from "styled-components";
 export const Container = styled.main`
   max-width: 1240px;
   margin: 0 auto;
-  padding: 80px 20px 20px 20px;
+  padding: 20px;
 
   display: flex;
   flex-direction: column;
   gap: 20px;
 
   @media (min-width: 768px) {
-    padding: 120px 20px 20px 20px;
     gap: 60px;
   }
 `;

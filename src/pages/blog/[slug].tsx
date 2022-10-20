@@ -17,6 +17,7 @@ import { ReadingProgressiveBar } from "../../components/ReadingProgressiveBar";
 
 import { Container, Infos, ContentPost } from "../../styles/postSlug";
 import { Footer } from "../../components/Footer";
+import { Breadcrumb } from "../../components/Breadcrumb";
 
 interface Post {
   updatedAt: string;
@@ -68,6 +69,8 @@ export default function PostPage({ post }: PostProps) {
       </Head>
 
       <ReadingProgressiveBar />
+      
+      <Breadcrumb />
 
       <Container>
         <article>
@@ -103,8 +106,6 @@ export default function PostPage({ post }: PostProps) {
           </ContentPost>
         </article>
       </Container>
-
-      <Footer />
     </>
   );
 }

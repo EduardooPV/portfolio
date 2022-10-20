@@ -12,6 +12,7 @@ import { Link, GithubLogo } from "phosphor-react";
 
 import { Container, Section, Aside } from "../../styles/projectSlug";
 import { Footer } from "../../components/Footer";
+import { Breadcrumb } from "../../components/Breadcrumb";
 
 interface Project {
   slug: string;
@@ -41,6 +42,8 @@ export default function ProjectPage({ project }: ProjectProps) {
       <Head>
         <title>Projeto: {project.slug} | Luiz Eduardo</title>
       </Head>
+
+      <Breadcrumb />
 
       <Container>
         <h1>{project.title}</h1>
@@ -80,8 +83,6 @@ export default function ProjectPage({ project }: ProjectProps) {
           </Section>
         </div>
       </Container>
-
-      <Footer />
     </>
   );
 }

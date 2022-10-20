@@ -7,8 +7,6 @@ export const Container = styled.main`
   padding: 40px 20px;
 
   h1 {
-    margin-top: 50px;
-
     font-weight: 700;
     font-size: 35px;
     line-height: 40px;

@@ -7,6 +7,7 @@ import { client } from "../services/prismic";
 
 import { ListPosts } from "../components/ListPosts";
 import { Footer } from "../components/Footer";
+import { Breadcrumb } from "../components/Breadcrumb";
 
 interface Post {
   slug: string;
@@ -31,9 +32,9 @@ export default function Blog({ posts }: PostsProps) {
         />
       </Head>
 
-      <ListPosts posts={posts} />
+      <Breadcrumb />
 
-      <Footer />
+      <ListPosts posts={posts} />
     </>
   );
 }

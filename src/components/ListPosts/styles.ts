@@ -5,14 +5,14 @@ export const Container = styled.main`
   max-width: 1120px;
 
   margin: 0 auto;
-  padding: 80px 20px 20px;
+  padding: 20px;
 
   display: flex;
   flex-direction: column;
   gap: 40px;
 
   @media (min-width: 768px) {
-    padding: 100px 20px;
+    padding: 40px 20px;
   }
 `;
 

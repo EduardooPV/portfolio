@@ -30,7 +30,6 @@ export default function Home() {
       <Diviser />
       <Skills />
       <Projects />
-      <Footer />
     </>
   );
 }

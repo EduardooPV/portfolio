@@ -6,6 +6,7 @@ import * as prismic from "@prismicio/client";
 import { client } from "../services/prismic";
 
 import { ListProjects } from "../components/ListProjects";
+import { Breadcrumb } from "../components/Breadcrumb";
 
 interface Project {
   slug: string;
@@ -29,6 +30,8 @@ export default function Projetos({ projects }: ProjectsProps) {
       <Head>
         <title>Projetos | Luiz Eduardo</title>
       </Head>
+
+      <Breadcrumb />
 
       <ListProjects projects={projects} />
     </>

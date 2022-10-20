@@ -21,7 +21,7 @@ export function ListPosts({ posts }: ListPostsProps) {
       {posts
         .sort((a: any, b: any) => b.updatedAt.localeCompare(a.updatedAt))
         .map((post) => (
-          <Link href={`post/${post.slug}`} passHref key={post.title}>
+          <Link href={`blog/${post.slug}`} passHref key={post.title}>
             <Post>
               <Title>{post.title}</Title>
 
