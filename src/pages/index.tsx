@@ -1,12 +1,24 @@
 import React, { useEffect } from "react";
+
+import dynamic from "next/dynamic";
 import Head from "next/head";
-import { Diviser } from "../components/Diviser";
+
 import { Hero } from "../components/Hero";
-import { About } from "../components/About";
-import { Skills } from "../components/Skills";
-import { Projects } from "../components/Projects";
-import { Footer } from "../components/Footer";
-import { BackToHome } from "../components/BackToHome";
+const Diviser = dynamic(() =>
+  import("../components/Diviser").then((mod) => mod.Diviser)
+);
+const About = dynamic(() =>
+  import("../components/About").then((mod) => mod.About)
+);
+const Skills = dynamic(() =>
+  import("../components/Skills").then((mod) => mod.Skills)
+);
+const Projects = dynamic(() =>
+  import("../components/Projects").then((mod) => mod.Projects)
+);
+const BackToHome = dynamic(() =>
+  import("../components/BackToHome").then((mod) => mod.BackToHome)
+);
 
 import { hotjar } from "react-hotjar";
 
@@ -21,8 +33,9 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Início | Luiz Eduardo </title>        
+        <title>Início | Luiz Eduardo </title>
       </Head>
+
       <BackToHome />
       <Hero />
       <Diviser />

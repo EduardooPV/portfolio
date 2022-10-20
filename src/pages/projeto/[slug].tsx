@@ -11,7 +11,6 @@ import { ParsedUrlQuery } from "querystring";
 import { Link, GithubLogo } from "phosphor-react";
 
 import { Container, Section, Aside } from "../../styles/projectSlug";
-import { Footer } from "../../components/Footer";
 import { Breadcrumb } from "../../components/Breadcrumb";
 
 interface Project {
@@ -40,13 +39,13 @@ export default function ProjectPage({ project }: ProjectProps) {
   return (
     <>
       <Head>
-        <title>Projeto: {project.slug} | Luiz Eduardo</title>
+        <title>Projeto: {project?.slug} | Luiz Eduardo</title>
       </Head>
 
       <Breadcrumb />
 
       <Container>
-        <h1>{project.title}</h1>
+        <h1>{project?.title}</h1>
 
         <div>
           <Aside>
@@ -54,19 +53,19 @@ export default function ProjectPage({ project }: ProjectProps) {
 
             <div
               dangerouslySetInnerHTML={{
-                __html: RichText.asHtml(project.description),
+                __html: RichText.asHtml(project?.description),
               }}
             />
 
             <p>Criado em:</p>
 
-            <span>{project.created_at}</span>
+            <span>{project?.created_at}</span>
 
             <p>Veja o projeto no:</p>
 
             <div>
               <GithubLogo size={20} />
-              <a href={project.github_url}>Github</a>
+              <a href={project?.github_url}>Github</a>
             </div>
 
             <div>
@@ -77,7 +76,7 @@ export default function ProjectPage({ project }: ProjectProps) {
           <Section>
             <div
               dangerouslySetInnerHTML={{
-                __html: RichText.asHtml(project.readme),
+                __html: RichText.asHtml(project?.readme),
               }}
             />
           </Section>
@@ -92,7 +91,7 @@ export const getStaticPaths = async () => {
     predicates: prismic.predicate.at("document.type", "projects"),
   });
 
-  const paths = response.results.map((post) => ({
+  const paths = response?.results?.map((post) => ({
     params: { slug: post.uid },
   }));
 
@@ -106,6 +105,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const { slug } = context.params as IParams;
 
   const response = await client.getByUID("projects", String(slug), {});
+
+  console.log(response)
 
   const project = {
     slug,
