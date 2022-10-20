@@ -17,7 +17,12 @@ export function ListPosts({ posts }: ListPostsProps) {
   };
 
   return (
-    <Container>
+    <Container
+      data-aos="fade-down"
+      data-aos-offset="20"
+      data-aos-duration="800"
+      data-aos-delay="800"
+    >
       {posts
         .sort((a: any, b: any) => b.updatedAt.localeCompare(a.updatedAt))
         .map((post) => (

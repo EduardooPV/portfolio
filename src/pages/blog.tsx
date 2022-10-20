@@ -34,7 +34,7 @@ export default function Blog({ posts }: PostsProps) {
 
       <Breadcrumb />
 
-      <ListPosts posts={posts} />
+      <ListPosts posts={posts}  />
     </>
   );
 }
