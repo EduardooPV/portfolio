@@ -40,6 +40,12 @@ export function Navbar({ toggleTheme, theme }: NavbarProps) {
           </svg>
         </a>
         <Media at="sm">
+          <label
+            htmlFor="theme"
+            style={{ width: "1px", height: "1px", opacity: "0"}}
+          >
+            DM 
+          </label>
           <Switch
             id="theme"
             onChange={toggleTheme}
@@ -72,7 +78,14 @@ export function Navbar({ toggleTheme, theme }: NavbarProps) {
               >
                 Curriculo
               </a>
+              <label
+                htmlFor="theme"
+                style={{ width: "1px", height: "1px", overflow: "hidden" }}
+              >
+                DM
+              </label>
               <Switch
+                id="theme"
                 onChange={toggleTheme}
                 checked={theme.title === "light"}
                 checkedIcon={false}
