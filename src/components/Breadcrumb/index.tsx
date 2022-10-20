@@ -54,29 +54,27 @@ export function Breadcrumb() {
         breadcrumbs.map((breadcrumb, index) => {
           if (index !== breadcrumbs.length - 1) {
             return (
-              <>
+              <div key={breadcrumb.href}>
                 <BreadcrumbItem
-                  key={breadcrumb.href}
                   href={breadcrumb.href}
                   isCurrent={breadcrumb.isCurrent}
                 >
                   {breadcrumb.label}
                 </BreadcrumbItem>
                 <span>/</span>
-              </>
+              </div>
             );
           }
 
           return (
-            <>
+            <div key={breadcrumb.href}>
               <BreadcrumbItem
-                key={breadcrumb.href}
                 href={breadcrumb.href}
                 isCurrent={breadcrumb.isCurrent}
               >
                 {breadcrumb.label}
               </BreadcrumbItem>
-            </>
+            </div>
           );
         })}
     </List>

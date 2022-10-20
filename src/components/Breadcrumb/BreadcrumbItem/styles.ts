@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Item = styled.li`
+export const Item = styled.span`
   list-style: none;
 
   a {

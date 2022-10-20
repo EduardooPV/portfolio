@@ -19,9 +19,7 @@ export function ListProjects({ projects }: ListProjects) {
 
       <Content>
         {projects?.map((project) => (
-          <>
-            <CardProject props={project} key={project.slug} />
-          </>
+          <CardProject props={project} key={project.slug} />
         ))}
       </Content>
     </Container>

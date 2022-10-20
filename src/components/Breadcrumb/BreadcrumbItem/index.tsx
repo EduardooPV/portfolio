@@ -15,7 +15,6 @@ export function BreadcrumbItem({
     <Item {...props}>
       <Link href={href} passHref>
         <a
-          className={isCurrent && "text-blue-500"}
           aria-current={isCurrent ? "page" : "false"}
         >
           {children}
