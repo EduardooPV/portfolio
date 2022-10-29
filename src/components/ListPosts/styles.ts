@@ -2,7 +2,7 @@ import styled from "styled-components";
 import c from "../../styles/pallete.json";
 
 export const Container = styled.main`
-  max-width: 1120px;
+  max-width: 1240px;
 
   margin: 0 auto;
   padding: 20px;

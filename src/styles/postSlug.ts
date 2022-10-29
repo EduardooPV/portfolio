@@ -56,6 +56,8 @@ export const ContentPost = styled.section`
 
   color: ${(props) => props.theme.colors.titlePost};
 
+  word-break: break-word;
+
   @media (min-width: 768px) {
     grid-template-columns: 1fr 250px;
     gap: 20px;

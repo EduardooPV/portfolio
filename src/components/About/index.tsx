@@ -21,11 +21,16 @@ export function About() {
   return (
     <Container id="about">
       <Content>
-        <TextSection tag="<h2>" tabIndex={0}>
+        <TextSection
+          tag="<h2>"
+          tabIndex={0}
+          data-aos="fade-up"
+          data-aos-duration="400"
+        >
           Quem sou?
         </TextSection>
 
-        <p>
+        <p data-aos="fade-up" data-aos-duration="600">
           Muito prazer, me chamo <span>Luiz Eduardo</span> (mas todos me chamam
           de Dudu, sou graduado em{" "}
           <span>Analise e desenvolvimento de sistemas</span> pela Universidade
@@ -35,7 +40,7 @@ export function About() {
           em todo o seu eco sistema.
         </p>
 
-        <ContainerIcons>
+        <ContainerIcons data-aos="fade-up" data-aos-duration="600">
           <a
             href="https://github.com/EduardooPV"
             target="_blank"
@@ -79,14 +84,14 @@ export function About() {
 
         <ContainerButton>
           <Link href="/projetos" passHref>
-            <a>
+            <a data-aos="fade-up" data-aos-duration="600">
               <ButtonGeneric>Meus projetos</ButtonGeneric>
             </a>
           </Link>
         </ContainerButton>
       </Content>
       <Media greaterThan="sm">
-        <Figure>
+        <Figure data-aos="fade-right" data-aos-duration="600">
           <img src="/assets/person.webp" alt="Ilustração" />
         </Figure>
       </Media>

@@ -42,9 +42,9 @@ export function Navbar({ toggleTheme, theme }: NavbarProps) {
         <Media at="sm">
           <label
             htmlFor="theme"
-            style={{ width: "1px", height: "1px", opacity: "0"}}
+            style={{ width: "1px", height: "1px", opacity: "0" }}
           >
-            DM 
+            DM
           </label>
           <Switch
             id="theme"
@@ -116,7 +116,9 @@ export function Navbar({ toggleTheme, theme }: NavbarProps) {
                 </a>
               </Link>
               <Link href="/blog" passHref>
-                <a>Blog</a>
+                <a className="menu-item" onClick={Toggle}>
+                  Blog
+                </a>
               </Link>
               <a
                 className="menu-item"

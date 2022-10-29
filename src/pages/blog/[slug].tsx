@@ -16,7 +16,6 @@ import { AsidePerson } from "../../components/AsidePerson";
 import { ReadingProgressiveBar } from "../../components/ReadingProgressiveBar";
 
 import { Container, Infos, ContentPost } from "../../styles/postSlug";
-import { Footer } from "../../components/Footer";
 import { Breadcrumb } from "../../components/Breadcrumb";
 
 interface Post {
@@ -69,14 +68,20 @@ export default function PostPage({ post }: PostProps) {
       </Head>
 
       <ReadingProgressiveBar />
-      
+
       <Breadcrumb />
 
       <Container>
         <article>
-          <h1>{post.data?.title}</h1>
+          <h1 data-aos="fade-up" data-aos-duration="600" data-aos-delay="1200">
+            {post.data?.title}
+          </h1>
 
-          <Infos>
+          <Infos
+            data-aos="fade-up"
+            data-aos-duration="600"
+            data-aos-delay="1800"
+          >
             <li>
               <CalendarBlank size={20} color="#F89D24" />
               <span>{post.updatedAt}</span>
@@ -91,7 +96,11 @@ export default function PostPage({ post }: PostProps) {
             </li>
           </Infos>
 
-          <ContentPost>
+          <ContentPost
+            data-aos="fade-up"
+            data-aos-duration="600"
+            data-aos-delay="1800"
+          >
             {post.data?.content.map((postContent: any, index) => (
               <div key={index}>
                 <div

@@ -41,6 +41,14 @@ export const ContainerCard = styled.div`
     align-items: center;
     gap: 20px;
 
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
     & + div {
       border-top: 2px solid;
     }
@@ -103,7 +111,7 @@ export const ModalHover = styled.div`
   transition: all 0.2s;
   opacity: 0;
 
-  border: 2px solid ${c.neutral200};
+  border: 2px solid ${c.neutral200}!important;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 
@@ -119,7 +127,7 @@ export const ModalHover = styled.div`
     }
 
     strong {
-      color: ${c.primary300}
+      color: ${c.primary300};
     }
   }
 

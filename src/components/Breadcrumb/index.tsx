@@ -45,7 +45,7 @@ export function Breadcrumb() {
   }, [router.asPath]);
 
   return (
-    <List>
+    <List data-aos="fade-right" data-aos-duration="600" data-aos-delay="600">
       <BreadcrumbItem isCurrent={router.pathname === "/"} href="/">
         Início
       </BreadcrumbItem>
@@ -61,7 +61,7 @@ export function Breadcrumb() {
                 >
                   {breadcrumb.label}
                 </BreadcrumbItem>
-                <span>/</span>
+                <span style={{ marginLeft: "10px" }}>/</span>
               </div>
             );
           }

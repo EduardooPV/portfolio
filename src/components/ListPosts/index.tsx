@@ -18,16 +18,18 @@ export function ListPosts({ posts }: ListPostsProps) {
 
   return (
     <Container
-      data-aos="fade-down"
-      data-aos-offset="20"
-      data-aos-duration="800"
-      data-aos-delay="800"
+      data-aos="fade-up"
+      data-aos-duration="600"
+      data-aos-delay="1200"
     >
       {posts
         .sort((a: any, b: any) => b.updatedAt.localeCompare(a.updatedAt))
         .map((post) => (
           <Link href={`blog/${post.slug}`} passHref key={post.title}>
-            <Post>
+            <Post
+              data-aos="fade-up"
+              data-aos-duration="600"
+            >
               <Title>{post.title}</Title>
 
               <Description>{post.description}</Description>

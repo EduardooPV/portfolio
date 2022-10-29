@@ -7,19 +7,27 @@ import { ListProjects } from "./types";
 
 export function ListProjects({ projects }: ListProjects) {
   return (
-    <Container
-      data-aos="fade-down"
-      data-aos-offset="20"
-      data-aos-duration="800"
-      data-aos-delay="800"
-    >
-      <TextSection tag="<h1>" tabIndex={0}>
+    <Container>
+      <TextSection
+        tag="<h1>"
+        tabIndex={0}
+        data-aos="fade-up"
+        data-aos-duration="600"
+        data-aos-delay="1200"
+      >
         Projetos
       </TextSection>
 
-      <Content>
+      <Content data-aos="fade-up" data-aos-duration="600" data-aos-delay="1800">
         {projects?.map((project) => (
-          <CardProject props={project} key={project.slug} />
+          <CardProject
+            props={project}
+            key={project.slug}
+            data-aos="fade-up"
+            data-aos-offset="10"
+            data-aos-duration="600"
+            data-aos-delay="400"
+          />
         ))}
       </Content>
     </Container>

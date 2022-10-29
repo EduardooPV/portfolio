@@ -9,9 +9,9 @@ import { CardProps } from "./types";
 
 import { Container, Header, Preview, Description, Footer } from "./styles";
 
-export function CardProject({ props }: CardProps) {
+export function CardProject({ props, ...rest }: CardProps) {
   return (
-    <Container>
+    <Container {...rest}>
       <Header>
         <p>{props.title}</p>
 

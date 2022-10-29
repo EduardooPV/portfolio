@@ -9,12 +9,17 @@ import { Container, Content, CardUIUX, CardDev } from "./styles";
 export function Projects() {
   return (
     <Container>
-      <TextSection tag="<h2>" tabIndex={0}>
+      <TextSection
+        tag="<h2>"
+        tabIndex={0}
+        data-aos="fade-up"
+        data-aos-duration="400"
+      >
         Projetos
       </TextSection>
 
       <Content>
-        <CardUIUX>
+        <CardUIUX data-aos="zoom-in" data-aos-duration="600">
           <div>
             <svg
               width="70"
@@ -32,7 +37,7 @@ export function Projects() {
           </span>
         </CardUIUX>
 
-        <CardDev>
+        <CardDev data-aos="zoom-in" data-aos-duration="600">
           <div>
             <svg
               width="70"

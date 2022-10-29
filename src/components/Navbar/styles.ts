@@ -179,7 +179,7 @@ const slide = keyframes`
     opacity: 0;
   }
   100% {
-    top: 5%;
+    top: 60px;
     opacity: 1;
   }
 `;
@@ -212,11 +212,17 @@ export const Menu = styled.div`
     text-decoration: none;
     text-align: center;
     font-family: "Roboto", sans-serif;
-    font-size: ${f.h2.fontSize};
-    line-height: ${f.h2.lineHeight};
-    font-weight: ${f.h2.fontWeight.bold};
+    font-size: ${f.h4.fontSize};
+    line-height: ${f.h4.lineHeight};
+    font-weight: ${f.h4.fontWeight.bold};
     color: ${c.neutral500};
     border: 1px solid transparent;
+
+    @media (min-width: 1024px) {
+      font-size: ${f.h2.fontSize};
+      font-weight: ${f.h2.fontWeight.bold};
+      line-height: ${f.h2.lineHeight};
+    }
   }
 
   a:active {
@@ -238,12 +244,13 @@ export const Menu = styled.div`
   &.menuOpen {
     display: flex;
     align-items: center;
+    gap: 20px;
 
     width: 100vw;
-    height: 100vh;
-    padding: 60px 0;
+    height: auto;
+    padding: 20px;
     z-index: 4;
-    top: 0;
+    top: 60px;
     left: 0;
     overflow: auto;
 
