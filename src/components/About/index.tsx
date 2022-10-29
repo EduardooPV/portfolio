@@ -19,7 +19,7 @@ import {
 
 export function About() {
   return (
-    <Container>
+    <Container id="about">
       <Content>
         <TextSection tag="<h2>" tabIndex={0}>
           Quem sou?
@@ -87,7 +87,7 @@ export function About() {
       </Content>
       <Media greaterThan="sm">
         <Figure>
-          <img src="/assets/person.png" alt="Ilustração" />
+          <img src="/assets/person.webp" alt="Ilustração" />
         </Figure>
       </Media>
     </Container>

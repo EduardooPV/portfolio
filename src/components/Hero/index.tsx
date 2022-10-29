@@ -30,7 +30,7 @@ export function Hero() {
         </Content>
         <Media greaterThan="sm">
           <Figure>
-            <img src="/assets/ilustration.png" alt="Ilustração" />
+            <img src="/assets/ilustration.webp" alt="Ilustração" />
           </Figure>
         </Media>
       </Container>

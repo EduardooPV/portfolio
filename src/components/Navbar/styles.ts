@@ -55,7 +55,7 @@ export const NavLinks = styled.nav`
   gap: 10px;
 
   a {
-    padding: 5px 10px;
+    padding: 0px 10px;
     font-family: montserrat, sans-serif;
     font-size: ${f.paragraphLarge.fontSize};
     line-height: ${f.paragraphLarge.lineHeight};

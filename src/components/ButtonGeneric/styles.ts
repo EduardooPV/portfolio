@@ -14,27 +14,29 @@ export const Container = styled.button<PropsStyled>`
   background: ${(props) => (props.types ? "transparent" : `${c.primary300}`)};
   border: 2px solid ${c.primary300};
 
-  color: ${(props) => (props.types ? c.primary300 : c.neutral500)};
+  color: ${(props) => (props.types ? c.primary300 : c.neutral700)};
   font-family: "Montserrat", sans-serif;
   font-size: ${f.paragraphLarge.fontSize};
   line-height: ${f.paragraphLarge.lineHeight};
   font-weight: ${f.paragraphLarge.fontWeight.bold};
+
+  border: 2px solid transparent;
 
   border-radius: 2px;
 
   transition: all 0.2s;
 
   &:hover {
-    background: ${(props) => (props.types ? "transparent" : `${c.primary400}`)};
+    background: ${(props) => (props.types ? "transparent" : `${c.primary250}`)};
     color: ${(props) => (props.types ? c.primary400 : "")};
-    border: 2px solid ${c.primary400};
+    border: 2px solid ${c.primary250};
   }
 
   &:active {
     color: ${(props) => (props.types ? c.primary300 : c.white)};
-    background: ${(props) => (props.types ? "transparent" : `${c.primary500}`)};
+    background: ${(props) => (props.types ? "transparent" : `${c.primary400}`)};
     color: ${(props) => (props.types ? c.primary500 : "")};
-    border: 2px solid ${c.primary500};
+    border: 2px solid ${c.primary400};
   }
 
   @media (min-width: 768px) {
