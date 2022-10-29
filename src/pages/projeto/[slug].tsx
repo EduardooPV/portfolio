@@ -105,9 +105,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const { slug } = context.params as IParams;
 
   const response = await client.getByUID("projects", String(slug), {});
-
-  console.log(response)
-
+  
   const project = {
     slug,
     title: response.data.title,
