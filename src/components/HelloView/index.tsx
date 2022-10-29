@@ -6,14 +6,14 @@ import robot from "../../lotties/robot.json";
 import { Container, Robot, Welcome } from "./styles";
 
 export function HelloView() {
-  const [showAnimation, setShowAnimation] = useState(true);
+  const [showAnimation, setShowAnimation] = useState("Show");
 
   useEffect(() => {
     if (window.sessionStorage.getItem("showAnimation")) {
-      setShowAnimation(false);
+      setShowAnimation("Hide");
     }
 
-    return sessionStorage.setItem("showAnimation", false);
+    return sessionStorage.setItem("showAnimation", "Hide");
   }, []);
 
   const welcomeProps = {
@@ -32,7 +32,7 @@ export function HelloView() {
     },
   };
 
-  return showAnimation ? (
+  return showAnimation === "Show" ? (
     <Container>
       <Robot>
         <Lottie options={robotProps} />
