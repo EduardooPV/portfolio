@@ -11,16 +11,11 @@ export function Hero() {
     <>
       <Container id="hero">
         <Content>
-          <TextSection
-            tag="<h1>"
-            tabIndex={0}
-            data-aos="fade-up"
-            data-aos-duration="600"
-          >
+          <TextSection tag="<h1>" tabIndex={0}>
             Seja bem vindo
           </TextSection>
 
-          <p data-aos="fade-up" data-aos-delay="400" data-aos-duration="600">
+          <p>
             Oii, muito bem vindo ao meu <span>portfolio</span>, desenvolvi esse
             projeto com o intuito de poder aplicar tudo que aprendi até hoje na
             minha carreira <i>(curta, porém carreira)</i> de{" "}
@@ -29,22 +24,13 @@ export function Hero() {
           </p>
 
           <ContainerButton>
-            <a
-              href="#about"
-              data-aos="fade-up"
-              data-aos-delay="800"
-              data-aos-duration="600"
-            >
+            <a href="#about">
               <ButtonGeneric>Sobre mim</ButtonGeneric>
             </a>
           </ContainerButton>
         </Content>
         <Media greaterThan="sm">
-          <Figure
-            data-aos="fade-left"
-            data-aos-delay="800"
-            data-aos-duration="800"
-          >
+          <Figure>
             <img src="/assets/ilustration.webp" alt="Ilustração" />
           </Figure>
         </Media>

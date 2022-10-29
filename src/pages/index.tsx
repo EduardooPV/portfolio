@@ -4,6 +4,8 @@ import dynamic from "next/dynamic";
 import Head from "next/head";
 
 import { Hero } from "../components/Hero";
+import { HelloView } from '../components/HelloView'
+
 const Diviser = dynamic(() =>
   import("../components/Diviser").then((mod) => mod.Diviser)
 );
@@ -36,6 +38,7 @@ export default function Home() {
         <title>Início | Luiz Eduardo </title>
       </Head>
 
+      <HelloView />
       <BackToHome />
       <Hero />
       <Diviser />

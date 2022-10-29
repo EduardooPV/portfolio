@@ -17,7 +17,7 @@ html {
     font-size: 87.5% // 14px
   }
 }
-
+  
 :target {
   scroll-margin-top: 4rem;
 }
