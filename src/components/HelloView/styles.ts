@@ -36,7 +36,7 @@ export const Container = styled.div`
   }
 
   div {
-    animation: animationsView 4s forwards;
+    animation: animationsView 4.3s forwards;
 
     @keyframes animationsView {
       0% {
