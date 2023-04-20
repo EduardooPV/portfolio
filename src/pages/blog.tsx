@@ -6,7 +6,6 @@ import * as prismic from "@prismicio/client";
 import { client } from "../services/prismic";
 
 import { ListPosts } from "../components/ListPosts";
-import { Footer } from "../components/Footer";
 import { Breadcrumb } from "../components/Breadcrumb";
 
 interface Post {

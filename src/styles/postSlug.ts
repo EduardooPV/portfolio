@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import c from "../styles/pallete.json";
+
 export const Container = styled.main`
   max-width: 1120px;
 
@@ -10,7 +12,7 @@ export const Container = styled.main`
     font-weight: 700;
     font-size: 35px;
     line-height: 40px;
-    color: ${(props) => props.theme.colors.titlePost};
+    color: ${c.heading};
 
     @media (min-width: 768px) {
       font-size: 48px;
@@ -42,7 +44,7 @@ export const Infos = styled.ul`
     align-items: center;
     gap: 0.5rem;
 
-    color: ${(props) => props.theme.colors.datePost};
+    color: ${c.info};
   }
 `;
 
@@ -54,7 +56,7 @@ export const ContentPost = styled.section`
   justify-items: center;
   gap: 20px;
 
-  color: ${(props) => props.theme.colors.titlePost};
+  color: ${c.heading};
 
   word-break: break-word;
 
@@ -72,7 +74,7 @@ export const ContentPost = styled.section`
     padding: 0 1rem;
 
     border-radius: 10px;
-    background: ${(props) => props.theme.colors.backgroundPost};
+    background: #181a1d;
   }
 
   h2 {
@@ -100,7 +102,7 @@ export const ContentPost = styled.section`
   }
 
   pre {
-    background: ${(props) => props.theme.colors.backgroundPrePost};
+    background: #37393c;
     font-size: 14px;
     padding: 1rem;
     border-radius: 4px;
@@ -108,7 +110,7 @@ export const ContentPost = styled.section`
   }
 
   a {
-    color: ${(props) => props.theme.colors.titlePost};
+    color: ${c.heading};
     transition: opacity 0.1s;
 
     :hover {

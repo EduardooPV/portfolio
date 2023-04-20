@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import c from "../../styles/pallete.json";
 
 export const Container = styled.span`
   position: fixed;
@@ -8,13 +9,13 @@ export const Container = styled.span`
   z-index: 10;
 
   path {
-    fill: ${(props) => props.theme.colors.icon};
+    fill: ${c.white};
   }
 
   @media (min-width: 768px) {
     right: 7%;
     bottom: 1.5rem;
-    
+
     &:hover {
       animation: toping 0.2s alternate infinite;
 

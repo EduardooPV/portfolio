@@ -23,24 +23,24 @@ export const Header = styled.header`
   flex-wrap: wrap;
 
   p {
+    color: ${c.white};
     font-size: ${f.h5.fontSize};
     line-height: ${f.h5.lineHeight};
     font-weight: bold;
-    color: ${(props) => props.theme.colors.title};
     text-transform: capitalize;
   }
 
   span {
+    color: ${c.neutral200};
     font-family: montserrat, sans-serif;
     font-size: ${f.caption.fontSize};
     line-height: ${f.caption.lineHeight};
-    color: ${c.neutral200};
   }
 `;
 
 export const Preview = styled.div`
   padding-top: 18px;
-  border-top: 1px solid ${(props) => props.theme.colors.barCard};
+  border-top: 1px solid ${c.neutral500};
 
   img {
     width: 100%;
@@ -53,9 +53,9 @@ export const Preview = styled.div`
 export const Description = styled.div`
   display: block;
   flex: 1;
+  color: ${c.neutral200};
   font-size: ${f.paragraphSmall.fontSize};
   line-height: ${f.paragraphSmall.lineHeight};
-  color: ${(props) => props.theme.colors.descriptionCard};
 `;
 
 export const Footer = styled.footer`
@@ -103,11 +103,7 @@ export const Footer = styled.footer`
     }
 
     :hover {
-      background: ${c.primary300};
-
-      svg {
-        color: ${c.white};
-      }
+      filter: brightness(0.7);
     }
   }
 `;

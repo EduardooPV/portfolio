@@ -7,7 +7,7 @@ export const Container = styled.section`
   max-width: 1240px;
   margin: 0 auto;
 
-  padding: 40px 20px;
+  padding: 40px 20px 80px 20px;
 
   display: flex;
   flex-direction: column;
@@ -46,8 +46,14 @@ export const CardUIUX = styled.div`
   flex-direction: column;
   gap: 20px;
 
-  background: ${(props) => props.theme.colors.backgroundCards};
+  background: ${c.neutral500};
   border: 2px solid ${c.neutral200};
+
+  &:hover {
+    transition: all 0.1s;
+    border: 2px solid ${c.primary300};
+    box-shadow: -5px 5px 0px ${c.primary300};
+  }
 
   path {
     fill: ${c.primary300};
@@ -77,9 +83,9 @@ export const CardUIUX = styled.div`
   }
 
   span {
+    color: ${c.neutral200};
     font-size: ${t.paragraphSmall.fontSize};
     line-height: ${t.paragraphSmall.lineHeight};
-    color: ${(props) => props.theme.colors.text};
     text-align: justify;
 
     @media (min-width: 768px) {
@@ -97,8 +103,14 @@ export const CardDev = styled.div`
   flex-direction: column;
   gap: 20px;
 
-  background: ${(props) => props.theme.colors.backgroundCards};
+  background: ${c.neutral500};
   border: 1px solid ${c.neutral200};
+
+  &:hover {
+    transition: all 0.1s;
+    border: 2px solid ${c.primary300};
+    box-shadow: -5px 5px 0px ${c.primary300};
+  }
 
   path {
     fill: ${c.primary300};
@@ -110,8 +122,8 @@ export const CardDev = styled.div`
 
     position: absolute;
 
-    right: 0!important;
-    bottom: 0!important;
+    right: 0 !important;
+    bottom: 0 !important;
   }
 
   > div {
@@ -128,9 +140,9 @@ export const CardDev = styled.div`
   }
 
   span {
+    color: ${c.neutral200};
     font-size: ${t.paragraphSmall.fontSize};
     line-height: ${t.paragraphSmall.lineHeight};
-    color: ${(props) => props.theme.colors.text};
     text-align: justify;
 
     @media (min-width: 768px) {

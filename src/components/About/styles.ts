@@ -24,7 +24,7 @@ export const Content = styled.div`
   grid-column: 2;
 
   p {
-    color: ${(props) => props.theme.colors.text};
+    color: ${c.neutral200};
     font-size: ${f.paragraphSmall.fontSize};
     line-height: ${f.paragraphSmall.lineHeight};
     text-align: center;
@@ -47,14 +47,14 @@ export const Content = styled.div`
 export const ContainerIcons = styled.div`
   display: flex;
   align-items: center;
-  flex-direction: row!important;
+  flex-direction: row !important;
   gap: 2rem;
 
   a {
     line-height: 0;
     transition: all 0.2s;
-    color: ${(props) => props.theme.colors.text}!important;
-    
+    color: ${c.neutral200}!important;
+
     :hover {
       filter: brightness(0.8);
       transform: scale(1.1);

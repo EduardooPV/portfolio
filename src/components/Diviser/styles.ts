@@ -7,6 +7,8 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
 
+  margin: 40px 0;
+
   overflow: hidden;
 
   div { 

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import f from "../../styles/typography.json";
+import c from "../../styles/pallete.json";
 
 export const Container = styled.main`
   min-height: 100vh;
@@ -11,10 +12,10 @@ export const Container = styled.main`
   justify-content: center;
 
   p {
+    color: ${c.white};
     font-family: montserrat, sans-serif;
     font-size: ${f.h3.fontSize};
     line-height: ${f.h3.lineHeight};
-    color: ${(props) => props.theme.colors.title};
   }
 
   div {
@@ -32,7 +33,7 @@ export const Container = styled.main`
   a {
     font-family: montserrat, sans-serif;
     font-size: ${f.h4.fontSize};
-    color: ${(props) => props.theme.colors.title};
+    color: ${c.white};
     transition: all 0.2;
 
     display: flex;

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import f from "./typography.json";
+import c from "../styles/pallete.json";
 
 export const Container = styled.main`
   max-width: 1240px;
@@ -11,7 +12,7 @@ export const Container = styled.main`
   h1 {
     text-align: center;
     margin-bottom: 2rem;
-    color: ${(props) => props.theme.colors.title};
+    color: ${c.white};
   }
 
   > div {
@@ -30,7 +31,7 @@ export const Section = styled.section`
     padding: 2rem;
 
     border-radius: 10px;
-    background: ${(props) => props.theme.colors.backgroundPost};
+    background: #181a1d;
 
     @media (min-width: 1024px) {
       margin-top: 1rem;
@@ -62,7 +63,7 @@ export const Section = styled.section`
   }
 
   pre {
-    background: ${(props) => props.theme.colors.backgroundPrePost};
+    background: #37393c;
     font-size: 14px;
     padding: 1rem;
     border-radius: 4px;
@@ -70,7 +71,7 @@ export const Section = styled.section`
   }
 
   a {
-    color: ${(props) => props.theme.colors.titlePost};
+    color: ${c.white};
     transition: opacity 0.1s;
 
     :hover {
@@ -96,7 +97,7 @@ export const Aside = styled.aside`
   position: static;
 
   border-radius: 10px;
-  background: ${(props) => props.theme.colors.backgroundPost};
+  background: #181a1d;
 
   @media (min-width: 1024px) {
     max-width: 400px;
@@ -108,7 +109,7 @@ export const Aside = styled.aside`
 
   > p {
     margin: 1rem 0;
-    color: ${(props) => props.theme.colors.title};
+    color: ${c.white};
     font-weight: bold;
     font-size: ${f.h5.fontSize};
   }
@@ -121,7 +122,7 @@ export const Aside = styled.aside`
     gap: 0.25rem;
 
     a {
-      color: ${(props) => props.theme.colors.titlePost};
+      color: ${c.white};
       transition: opacity 0.1s;
 
       :hover {

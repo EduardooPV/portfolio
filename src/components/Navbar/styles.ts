@@ -37,13 +37,13 @@ export const Content = styled.div`
     width: fit-content;
 
     path:nth-child(1) {
-      fill: ${(props) => props.theme.colors.logoEduardo};
+      fill: ${c.neutral100};
     }
     path:nth-child(2) {
-      fill: ${(props) => props.theme.colors.logoDev};
+      fill: ${c.primary300};
     }
     path:nth-child(3) {
-      fill: ${(props) => props.theme.colors.logoPrado};
+      fill: ${c.neutral100};
     }
   }
 `;
@@ -56,11 +56,14 @@ export const NavLinks = styled.nav`
 
   a {
     padding: 0px 10px;
+    
+    color: ${c.neutral100};
     font-family: montserrat, sans-serif;
     font-size: ${f.paragraphLarge.fontSize};
     line-height: ${f.paragraphLarge.lineHeight};
-    color: ${c.neutral100};
     text-decoration: none;
+
+    border-radius: 4px;
 
     position: relative;
 
@@ -90,6 +93,8 @@ export const NavLinks = styled.nav`
   }
 
   a:nth-child(4) {
+    background-color: ${c.primary300};
+    color: white;
     margin-right: 10px;
   }
 `;
@@ -209,6 +214,7 @@ export const Menu = styled.div`
 
   a {
     width: 80%;
+    padding: 10px 0;
     text-decoration: none;
     text-align: center;
     font-family: "Roboto", sans-serif;

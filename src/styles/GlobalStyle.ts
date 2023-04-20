@@ -1,5 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
+import c from "../styles/pallete.json";
+
 export const GlobalStyle = createGlobalStyle`
 * {
   margin: 0;
@@ -32,8 +34,8 @@ h1, h2, h3, h4, h5, h6, strong {
 }
 
 body {
-  background: ${(props) => props.theme.colors.background};
-  color: ${(props) => props.theme.colors.text};
+  background: ${c.neutral700};
+  color: ${c.neutral200};
   -webkit-font-smoothing: antialiased;
 }
 

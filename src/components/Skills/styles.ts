@@ -6,7 +6,7 @@ export const Container = styled.section`
   max-width: 1240px;
   margin: 0 auto;
 
-  padding: 40px 20px;
+  padding: 40px 20px 80px 20px;
 
   display: flex;
   flex-direction: column;
@@ -23,7 +23,7 @@ export const ContainerCard = styled.div`
   flex-direction: column;
 
   position: relative;
-  background: ${(props) => props.theme.colors.backgroundCards};
+  background: ${c.neutral500};
 
   border: 2px solid ${c.neutral200};
   z-index: 9;
@@ -54,13 +54,13 @@ export const ContainerCard = styled.div`
     }
 
     path {
-      fill: ${(props) => props.theme.colors.icon};
+      fill: ${c.white};
     }
   }
 
   path {
-    fill: ${(props) => props.theme.colors.text};
-    stroke: ${(props) => props.theme.colors.text};
+    fill: ${c.neutral200};
+    stroke: ${c.neutral200};
   }
 
   > svg {
@@ -81,7 +81,7 @@ export const ContainerCard = styled.div`
 
   p {
     font-size: ${t.h5.fontSize};
-    color: ${(props) => props.theme.colors.title};
+    color: ${c.white};
   }
 
   @media (min-width: 768px) {
@@ -107,7 +107,7 @@ export const ModalHover = styled.div`
 
   position: absolute;
   bottom: 0;
-  background: ${(props) => props.theme.colors.background};
+  background: ${c.neutral700};
   transition: all 0.2s;
   opacity: 0;
 

@@ -45,6 +45,7 @@ export default function Home() {
       <About />
       <Diviser />
       <Skills />
+      <Diviser />
       <Projects />
     </>
   );

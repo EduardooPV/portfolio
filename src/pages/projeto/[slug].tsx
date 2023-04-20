@@ -39,7 +39,7 @@ export default function ProjectPage({ project }: ProjectProps) {
   return (
     <>
       <Head>
-        <title>Projeto: {project?.slug} | Luiz Eduardo</title>
+        <title>Projeto: {project?.title} | Luiz Eduardo</title>
       </Head>
 
       <Breadcrumb />

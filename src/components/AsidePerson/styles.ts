@@ -13,7 +13,7 @@ export const Container = styled.aside`
   gap: 20px;
 
   border-radius: 10px;
-  background: ${(props) => props.theme.colors.backgroundPost};
+  background: #181a1d;
   position: sticky;
   top: 80px;
 `;
@@ -37,7 +37,7 @@ export const ContainerImage = styled.div`
     font-size: 16px;
     line-height: 24px;
     font-weight: bold;
-    color: ${(props) => props.theme.colors.titlePost};
+    color: ${c.heading};
   }
 `;
 
@@ -53,6 +53,6 @@ export const Details = styled.div`
   span {
     font-size: 16px;
     line-height: 24px;
-    color: ${(props) => props.theme.colors.descriptionPost};
+    color: ${c.body};
   }
 `;

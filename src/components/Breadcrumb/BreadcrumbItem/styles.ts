@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import c from "../../../styles/pallete.json";
 
 export const Item = styled.span`
   list-style: none;
 
   a {
-    color: ${(props) => props.theme.colors.text};
+    color: ${c.neutral200};
     text-decoration: none;
     transition: opacity 0.1s;
 
@@ -14,12 +15,12 @@ export const Item = styled.span`
       opacity: 0.7;
     }
 
-    @media(min-width: 768px) {
+    @media (min-width: 768px) {
       font-size: 1rem;
     }
   }
 
   :last-child a {
-    color: ${(props) => props.theme.colors.title};
+    color: ${c.white};
   }
 `;

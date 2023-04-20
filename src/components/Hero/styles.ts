@@ -29,7 +29,7 @@ export const Content = styled.div`
   p {
     margin: 3rem auto;
 
-    color: ${(props) => props.theme.colors.text};
+    color: ${c.neutral200};
     font-size: ${f.paragraphSmall.fontSize};
     line-height: ${f.paragraphSmall.lineHeight};
     text-align: center;

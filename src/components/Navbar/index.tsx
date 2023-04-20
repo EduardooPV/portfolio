@@ -1,14 +1,10 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 
 import { Container, Content, MenuIcon, Menu, NavLinks } from "./styles";
-import { NavbarProps } from "./types";
-import Switch from "react-switch";
-import { ThemeContext } from "styled-components";
 import { Media } from "../MediaScreen";
 import Link from "next/link";
 
-export function Navbar({ toggleTheme, theme }: NavbarProps) {
-  const { colors } = useContext(ThemeContext);
+export function Navbar() {
   const [active, setActive] = useState(false);
   function Toggle() {
     setActive(!active);
@@ -39,27 +35,7 @@ export function Navbar({ toggleTheme, theme }: NavbarProps) {
             />
           </svg>
         </a>
-        <Media at="sm">
-          <label
-            htmlFor="theme"
-            style={{ width: "1px", height: "1px", opacity: "0" }}
-          >
-            DM
-          </label>
-          <Switch
-            id="theme"
-            onChange={toggleTheme}
-            checked={theme.title === "light"}
-            checkedIcon={false}
-            uncheckedIcon={false}
-            height={10}
-            width={40}
-            handleDiameter={20}
-            offColor={colors.primary}
-            onColor="#fff"
-            onHandleColor={colors.primary}
-          />
-        </Media>
+
         <div>
           <Media greaterThan="sm">
             <NavLinks>
@@ -78,25 +54,6 @@ export function Navbar({ toggleTheme, theme }: NavbarProps) {
               >
                 Curriculo
               </a>
-              <label
-                htmlFor="theme"
-                style={{ width: "1px", height: "1px", overflow: "hidden" }}
-              >
-                DM
-              </label>
-              <Switch
-                id="theme"
-                onChange={toggleTheme}
-                checked={theme.title === "light"}
-                checkedIcon={false}
-                uncheckedIcon={false}
-                height={10}
-                width={40}
-                handleDiameter={20}
-                offColor={colors.primary}
-                onColor="#fff"
-                onHandleColor={colors.primary}
-              />
             </NavLinks>
           </Media>
           <Media at="sm">

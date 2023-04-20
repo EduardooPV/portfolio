@@ -11,52 +11,60 @@ export const Content = styled.div`
   max-width: 1240px;
 
   margin: 0 auto;
-  padding: 20px;
+  padding: 60px 20px;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  gap: 60px;
 
-  @media (min-width: 1000px) {
-    padding: 40px;
-
-    flex-direction: row;
+ @media (min-width: 1000px) {
+    padding: 80px 40px;
   }
 
-  div a {
-    position: relative;
-
+  > div {
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 40px;
+    
+    div a {
+      position: relative;
 
-    font-size: ${f.paragraphLarge.fontSize};
-    line-height: ${f.paragraphLarge.lineHeight};
-    color: ${c.neutral100};
-    text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
 
-    ::after {
-      content: "";
-      display: block;
-      position: absolute;
-      left: 50%;
-      bottom: 0;
-      width: 0px;
-      height: 2px;
-      background: ${c.neutral100};
+      font-size: ${f.paragraphLarge.fontSize};
+      line-height: ${f.paragraphLarge.lineHeight};
+      color: ${c.neutral100};
+      text-decoration: none;
 
-      transition: all 0.2s;
-    }
-
-    &:hover {
       ::after {
-        left: 0;
-        width: 100%;
+        content: "";
+        display: block;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 0px;
+        height: 2px;
+        background: ${c.neutral100};
+
+        transition: all 0.2s;
+      }
+
+      &:hover {
+        ::after {
+          left: 0;
+          width: 100%;
+        }
       }
     }
   }
+
 
   span {
     font-size: ${f.caption.fontSize};

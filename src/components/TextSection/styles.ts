@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import c from '../../styles/pallete.json'
-import f from '../../styles/typography.json'
+import c from "../../styles/pallete.json";
+import f from "../../styles/typography.json";
 
 export const Container = styled.div`
   width: fit-content;
@@ -8,13 +8,13 @@ export const Container = styled.div`
   padding: 1rem 0.5rem;
   position: relative;
 
-  h1 { 
+  h1 {
     position: relative;
 
     font-family: "Roboto", sans-serif;
     font-size: ${f.h1.fontSize};
     line-height: ${f.h1.lineHeight};
-    color: ${props => props.theme.colors.title};
+    color: ${c.white};
 
     z-index: 1;
 
@@ -40,8 +40,8 @@ export const Container = styled.div`
       }
     }
   }
-  
-  span { 
+
+  span {
     font-family: "Montserrat", sans-serif;
     font-size: ${f.caption.fontSize};
     font-style: italic;
@@ -57,4 +57,4 @@ export const Container = styled.div`
       left: 0;
     }
   }
-`
+`;
