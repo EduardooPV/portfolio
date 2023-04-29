@@ -49,6 +49,12 @@ E por final desenvolvi o Mobile e Desktop criando algumas interações e compone
 
 ---
 
+### Preview:
+
+<img src="https://github.com/EduardooPV/portfolio/blob/72709c629e2854fe6db554856b3444dbfef5f737/public/preview.gif">
+
+---
+
 ### Acompanhamento e Feedback
 
 Para realizar o acompanhamento, utilizei o [Hotjar](https://www.hotjar.com/pt-BR/behavior-analytics-software/?utm_campaign=HJ-Search-Leap-Brazil-Brand-Translated-Generic&utm_source=google&utm_medium=cpc&ads_adid=133696075850&ads_targetid=kwd-301757736238&utm_term=hotjar&keyword=hotjar&matchtype=e&geo=1001776&ads_creative=608650204545&ads_network=g&device=c&adpos=&utm_squad=leap&gclid=Cj0KCQjwof6WBhD4ARIsAOi65ahsxuDNqr43hdxZBgNFcrvOKLO4s4fhU83QKoOjhUmM09A-sMaeMJ0aAguREALw_wcB), ele permite criar Heatmaps, Recordings, Highlights entre outras ferramentas, para poder acompanhar a jornada do usuário pelo site, e encontrando possiveis bugs, ou as partes mais acessadas (Importante para conversão de Leads e outras técnicas).
