@@ -12,11 +12,10 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     AOS.init();
   }, []);
-  
+
   return (
     <MediaContextProvider>
       <GlobalStyle />
-      <Navbar />
       <Component {...pageProps} />
       <Footer />
     </MediaContextProvider>

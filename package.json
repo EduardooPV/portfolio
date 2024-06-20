@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@apollo/client": "^3.10.5",
     "@artsy/fresnel": "^3.5.0",
     "@prismicio/client": "^6.7.1",
     "@types/prismic-dom": "^2.1.1",
     "aos": "^2.3.4",
     "framer-motion": "^6.2.8",
+    "graphql": "^16.8.2",
     "next": "12.1.0",
     "phosphor-react": "^1.4.1",
     "prismic-dom": "^2.2.7",
