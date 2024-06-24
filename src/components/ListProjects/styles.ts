@@ -1,4 +1,9 @@
 import styled from "styled-components";
+import c from "../../styles/pallete.json";
+
+interface Layout {
+  layout: boolean;
+}
 
 export const Container = styled.main`
   max-width: 1240px;
@@ -14,7 +19,32 @@ export const Container = styled.main`
   }
 `;
 
-export const Content = styled.section`
+export const Header = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  div {
+    display: flex;
+    gap: 14px;
+
+    button {
+      background: ${c.background};
+      border: 0;
+      border-radius: 6px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg path {
+        fill: ${c.neutral300};
+      }
+    }
+  }
+`;
+
+export const Content = styled.section<Layout>`
   display: grid;
   grid-template-columns: 1fr;
   gap: 30px;
@@ -22,7 +52,10 @@ export const Content = styled.section`
   position: relative;
 
   @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr;
+    ${(props) =>
+      props.layout
+        ? "grid-template-columns: 1fr 1fr;"
+        : "grid-template-columns: 1fr;"}
     gap: 40px;
   }
 `;

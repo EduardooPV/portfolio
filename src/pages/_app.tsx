@@ -16,6 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <MediaContextProvider>
       <GlobalStyle />
+      <Navbar />
       <Component {...pageProps} />
       <Footer />
     </MediaContextProvider>

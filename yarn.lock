@@ -161,6 +161,18 @@
     "@babel/helper-validator-identifier" "^7.16.7"
     to-fast-properties "^2.0.0"
 
+"@contentful/rich-text-react-renderer@^15.21.2":
+  version "15.21.2"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-react-renderer/-/rich-text-react-renderer-15.21.2.tgz#3f04104a5abf20ed256b2009146d880a79b66d0e"
+  integrity sha512-4JhqntPTVUyCisvA9KskQcrOQrhmohX0VfDWgc79USJFdp+ZF44Zqxt68xgIIOv/H/qkE2UVsNzO1kinpenHQA==
+  dependencies:
+    "@contentful/rich-text-types" "^16.5.2"
+
+"@contentful/rich-text-types@^16.5.2":
+  version "16.5.2"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-16.5.2.tgz#924641091d5ae83b9fb34908745a62d652b44d68"
+  integrity sha512-qD98Amp/vWxCYMtv7yprh4Ry3QHFX50sf+i3E6e/WRquz+aUW2ilqmQqW6ucb4F2dlatUxMbOOhZOFazv2XLjg==
+
 "@emotion/is-prop-valid@^0.8.2", "@emotion/is-prop-valid@^0.8.8":
   version "0.8.8"
   resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.8.8.tgz#db28b1c4368a259b60a97311d6a952d4fd01ac1a"
@@ -836,6 +848,11 @@ damerau-levenshtein@^1.0.7:
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/damerau-levenshtein/-/damerau-levenshtein-1.0.8.tgz#b43d286ccbd36bc5b2f7ed41caf2d0aba1f8a6e7"
   integrity sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==
+
+date-fns@^3.6.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-3.6.0.tgz#f20ca4fe94f8b754951b24240676e8618c0206bf"
+  integrity sha512-fRHTG8g/Gif+kSh50gaGEdToemgfj74aRX3swtiouboip5JDLAyDE9F11nHMIcvOaXeOC6D7SpNhi7uFyB7Uww==
 
 debug@^2.6.9:
   version "2.6.9"

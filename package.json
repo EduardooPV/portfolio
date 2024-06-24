@@ -11,9 +11,11 @@
   "dependencies": {
     "@apollo/client": "^3.10.5",
     "@artsy/fresnel": "^3.5.0",
+    "@contentful/rich-text-react-renderer": "^15.21.2",
     "@prismicio/client": "^6.7.1",
     "@types/prismic-dom": "^2.1.1",
     "aos": "^2.3.4",
+    "date-fns": "^3.6.0",
     "framer-motion": "^6.2.8",
     "graphql": "^16.8.2",
     "next": "12.1.0",

@@ -3,7 +3,6 @@ import React, { useEffect } from "react";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 
-import { Navbar } from "../components/Navbar";
 import { Hero } from "../components/Hero";
 import { HelloView } from "../components/HelloView";
 
@@ -24,38 +23,8 @@ const BackToHome = dynamic(() =>
 );
 
 import { hotjar } from "react-hotjar";
-import { initializeApollo } from "../services/apolloClient";
-import { gql } from "@apollo/client";
 
-interface headerProps {
-  title: string;
-  logo: {
-    description: string;
-    url: string;
-    width: number;
-    height: number;
-  };
-  content: {
-    links: {
-      text: string;
-      href: string;
-    }[];
-  };
-}
-
-interface footerProps {
-  title: string;
-  content: {
-    teste: string;
-  };
-}
-
-interface Props {
-  headerCollection: headerProps;
-  footerCollection: footerProps;
-}
-
-export default function Home({ headerCollection }: Props) {
+export default function Home() {
   const hjid = 3080565;
   const hjsv = 6;
 
@@ -69,7 +38,6 @@ export default function Home({ headerCollection }: Props) {
         <title>Início | Luiz Eduardo </title>
       </Head>
 
-      <Navbar {...headerCollection} />
       <HelloView />
       <BackToHome />
       <Hero />
@@ -81,44 +49,4 @@ export default function Home({ headerCollection }: Props) {
       <Projects />
     </>
   );
-}
-
-export async function getStaticProps() {
-  const apolloClient = initializeApollo();
-
-  const query = gql`
-    {
-      headerCollection {
-        items {
-          title
-          logo {
-            title
-            description
-            url
-            width
-            height
-          }
-          content
-        }
-      }
-      footerCollection {
-        items {
-          title
-          content
-        }
-      }
-    }
-  `;
-
-  const { data } = await apolloClient.query({
-    query: query,
-  });
-
-  return {
-    props: {
-      headerCollection: data.headerCollection.items[0],
-      footerProps: data.footerCollection.items[0],
-    },
-    revalidate: 1, // Revalidate at most once every second
-  };
 }
