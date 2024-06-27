@@ -56,7 +56,7 @@ class MyDocument extends Document {
 
           <meta property="og:locale" content="pt_BR" />
 
-          <meta property="og:image" content="/assets/ilustration.png" />
+          <meta property="og:image" content="/assets/ilustration.webp" />
 
           <meta
             name="description"
