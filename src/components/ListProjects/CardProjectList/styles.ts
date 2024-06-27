@@ -6,26 +6,80 @@ import f from "../../../styles/typography.json";
 export const Container = styled.div`
   padding: 20px;
 
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   justify-content: space-between;
   gap: 15px;
 
   border: 1px solid ${c.neutral400};
   border-radius: 4px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: minmax(300px, 600px) minmax(300px, 600px);
+  }
+`;
+
+export const Preview = styled.div`
+  width: 100%;
+
+  display: flex;
+
+  padding-right: 18px;
+  border-right: 1px solid ${c.neutral500};
+
+  @media (max-width: 768px) {
+    padding-right: 0px;
+    padding-bottom: 18px;
+    border-right: 0px;
+    border-bottom: 1px solid ${c.neutral500};
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center center;
+  }
+`;
+
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 `;
 
 export const Header = styled.header`
   font-family: montserrat, sans-serif;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
 
-  p {
+  > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    > div {
+      display: flex;
+      gap: 10px;
+
+      p {
+        width: fit-content;
+        padding: 6px;
+        border-radius: 4px;
+        color: #fff;
+        font-weight: 500;
+      }
+    }
+  }
+
+  > p {
     color: ${c.white};
-    font-size: ${f.h5.fontSize};
-    line-height: ${f.h5.lineHeight};
+    font-size: ${f.h4.fontSize};
+    line-height: ${f.h4.lineHeight};
     font-weight: bold;
     text-transform: capitalize;
   }
@@ -35,18 +89,6 @@ export const Header = styled.header`
     font-family: montserrat, sans-serif;
     font-size: ${f.caption.fontSize};
     line-height: ${f.caption.lineHeight};
-  }
-`;
-
-export const Preview = styled.div`
-  padding-top: 18px;
-  border-top: 1px solid ${c.neutral500};
-
-  img {
-    width: 100%;
-    max-height: 350px;
-    object-fit: cover;
-    object-position: center top;
   }
 `;
 
@@ -60,24 +102,38 @@ export const Description = styled.div`
 
 export const Footer = styled.footer`
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 
-  a:first-child {
-    width: 100%;
+  @media (min-width: 768px) and (max-width: 1050px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 550px) {
+    flex-direction: column;
+  }
+
+  a {
+    flex: 1;
     padding: 8px 20px;
 
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
 
     background: transparent;
 
-    color: ${c.black};
-    background-color: ${c.primary300};
     text-decoration: none;
     border-radius: 4px;
+    font-weight: 500;
 
     transition: filter 0.2s;
+
+    svg {
+      font-size: 25px;
+      stroke-width: 1;
+    }
 
     :hover {
       filter: brightness(0.8);
@@ -88,22 +144,13 @@ export const Footer = styled.footer`
     }
   }
 
-  a:last-child {
-    padding: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  a:first-child {
+    color: ${c.black};
+    background-color: ${c.primary300};
+  }
 
+  a:last-child {
     color: ${c.primary300};
     border: 1px solid ${c.primary300};
-    border-radius: 4px;
-    transition: 0.2s;
-    svg {
-      font-size: 25px;
-    }
-
-    :hover {
-      filter: brightness(0.7);
-    }
   }
 `;

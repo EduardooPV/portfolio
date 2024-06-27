@@ -50,7 +50,22 @@ export const Preview = styled.div`
   }
 `;
 
+export const Tags = styled.div`
+  display: flex;
+  gap: 10px;
+
+  p {
+    width: fit-content;
+    padding: 6px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 500;
+  }
+`;
+
 export const Description = styled.div`
+  margin: 10px 0;
+
   display: block;
   flex: 1;
   color: ${c.neutral200};
@@ -60,24 +75,31 @@ export const Description = styled.div`
 
 export const Footer = styled.footer`
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 
-  a:first-child {
-    width: 100%;
+  a {
+    flex: 1;
+    min-width: max-content;
     padding: 8px 20px;
 
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
 
     background: transparent;
 
-    color: ${c.black};
-    background-color: ${c.primary300};
     text-decoration: none;
     border-radius: 4px;
+    font-weight: 500;
 
     transition: filter 0.2s;
+
+    svg {
+      font-size: 25px;
+      stroke-width: 1;
+    }
 
     :hover {
       filter: brightness(0.8);
@@ -88,22 +110,13 @@ export const Footer = styled.footer`
     }
   }
 
-  a:last-child {
-    padding: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  a:first-child {
+    color: ${c.black};
+    background-color: ${c.primary300};
+  }
 
+  a:last-child {
     color: ${c.primary300};
     border: 1px solid ${c.primary300};
-    border-radius: 4px;
-    transition: 0.2s;
-    svg {
-      font-size: 25px;
-    }
-
-    :hover {
-      filter: brightness(0.7);
-    }
   }
 `;

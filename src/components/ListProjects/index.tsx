@@ -32,9 +32,9 @@ export function ListProjects({ projects }: ProjectsProps) {
         <TextSection
           tag="<h1>"
           tabIndex={0}
-          data-aos="fade-up"
-          data-aos-duration="600"
-          data-aos-delay="1200"
+          // data-aos="fade-up"
+          // data-aos-duration="600"
+          // data-aos-delay="1200"
         >
           Projetos
         </TextSection>
@@ -106,9 +106,9 @@ export function ListProjects({ projects }: ProjectsProps) {
       </Header>
 
       <Content
-        data-aos="fade-up"
-        data-aos-duration="600"
-        data-aos-delay="1600"
+        // data-aos="fade-up"
+        // data-aos-duration="600"
+        // data-aos-delay="1600"
         layout={gridLayout}
       >
         {sortedProjects.map((project) =>
@@ -116,19 +116,19 @@ export function ListProjects({ projects }: ProjectsProps) {
             <CardProjectGrid
               project={project}
               key={project.title}
-              data-aos="fade-up"
-              data-aos-offset="10"
-              data-aos-duration="600"
-              data-aos-delay="400"
+              // data-aos="fade-up"
+              // data-aos-offset="10"
+              // data-aos-duration="600"
+              // data-aos-delay="400"
             />
           ) : (
             <CardProjectList
               project={project}
               key={project.title}
-              data-aos="fade-up"
-              data-aos-offset="10"
-              data-aos-duration="600"
-              data-aos-delay="400"
+              // data-aos="fade-up"
+              // data-aos-offset="10"
+              // data-aos-duration="600"
+              // data-aos-delay="400"
             />
           )
         )}

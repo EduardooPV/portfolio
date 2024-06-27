@@ -65,4 +65,9 @@ button {
   outline: 2px solid  #F89D24;
   outline-offset: 4px;
 }
+
+::selection {
+  color: ${c.black};
+  background: ${c.neutral200};
+}
 `;

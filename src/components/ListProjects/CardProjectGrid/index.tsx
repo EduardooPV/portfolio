@@ -2,9 +2,17 @@ import React from "react";
 import Link from "next/link";
 
 import { AiFillGithub } from "react-icons/ai";
+import { FiExternalLink } from "react-icons/fi";
 import "react-loading-skeleton/dist/skeleton.css";
 
-import { Container, Header, Preview, Description, Footer } from "./styles";
+import {
+  Container,
+  Header,
+  Preview,
+  Tags,
+  Description,
+  Footer,
+} from "./styles";
 import { ProjectProps } from "../../../pages/projetos";
 
 interface CardProjectProps {
@@ -25,12 +33,30 @@ export function CardProjectGrid({ project, ...rest }: CardProjectProps) {
         <img src={project.image.url} alt={project.image.description} />
       </Preview>
 
+      {project.tags && (
+        <Tags>
+          {project.tags.map(({ text, color }) => (
+            <p
+              key={text}
+              style={{
+                backgroundColor: color,
+              }}
+            >
+              {text}
+            </p>
+          ))}
+        </Tags>
+      )}
+
       {project.description && <Description>{project.description}</Description>}
 
       <Footer>
         {project.linkPreview && (
           <Link href={`projeto/${project.slug}`} passHref>
-            <a>Detalhes do projeto</a>
+            <a title="Visite a página do projeto">
+              Detalhes do projeto
+              <FiExternalLink />
+            </a>
           </Link>
         )}
         {project.linkGithub && (
@@ -40,6 +66,7 @@ export function CardProjectGrid({ project, ...rest }: CardProjectProps) {
               rel="noreferrer"
               title="Visite o projeto no Github"
             >
+              Veja no Github
               <AiFillGithub />
             </a>
           </Link>

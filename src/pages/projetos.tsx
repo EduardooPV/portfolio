@@ -8,6 +8,7 @@ import { initializeApollo } from "../services/apolloClient";
 import { gql } from "@apollo/client";
 import { format } from "date-fns";
 import { createSlug } from "../utils/formatterSlug";
+import { tagColors } from "../utils/tagColors";
 
 export interface ProjectProps {
   title: string;
@@ -19,6 +20,10 @@ export interface ProjectProps {
     height: string;
     description: string;
   };
+  tags: {
+    text: string;
+    color: string;
+  }[];
   description: string;
   linkGithub: string;
   linkPreview: string;
@@ -65,6 +70,7 @@ export const getStaticProps: GetStaticProps = async () => {
             height
             description
           }
+          tags
           description
           linkGithub
           linkPreview
@@ -89,13 +95,15 @@ export const getStaticProps: GetStaticProps = async () => {
       };
     }
 
-    const projects = data.projectCollection?.items.map(
-      (project: ProjectProps) => ({
-        ...project,
-        published: format(new Date(project.published), "dd/MM/yyyy"),
-        slug: createSlug(project.title),
-      })
-    );
+    const projects = data.projectCollection?.items.map((project) => ({
+      ...project,
+      tags: (project.tags || []).map((tag: string) => ({
+        text: tag,
+        color: tagColors[tag],
+      })),
+      published: format(new Date(project.published), "dd/MM/yyyy"),
+      slug: createSlug(project.title),
+    }));
 
     return {
       props: {
