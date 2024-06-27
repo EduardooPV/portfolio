@@ -32,9 +32,9 @@ export function ListProjects({ projects }: ProjectsProps) {
         <TextSection
           tag="<h1>"
           tabIndex={0}
-          // data-aos="fade-up"
-          // data-aos-duration="600"
-          // data-aos-delay="1200"
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-delay="1200"
         >
           Projetos
         </TextSection>
@@ -61,10 +61,18 @@ export function ListProjects({ projects }: ProjectsProps) {
               </svg>
             ) : (
               // Icon Descending
-             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M19 7H16L20 3L24 7H21V21H19V7ZM8 16H11V13H8V16ZM13 5H12V3H10V5H6V3H4V5H3C1.89 5 1 5.89 1 7V18C1 19.11 1.89 20 3 20H13C14.11 20 15 19.11 15 18V7C15 5.89 14.11 5 13 5ZM3 18V11H13V18H3Z" fill="black"/>
-</svg>
-
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19 7H16L20 3L24 7H21V21H19V7ZM8 16H11V13H8V16ZM13 5H12V3H10V5H6V3H4V5H3C1.89 5 1 5.89 1 7V18C1 19.11 1.89 20 3 20H13C14.11 20 15 19.11 15 18V7C15 5.89 14.11 5 13 5ZM3 18V11H13V18H3Z"
+                  fill="black"
+                />
+              </svg>
             )}
           </button>
           <button
@@ -106,9 +114,9 @@ export function ListProjects({ projects }: ProjectsProps) {
       </Header>
 
       <Content
-        // data-aos="fade-up"
-        // data-aos-duration="600"
-        // data-aos-delay="1600"
+        data-aos="fade-up"
+        data-aos-duration="600"
+        data-aos-delay="1600"
         layout={gridLayout}
       >
         {sortedProjects.map((project) =>
@@ -116,19 +124,19 @@ export function ListProjects({ projects }: ProjectsProps) {
             <CardProjectGrid
               project={project}
               key={project.title}
-              // data-aos="fade-up"
-              // data-aos-offset="10"
-              // data-aos-duration="600"
-              // data-aos-delay="400"
+              data-aos="fade-up"
+              data-aos-offset="10"
+              data-aos-duration="600"
+              data-aos-delay="400"
             />
           ) : (
             <CardProjectList
               project={project}
               key={project.title}
-              // data-aos="fade-up"
-              // data-aos-offset="10"
-              // data-aos-duration="600"
-              // data-aos-delay="400"
+              data-aos="fade-up"
+              data-aos-offset="10"
+              data-aos-duration="600"
+              data-aos-delay="400"
             />
           )
         )}

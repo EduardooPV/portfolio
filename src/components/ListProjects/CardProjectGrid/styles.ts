@@ -59,7 +59,8 @@ export const Tags = styled.div`
     padding: 6px;
     border-radius: 4px;
     color: #fff;
-    font-weight: 500;
+    font-size: 14px;
+    opacity: 0.9;
   }
 `;
 

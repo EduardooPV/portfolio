@@ -70,8 +70,9 @@ export const Header = styled.header`
         width: fit-content;
         padding: 6px;
         border-radius: 4px;
+        font-size: 14px;
         color: #fff;
-        font-weight: 500;
+        opacity: 0.9;
       }
     }
   }
