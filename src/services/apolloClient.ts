@@ -4,11 +4,11 @@ let apolloClient;
 
 function createApolloClient() {
   return new ApolloClient({
-    uri: `${process.env.NEXT_PUBLIC_CONTENTFUL_API_URL}/${process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID}`,
+    uri: `${process.env.CONTENTFUL_API_URL}/${process.env.CONTENTFUL_SPACE_ID}`,
     cache: new InMemoryCache(),
     credentials: "same-origin",
     headers: {
-      Authorization: `Bearer ${process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN}`,
+      Authorization: `Bearer ${process.env.CONTENTFUL_ACCESS_TOKEN}`,
     },
   });
 }
