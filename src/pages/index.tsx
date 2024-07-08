@@ -6,6 +6,8 @@ import Head from "next/head";
 import { Hero } from "../components/Hero";
 import { HelloView } from "../components/HelloView";
 
+import ReactGA from "react-ga";
+
 const Diviser = dynamic(() =>
   import("../components/Diviser").then((mod) => mod.Diviser)
 );
@@ -29,6 +31,11 @@ export default function Home() {
   const hjsv = 6;
 
   useEffect(() => {
+    ReactGA.send({
+      hitType: "pageview",
+      page: "/",
+      title: "Home",
+    });
     hotjar.initialize(hjid, hjsv);
   });
 

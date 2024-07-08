@@ -4,8 +4,12 @@ import { Container, Content, MenuIcon, Menu, NavLinks } from "./styles";
 import { Media } from "../MediaScreen";
 import Link from "next/link";
 
+import useAnalyticsEventTracker from "../../hooks/useAnalyticsEventTracker";
+
 export function Navbar() {
   const [active, setActive] = useState(false);
+
+  const gaEventTracker = useAnalyticsEventTracker("Home");
 
   function Toggle() {
     setActive(!active);
@@ -14,7 +18,12 @@ export function Navbar() {
   return (
     <Container data-aos="fade-down" data-aos-duration="800">
       <Content>
-        <a href="/" title="Logo" tabIndex={0}>
+        <a
+          href="/"
+          title="Logo"
+          tabIndex={0}
+          onClick={() => gaEventTracker("logoImage")}
+        >
           <svg
             width="48"
             height="16"
