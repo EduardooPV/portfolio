@@ -12,7 +12,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const TRACKING_ID = "G-4QSYE7G5ZQ"; 
+  const TRACKING_ID = process.env.GOOGLE_ANALYTiCS; 
   ReactGA.initialize(TRACKING_ID);
 
   useEffect(() => {
