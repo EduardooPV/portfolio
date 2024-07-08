@@ -8,15 +8,13 @@ import { MediaContextProvider } from "../components/MediaScreen";
 
 import ReactGA from 'react-ga4';
 
-const TRACKING_ID = process.env.GOOGLE_ANALYTICS;
-
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
-    ReactGA.initialize(TRACKING_ID);
+    ReactGA.initialize(process.env.GOOGLE_ANALYTICS);
 
     AOS.init();
   }, []);
