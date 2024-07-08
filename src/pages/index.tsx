@@ -27,8 +27,8 @@ const BackToHome = dynamic(() =>
 import { hotjar } from "react-hotjar";
 
 export default function Home() {
-  const hjid = Number(process.env.HOTJAR_ID);
-  const hjsv = Number(process.env.HOTJAR_SV);
+  const hjid = Number(process.env.NEXT_PUBLIC_HOTJAR_ID);
+  const hjsv = Number(process.env.NEXT_PUBLIC_HOTJAR_SV);
 
   useEffect(() => {
     ReactGA.send({
