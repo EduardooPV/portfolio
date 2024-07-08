@@ -44,6 +44,11 @@ export default function Home() {
     <>
       <Head>
         <title>Início | Luiz Eduardo </title>
+
+        <meta
+          name="google-site-verification"
+          content={process.env.NEXT_PUBLIC_GOOGLE_SEARCH_CONSOLE}
+        />
       </Head>
 
       <HelloView />
