@@ -14,7 +14,6 @@ import "aos/dist/aos.css";
 function MyApp({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
-    console.log(process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS);
     ReactGA.initialize(process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS);
 
     AOS.init();
