@@ -6,7 +6,7 @@ import Head from "next/head";
 import { Hero } from "../components/Hero";
 import { HelloView } from "../components/HelloView";
 
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 
 const Diviser = dynamic(() =>
   import("../components/Diviser").then((mod) => mod.Diviser)
@@ -36,6 +36,7 @@ export default function Home() {
       page: "/",
       title: "Home",
     });
+
     hotjar.initialize(hjid, hjsv);
   });
 

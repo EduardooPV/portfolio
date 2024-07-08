@@ -9,8 +9,6 @@ import useAnalyticsEventTracker from "../../hooks/useAnalyticsEventTracker";
 export function Navbar() {
   const [active, setActive] = useState(false);
 
-  const gaEventTracker = useAnalyticsEventTracker("Home");
-
   function Toggle() {
     setActive(!active);
   }
@@ -22,7 +20,9 @@ export function Navbar() {
           href="/"
           title="Logo"
           tabIndex={0}
-          onClick={() => gaEventTracker("logoImage")}
+          onClick={() =>
+            useAnalyticsEventTracker("Header", "click", "logoImage")
+          }
         >
           <svg
             width="48"

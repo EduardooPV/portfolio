@@ -6,16 +6,18 @@ import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import { MediaContextProvider } from "../components/MediaScreen";
 
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
+
+const TRACKING_ID = process.env.GOOGLE_ANALYTICS;
 
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const TRACKING_ID = process.env.GOOGLE_ANALYTiCS; 
-  ReactGA.initialize(TRACKING_ID);
 
   useEffect(() => {
+    ReactGA.initialize(TRACKING_ID);
+
     AOS.init();
   }, []);
 
