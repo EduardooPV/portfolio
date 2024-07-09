@@ -17,13 +17,22 @@ import { ProjectProps } from "../../../pages/projetos";
 
 interface CardProjectProps {
   project: ProjectProps;
+  titleCenter: boolean;
   [key: string]: any;
 }
 
-export function CardProjectGrid({ project, ...rest }: CardProjectProps) {
+export function CardProjectGrid({
+  project,
+  titleCenter = false,
+  ...rest
+}: CardProjectProps) {
+  const headerStyle = {
+    justifyContent: titleCenter ? "center" : "space-between",
+  };
+
   return (
     <Container {...rest}>
-      <Header>
+      <Header style={headerStyle}>
         <p>{project.title}</p>
 
         {project.published && <span>Criado em: {project.published}</span>}

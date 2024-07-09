@@ -84,14 +84,12 @@ export const getStaticProps: GetStaticProps = async () => {
       projectCollection(limit: 2, order: published_DESC) {
         items {
           title
-          published
           image {
             url
             width
             height
             description
           }
-          tags
           description
           linkGithub
           linkPreview
@@ -118,11 +116,6 @@ export const getStaticProps: GetStaticProps = async () => {
 
     const projects = data.projectCollection?.items.map((project) => ({
       ...project,
-      tags: (project.tags || []).map((tag: string) => ({
-        text: tag,
-        color: tagColors[tag],
-      })),
-      published: format(new Date(project.published), "dd/MM/yyyy"),
       slug: createSlug(project.title),
     }));
 

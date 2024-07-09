@@ -29,6 +29,7 @@ export function Projects({ projects }: ProjectsProps) {
             data-aos-offset="10"
             data-aos-duration="600"
             data-aos-delay="400"
+            titleCenter={true}
           />
         ))}
       </Content>
