@@ -31,13 +31,12 @@ export function About() {
         </TextSection>
 
         <p data-aos="fade-up" data-aos-duration="600">
-          Muito prazer, me chamo <span>Luiz Eduardo</span> (mas todos me chamam
-          de Dudu, sou graduado em{" "}
-          <span>Analise e desenvolvimento de sistemas</span> pela Universidade
-          Norte do Paraná <span>(Unopar)</span>. Apaixonado pela arte de
-          programar, decidi seguir carreira pelo ramo do desenvolvimento web, e
-          me especializei em <span>Javascript</span> + <span>React.js</span> e
-          em todo o seu eco sistema.
+          Muito prazer, me chamo Luiz Eduardo, tenho 24 anos e sou graduado em
+          <span> Analise e desenvolvimento de sistemas - UNOPAR</span> e
+          cursando pós gradução em <span>Full Stack - Descomplica</span>.
+          Apaixonado pela arte de programar, decidi seguir carreira pelo ramo do
+          desenvolvimento web, e me especializei em <span>Javascript</span> com
+          <span> React.js</span> e em todo o seu eco sistema.
         </p>
 
         <ContainerIcons data-aos="fade-up" data-aos-duration="600">
@@ -92,7 +91,11 @@ export function About() {
       </Content>
       <Media greaterThan="sm">
         <Figure data-aos="fade-right" data-aos-duration="600">
-          <img src="/assets/person.webp" alt="Ilustração" />
+          <img
+            src="/assets/person.webp"
+            alt="Homem com ficha técnica ao lado"
+            loading="lazy"
+          />
         </Figure>
       </Media>
     </Container>

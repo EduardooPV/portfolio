@@ -6,7 +6,7 @@ export const Container = styled.section`
   max-width: 1240px;
   margin: 0 auto;
 
-  padding: 40px 20px;
+  padding: 0px 20px 40px 20px;
 
   @media (min-width: 768px) {
     display: grid;

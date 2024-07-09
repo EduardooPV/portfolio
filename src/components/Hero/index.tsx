@@ -4,12 +4,7 @@ import { Media } from "../MediaScreen";
 import { TextSection } from "../TextSection";
 import { ButtonGeneric } from "../ButtonGeneric";
 
-import {
-  Container,
-  Content,
-  Figure,
-  ContainerButton,
-} from "./styles";
+import { Container, Content, Figure, ContainerButton } from "./styles";
 
 export function Hero() {
   return (
@@ -26,11 +21,12 @@ export function Hero() {
           </TextSection>
 
           <p data-aos="fade-up" data-aos-delay="400" data-aos-duration="600">
-            Oii, muito bem vindo ao meu <span>portfolio</span>, desenvolvi esse
-            projeto com o intuito de poder aplicar tudo que aprendi até hoje na
-            minha carreira <i>(curta, porém carreira)</i> de{" "}
-            <span>Desenvolvedor Front-end.</span> Sinta-se avontade para pegar
-            algum insight ou usar como referencia.
+            <span>Desenvolvedor Front-End com 4 anos</span> de experiência
+            focados no desenvolvimento web utilizando
+            <span> JavaScript, React.js e Next.js.</span> Este portfólio foi
+            criado para aplicar e demonstrar os conceitos que adquiri, além de
+            compartilhar meu trabalho e inspiração. Sinta-se à vontade para
+            explorar e entrar em contato.
           </p>
 
           <ContainerButton>
@@ -50,7 +46,12 @@ export function Hero() {
             data-aos-delay="800"
             data-aos-duration="800"
           >
-            <img src="/assets/ilustration.webp" alt="Ilustração" />
+            <img
+              src="/assets/ilustration.webp"
+              alt="Personagem flutuando com graficos envolta dele."
+              loading="eager"
+              decoding="async"
+            />
           </Figure>
         </Media>
       </Container>
