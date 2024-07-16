@@ -8,7 +8,7 @@ export const Container = styled.div`
   padding: 1rem 0.5rem;
   position: relative;
 
-  h1 {
+  h1, h2 {
     position: relative;
 
     font-family: "Roboto", sans-serif;

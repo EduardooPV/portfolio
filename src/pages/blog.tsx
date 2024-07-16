@@ -29,11 +29,13 @@ export default function Blog({ posts }: PostsProps) {
           name="description"
           content="Blog desenvolvido com intuito de fixar todos os conhecimentos absorvidos durante meus estudos"
         />
+
+        <link rel="canonical" href="https://luizeduardo.vercel.app/blog" />
       </Head>
 
       <Breadcrumb />
 
-      <ListPosts posts={posts}  />
+      <ListPosts posts={posts} />
     </>
   );
 }

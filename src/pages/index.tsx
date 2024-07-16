@@ -38,8 +38,6 @@ export default function Home({ projects, error }: ProjectsProps) {
   const hjid = Number(process.env.NEXT_PUBLIC_HOTJAR_ID);
   const hjsv = Number(process.env.NEXT_PUBLIC_HOTJAR_SV);
 
-  console.log(projects);
-
   useEffect(() => {
     ReactGA.send({
       hitType: "pageview",
@@ -63,6 +61,8 @@ export default function Home({ projects, error }: ProjectsProps) {
           name="google-site-verification"
           content={process.env.NEXT_PUBLIC_GOOGLE_SEARCH_CONSOLE}
         />
+
+        <link rel="canonical" href="https://luizeduardo.vercel.app/" />
       </Head>
 
       <HelloView />

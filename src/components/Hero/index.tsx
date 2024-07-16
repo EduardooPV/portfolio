@@ -16,6 +16,7 @@ export function Hero() {
             tabIndex={0}
             data-aos="fade-up"
             data-aos-duration="600"
+            h1
           >
             Seja bem vindo
           </TextSection>

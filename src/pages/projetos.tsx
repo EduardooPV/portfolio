@@ -46,6 +46,8 @@ export default function Projetos({ projects, error }: ProjectsProps) {
     <>
       <Head>
         <title>Projetos | Luiz Eduardo</title>
+
+        <link rel="canonical" href="https://luizeduardo.vercel.app/projetos" />
       </Head>
 
       <Breadcrumb />

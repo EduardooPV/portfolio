@@ -1,5 +1,6 @@
 export interface Props {
   children: string;
   tag: string;
-  tabIndex?: number
+  tabIndex?: number;
+  h1?: boolean;
 }

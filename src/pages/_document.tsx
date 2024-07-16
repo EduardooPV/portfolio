@@ -50,13 +50,13 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
 
-          <link rel="shortcut icon" href="/favicon.png" />
+          <link rel="shortcut icon" href="../../public/favicon.png" />
 
           <meta name="theme-color" content="#232222" />
 
           <meta property="og:locale" content="pt_BR" />
 
-          <meta property="og:image" content="/assets/ilustration.webp" />
+          <meta property="og:image" content="../../public/assets/ilustration.webp" />
 
           <meta
             name="description"
