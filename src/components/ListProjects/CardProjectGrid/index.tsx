@@ -17,7 +17,7 @@ import { ProjectProps } from "../../../pages/projetos";
 
 interface CardProjectProps {
   project: ProjectProps;
-  titleCenter: boolean;
+  titleCenter?: boolean;
   [key: string]: any;
 }
 
