@@ -8,6 +8,8 @@ import { Container, Content } from "./styles";
 import { ProjectsProps } from "../../pages/projetos";
 import { CardProjectGrid } from "../ListProjects/CardProjectGrid";
 
+import useAnalyticsEventTracker from "../../hooks/useAnalyticsEventTracker";
+
 export function Projects({ projects }: ProjectsProps) {
   return (
     <Container>
@@ -34,7 +36,11 @@ export function Projects({ projects }: ProjectsProps) {
         ))}
       </Content>
       <Link href="/projetos" passHref>
-        <a>
+        <a
+          onClick={() =>
+            useAnalyticsEventTracker("Projects Home", "click", "ver-todos")
+          }
+        >
           <ButtonGeneric>Ver todos</ButtonGeneric>
         </a>
       </Link>

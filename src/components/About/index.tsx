@@ -9,6 +9,8 @@ import { HiOutlineMail } from "react-icons/hi";
 import { FaDev } from "react-icons/fa";
 import { BiCloudDownload } from "react-icons/bi";
 
+import useAnalyticsEventTracker from "../../hooks/useAnalyticsEventTracker";
+
 import {
   Container,
   Content,
@@ -45,6 +47,9 @@ export function About() {
             target="_blank"
             rel="noreferrer"
             title="Icone Github"
+            onClick={() =>
+              useAnalyticsEventTracker("About", "click", "github-icon")
+            }
           >
             <AiFillGithub size={30} />
           </a>
@@ -53,6 +58,9 @@ export function About() {
             target="_blank"
             rel="noreferrer"
             title="Icone LinkedIn"
+            onClick={() =>
+              useAnalyticsEventTracker("About", "click", "linkedin-icon")
+            }
           >
             <AiFillLinkedin size={35} />
           </a>
@@ -61,6 +69,9 @@ export function About() {
             target="_blank"
             rel="noreferrer"
             title="Icone E-mail"
+            onClick={() =>
+              useAnalyticsEventTracker("About", "click", "email-icon")
+            }
           >
             <HiOutlineMail size={40} />
           </a>
@@ -69,6 +80,9 @@ export function About() {
             target="_blank"
             rel="noreferrer"
             title="Icone blog Dev.to"
+            onClick={() =>
+              useAnalyticsEventTracker("About", "click", "devto-icon")
+            }
           >
             <FaDev size={29} />
           </a>
@@ -76,6 +90,9 @@ export function About() {
             href="/CV-Luiz-Eduardo-Front-End.pdf/"
             download="CV-Luiz-Eduardo-Front-End"
             title="Icone download curriculo"
+            onClick={() =>
+              useAnalyticsEventTracker("About", "click", "curriculo-icon")
+            }
           >
             <BiCloudDownload size={40} />
           </a>
@@ -83,7 +100,13 @@ export function About() {
 
         <ContainerButton>
           <Link href="/projetos" passHref>
-            <a data-aos="fade-up" data-aos-duration="600">
+            <a
+              data-aos="fade-up"
+              data-aos-duration="600"
+              onClick={() =>
+                useAnalyticsEventTracker("About", "click", "meus-projetos")
+              }
+            >
               <ButtonGeneric>Meus projetos</ButtonGeneric>
             </a>
           </Link>

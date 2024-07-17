@@ -21,7 +21,7 @@ export function Navbar() {
           title="Logo"
           tabIndex={0}
           onClick={() =>
-            useAnalyticsEventTracker("Header", "click", "logoImage")
+            useAnalyticsEventTracker("Header", "click", "imagem-logo")
           }
         >
           <svg
@@ -50,17 +50,38 @@ export function Navbar() {
           <Media greaterThan="sm">
             <NavLinks>
               <Link href="/" passHref>
-                <a>Início</a>
+                <a
+                  onClick={() =>
+                    useAnalyticsEventTracker("Header", "click", "inicio")
+                  }
+                >
+                  Início
+                </a>
               </Link>
               <Link href="/projetos" passHref>
-                <a>Projetos</a>
+                <a
+                  onClick={() =>
+                    useAnalyticsEventTracker("Header", "click", "projetos")
+                  }
+                >
+                  Projetos
+                </a>
               </Link>
               <Link href="/blog" passHref>
-                <a>Blog</a>
+                <a
+                  onClick={() =>
+                    useAnalyticsEventTracker("Header", "click", "blog")
+                  }
+                >
+                  Blog
+                </a>
               </Link>
               <a
                 href="/CV-Luiz-Eduardo-Front-End.pdf/"
                 download="CV-Luiz-Eduardo-Front-End"
+                onClick={() =>
+                  useAnalyticsEventTracker("Header", "click", "curriculo")
+                }
               >
                 Curriculo
               </a>
@@ -73,17 +94,43 @@ export function Navbar() {
             />
             <Menu className={active ? "menuOpen" : "menuClose"}>
               <Link href="/" passHref>
-                <a className="menu-item" onClick={Toggle}>
+                <a
+                  className="menu-item"
+                  onClick={() => {
+                    Toggle();
+                    useAnalyticsEventTracker(
+                      "Header",
+                      "click",
+                      "inicio-mobile"
+                    );
+                  }}
+                >
                   Início
                 </a>
               </Link>
               <Link href="/projetos" passHref>
-                <a className="menu-item" onClick={Toggle}>
+                <a
+                  className="menu-item"
+                  onClick={() => {
+                    Toggle();
+                    useAnalyticsEventTracker(
+                      "Header",
+                      "click",
+                      "projetos-mobile"
+                    );
+                  }}
+                >
                   Projetos
                 </a>
               </Link>
               <Link href="/blog" passHref>
-                <a className="menu-item" onClick={Toggle}>
+                <a
+                  className="menu-item"
+                  onClick={() => {
+                    Toggle();
+                    useAnalyticsEventTracker("Header", "click", "blog-mobile");
+                  }}
+                >
                   Blog
                 </a>
               </Link>
@@ -91,7 +138,14 @@ export function Navbar() {
                 className="menu-item"
                 href="/CV-Luiz-Eduardo-Front-End.pdf/"
                 download="CV-Luiz-Eduardo-Front-End"
-                onClick={Toggle}
+                onClick={() => {
+                  Toggle();
+                  useAnalyticsEventTracker(
+                    "Header",
+                    "click",
+                    "curriculo-mobile"
+                  );
+                }}
               >
                 Curriculo
               </a>

@@ -6,6 +6,8 @@ import { ButtonGeneric } from "../ButtonGeneric";
 
 import { Container, Content, Figure, ContainerButton } from "./styles";
 
+import useAnalyticsEventTracker from "../../hooks/useAnalyticsEventTracker";
+
 export function Hero() {
   return (
     <>
@@ -36,6 +38,9 @@ export function Hero() {
               data-aos="fade-up"
               data-aos-delay="800"
               data-aos-duration="600"
+              onClick={() =>
+                useAnalyticsEventTracker("Hero", "click", "sobre-mim")
+              }
             >
               <ButtonGeneric>Sobre mim</ButtonGeneric>
             </a>

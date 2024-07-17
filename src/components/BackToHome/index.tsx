@@ -1,10 +1,19 @@
 import React from "react";
 import { Container } from './styles';
 
+import useAnalyticsEventTracker from "../../hooks/useAnalyticsEventTracker";
+
 export function BackToHome() {
   return (
     <Container>
-      <a href="#" tabIndex={0} title="Voltar para o topo">
+      <a
+        href="#"
+        tabIndex={0}
+        title="Voltar para o topo"
+        onClick={() =>
+          useAnalyticsEventTracker("All Pages", "click", "back-to-home")
+        }
+      >
         <svg
           width="43"
           height="43"
