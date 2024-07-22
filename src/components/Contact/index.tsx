@@ -35,20 +35,22 @@ export function Contact() {
           <TextSection
             tag="<h2>"
             tabIndex={0}
-            data-aos="fade-up"
+            data-aos="fade-right"
             data-aos-duration="400"
           >
             Fale comigo
           </TextSection>
-          <p data-aos="fade-up" data-aos-duration="600">
+          <p data-aos="fade-right" data-aos-duration="500">
             Gostaria de saber mais sobre os meus projetos ou discutir uma
             possível colaboração? Use o formulário para enviar uma mensagem
             diretamente para mim.
           </p>
-          <strong> Vamos construir algo incrível juntos!</strong>
+          <strong data-aos="fade-right" data-aos-duration="600">
+            Vamos construir algo incrível juntos!
+          </strong>
         </Header>
 
-        <div>
+        <div data-aos="fade-left" data-aos-duration="600">
           <Formik
             initialValues={{
               name: "",

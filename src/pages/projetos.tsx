@@ -9,6 +9,8 @@ import { gql } from "@apollo/client";
 import { format } from "date-fns";
 import { createSlug } from "../utils/formatterSlug";
 import { tagColors } from "../utils/tagColors";
+import { Diviser } from "../components/Diviser";
+import { Contact } from "../components/Contact";
 
 export interface ProjectProps {
   title: string;
@@ -53,6 +55,10 @@ export default function Projetos({ projects, error }: ProjectsProps) {
       <Breadcrumb />
 
       <ListProjects projects={projects} />
+
+      <Diviser />
+
+      <Contact />
     </>
   );
 }
