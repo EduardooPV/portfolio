@@ -6,7 +6,7 @@ import { TextSection } from "../TextSection";
 
 import { Container, Content } from "./styles";
 import { ProjectsProps } from "../../pages/projetos";
-import { CardProjectGrid } from "../ListProjects/CardProjectGrid";
+import { CardProjectResume } from "../ListProjects/CardProjectResume";
 
 import useAnalyticsEventTracker from "../../hooks/useAnalyticsEventTracker";
 
@@ -24,14 +24,13 @@ export function Projects({ projects }: ProjectsProps) {
 
       <Content>
         {projects.map((project) => (
-          <CardProjectGrid
+          <CardProjectResume
             project={project}
             key={project.title}
             data-aos="fade-up"
             data-aos-offset="10"
             data-aos-duration="600"
             data-aos-delay="400"
-            titleCenter={true}
           />
         ))}
       </Content>

@@ -16,9 +16,12 @@
     "@types/prismic-dom": "^2.1.1",
     "aos": "^2.3.4",
     "date-fns": "^3.6.0",
+    "dotenv": "^16.4.5",
+    "formik": "^2.4.6",
     "framer-motion": "^6.2.8",
     "graphql": "^16.8.2",
     "next": "12.1.0",
+    "nodemailer": "^6.9.14",
     "phosphor-react": "^1.4.1",
     "prismic-dom": "^2.2.7",
     "react": "17.0.2",
@@ -28,7 +31,8 @@
     "react-icons": "^4.4.0",
     "react-loading-skeleton": "^3.1.0",
     "react-lottie": "^1.2.3",
-    "react-switch": "^6.0.0"
+    "react-switch": "^6.0.0",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@types/aos": "^3.0.4",

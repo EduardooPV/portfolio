@@ -33,6 +33,7 @@ const BackToHome = dynamic(() =>
 import { hotjar } from "react-hotjar";
 import { GetStaticProps } from "next";
 import { ProjectsProps } from "./projetos";
+import { Contact } from "../components/Contact";
 
 export default function Home({ projects, error }: ProjectsProps) {
   const hjid = Number(process.env.NEXT_PUBLIC_HOTJAR_ID);
@@ -72,6 +73,8 @@ export default function Home({ projects, error }: ProjectsProps) {
       <Diviser />
       <Skills />
       <Projects projects={projects} />
+      <Diviser />
+      <Contact />
     </>
   );
 }
