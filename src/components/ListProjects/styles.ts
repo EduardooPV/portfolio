@@ -17,6 +17,14 @@ export const Container = styled.main`
   @media (min-width: 768px) {
     gap: 60px;
   }
+
+  .layoutButton {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
 `;
 
 export const Header = styled.div`
@@ -47,7 +55,7 @@ export const Header = styled.div`
 export const Content = styled.section<Layout>`
   display: grid;
   grid-template-columns: 1fr;
-  gap: 30px;
+  gap: 60px;
 
   position: relative;
 
@@ -56,6 +64,7 @@ export const Content = styled.section<Layout>`
       props.layout
         ? "grid-template-columns: 1fr 1fr;"
         : "grid-template-columns: 1fr;"}
-    gap: 40px;
+    column-gap: 30px;
+    row-gap: 60px;
   }
 `;

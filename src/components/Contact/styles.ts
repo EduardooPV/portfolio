@@ -12,6 +12,8 @@ export const Container = styled.section`
   margin: 50px auto;
   padding: 0 20px;
 
+  overflow-x: hidden;
+
   @media (min-width: 768px) {
     margin: 120px auto;
 

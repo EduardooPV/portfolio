@@ -11,8 +11,13 @@ export const Container = styled.div`
   justify-content: space-between;
   gap: 15px;
 
-  border: 1px solid ${c.neutral400};
+  border: 1px solid ${c.neutral500};
   border-radius: 4px;
+
+  :hover {
+    border: 1px solid ${c.neutral400};
+    transition: border 200ms !important;
+  }
 
   @media (min-width: 768px) {
     grid-template-columns: minmax(300px, 600px) minmax(300px, 600px);

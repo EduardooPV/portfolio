@@ -4,15 +4,23 @@ import c from "../../../styles/pallete.json";
 import f from "../../../styles/typography.json";
 
 export const Container = styled.div`
-  padding: 20px;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 15px;
 
-  border: 1px solid ${c.neutral400};
   border-radius: 4px;
+
+  @media (min-width: 768px) {
+    padding: 20px;
+
+    border: 1px solid ${c.neutral500};
+
+    :hover {
+      border: 1px solid ${c.neutral400};
+      transition: border 200ms !important;
+    }
+  }
 `;
 
 export const Header = styled.header`
@@ -79,6 +87,7 @@ export const Footer = styled.footer`
   flex-wrap: wrap;
   gap: 20px;
 
+  button,
   a {
     flex: 1;
     min-width: max-content;
@@ -112,10 +121,11 @@ export const Footer = styled.footer`
   }
 
   a:first-child {
-    color: ${c.black};
+    color: ${c.black} !important;
     background-color: ${c.primary300};
   }
 
+  button:last-child,
   a:last-child {
     color: ${c.primary300};
     border: 1px solid ${c.primary300};

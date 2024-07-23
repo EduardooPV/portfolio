@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { AiFillGithub } from "react-icons/ai";
 import { FiExternalLink } from "react-icons/fi";
+import { TbLock } from "react-icons/tb";
 import "react-loading-skeleton/dist/skeleton.css";
 
 import {
@@ -42,7 +43,7 @@ export function CardProjectGrid({
         <img src={project.image.url} alt={project.image.description} />
       </Preview>
 
-      {project.tags && (
+      {/* {project.tags && (
         <Tags>
           {project.tags.map(({ text, color }) => (
             <p
@@ -55,7 +56,7 @@ export function CardProjectGrid({
             </p>
           ))}
         </Tags>
-      )}
+      )} */}
 
       {project.description && <Description>{project.description}</Description>}
 
@@ -68,7 +69,7 @@ export function CardProjectGrid({
             </a>
           </Link>
         )}
-        {project.linkGithub && (
+        {project.linkGithub ? (
           <Link href={project.linkGithub}>
             <a
               target="_blank"
@@ -79,6 +80,11 @@ export function CardProjectGrid({
               <AiFillGithub />
             </a>
           </Link>
+        ) : (
+          <button disabled>
+            Repositório privado
+            <TbLock />
+          </button>
         )}
       </Footer>
     </Container>

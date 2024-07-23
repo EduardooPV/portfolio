@@ -32,7 +32,7 @@ export function CardProjectList({ project, ...rest }: CardProjectProps) {
           <div>
             {project.published && <span>Criado em: {project.published}</span>}
 
-            {project.tags && (
+            {/* {project.tags && (
               <div>
                 {project.tags.map(({ text, color }) => (
                   <p
@@ -45,7 +45,7 @@ export function CardProjectList({ project, ...rest }: CardProjectProps) {
                   </p>
                 ))}
               </div>
-            )}
+            )} */}
           </div>
 
           <p>{project.title}</p>
