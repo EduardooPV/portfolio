@@ -10,6 +10,8 @@ import ReactGA from 'react-ga4';
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { PageTransition } from '../components/PageTransition';
+import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
 
@@ -23,7 +25,9 @@ function MyApp({ Component, pageProps }: AppProps) {
     <MediaContextProvider>
       <GlobalStyle />
       <Navbar />
-      <Component {...pageProps} />
+      <PageTransition>
+        <Component {...pageProps} />
+      </PageTransition>
       <Footer />
     </MediaContextProvider>
   );
