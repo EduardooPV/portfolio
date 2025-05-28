@@ -5,13 +5,13 @@ import { PropsStyled } from "./interface";
 
 export const Container = styled.button<PropsStyled>`
   width: 100%;
-  min-width: 250px;
-  max-width: 400px;
+  /* min-width: 250px; */
+  /* max-width: 400px; */
 
   margin: 0 auto;
-  padding: 5px 20px;
+  padding: 5px 40px;
 
-  background: ${(props) => (props.types ? "transparent" : `${c.primary300}`)};
+  background: ${(props) => (props.types ? "transparent" : `${c.white}`)};
   border: 2px solid ${c.primary300};
 
   color: ${(props) => (props.types ? c.primary300 : c.neutral700)};
@@ -22,20 +22,19 @@ export const Container = styled.button<PropsStyled>`
 
   border: 2px solid transparent;
 
-  border-radius: 2px;
+  border-radius: 999px !important;
 
   transition: all 0.2s;
 
   &:hover {
-    background: ${(props) => (props.types ? "transparent" : `${c.primary250}`)};
-    color: ${(props) => (props.types ? c.primary400 : "")};
-    border: 2px solid ${c.primary250};
+    background: ${(props) => (props.types ? "transparent" : `${c.neutral700}`)};
+    color: ${(props) => (props.types ? c.primary400 : c.white)};
+    border: 2px solid ${c.white};
   }
 
   &:active {
     color: ${(props) => (props.types ? c.primary300 : c.white)};
     background: ${(props) => (props.types ? "transparent" : `${c.primary400}`)};
-    color: ${(props) => (props.types ? c.primary500 : "")};
     border: 2px solid ${c.primary400};
   }
 

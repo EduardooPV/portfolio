@@ -6,6 +6,7 @@
   "neutral300": "#BABABA",
   "neutral400": "#767676",
   "neutral500": "#232222",
+  "neutral600": "#1e1d1d",
   "neutral700": "#171515",
   "primary100": "#FFC16E",
   "primary200": "#FFBD65",
@@ -17,5 +18,6 @@
   "heading": " #F8F8F8",
   "info": " #BBBBBB",
   "background": " #1A1D23",
-  "highlight": "#F89D24"
+  "highlight": "#F89D24",
+  "error": "#c62828"
 }

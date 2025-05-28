@@ -26,15 +26,19 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
 
   const mailData = {
     from: USERNAME,
-    to: "du__du@live.com",
-    subject: `Mensagem de: ${req.body.name}`,
-    html: `<div>
-      <div>Contato através do Portfolio</div>
-      </br>
-      <div>${formattedMessage}</div>
-      </br>
-      <div>Enviado por: ${req.body.email}</div>
-    </div>`,
+    to: "eduardoveltroni@hotmail.com",
+    subject: "Contato do Portfolio",
+    html: `
+      <div>
+        <div>Contato enviado pelo formulário do portfolio</div>
+        </br>
+        <div>Nome: ${req.body.name}</div>
+        </br>
+        <div>Enviado por: ${req.body.email}</div>
+        </br>
+        <div>Mensagem: </div>
+        <div>${formattedMessage}</div>
+      </div>`,
   };
 
   try {

@@ -1,9 +1,9 @@
 import React from "react";
 
-import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
-import { HiOutlineMail } from "react-icons/hi";
+import { AiFillLinkedin } from "react-icons/ai";
+import { MdEmail } from "react-icons/md";
 import { FaDev } from "react-icons/fa";
-import { BiCloudDownload } from "react-icons/bi";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 import useAnalyticsEventTracker from "../../hooks/useAnalyticsEventTracker";
 
@@ -14,31 +14,32 @@ export function Footer() {
     <Container>
       <Content>
         <div>
-          <div>
+          {/* <div>
             <a
               href="https://github.com/EduardooPV"
               target="_blank"
               rel="noreferrer"
               title="Icone Github"
               onClick={() =>
-                useAnalyticsEventTracker("Footer", "click", "github-icon")
+              useAnalyticsEventTracker("Footer", "click", "github-icon")
               }
-            >
+              >
               <AiFillGithub size={30} />
               Github
-            </a>
-          </div>
+              </a>
+              </div> */}
+
           <div>
             <a
-              href="https://www.linkedin.com/in/luiz-veltroni/"
+              href="https://wa.me/5515981897613?text=Ol%C3%A1%2C%20vi%20seu%20portfolio%20e%20gostaria%20de%20conversar%20sobre%20um%20servi%C3%A7o."
               target="_blank"
               rel="noreferrer"
               onClick={() =>
-                useAnalyticsEventTracker("Footer", "click", "linkedin-icon")
+                useAnalyticsEventTracker("Footer", "click", "whatsapp")
               }
             >
-              <AiFillLinkedin size={25} />
-              LinkedIn
+              <IoLogoWhatsapp size={25} />
+              Whatsapp
             </a>
           </div>
 
@@ -51,8 +52,22 @@ export function Footer() {
                 useAnalyticsEventTracker("Footer", "click", "email-icon")
               }
             >
-              <HiOutlineMail size={25} />
+              <MdEmail size={25} />
               E-mail
+            </a>
+          </div>
+
+          <div>
+            <a
+              href="https://www.linkedin.com/in/luiz-veltroni/"
+              target="_blank"
+              rel="noreferrer"
+              onClick={() =>
+                useAnalyticsEventTracker("Footer", "click", "linkedin-icon")
+              }
+            >
+              <AiFillLinkedin size={25} />
+              LinkedIn
             </a>
           </div>
 
@@ -70,7 +85,7 @@ export function Footer() {
             </a>
           </div>
 
-          <div>
+          {/* <div>
             <a
               href="/CV-Luiz-Eduardo-Front-End.pdf/"
               download="CV-Luiz-Eduardo-Front-End"
@@ -81,10 +96,13 @@ export function Footer() {
               <BiCloudDownload size={25} />
               Curriculo
             </a>
-          </div>
+            </div> */}
         </div>
 
-        <span>Copyright © 2022 - Luiz Eduardo Prado Veltroni</span>
+        <span>
+          Copyright © 2025 - Luiz Eduardo Prado Veltroni. Todos os direitos
+          reservados.
+        </span>
       </Content>
     </Container>
   );

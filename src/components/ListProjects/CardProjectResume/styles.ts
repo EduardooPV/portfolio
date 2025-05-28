@@ -4,33 +4,66 @@ import c from "../../../styles/pallete.json";
 import f from "../../../styles/typography.json";
 
 export const Container = styled.div`
-  padding: 20px;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 15px;
+  overflow: hidden;
+
+  cursor: pointer;
+
+  border: 1px solid ${c.neutral600};
+  border-radius: 20px;
+
+  transition: all 0.3s ease-in-out;
+
+  :hover {
+    background: ${c.neutral600};
+    transition: all 0.1s ease-in-out;
+  }
 `;
 
 export const Header = styled.header`
   font-family: montserrat, sans-serif;
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
+
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  gap: 2rem;
+  align-items: center;
+
+  padding: 16px 20px;
+
+  background: ${c.neutral600};
 
   p {
-    width: 100%;
     color: ${c.white};
     font-size: ${f.h5.fontSize};
     line-height: ${f.h5.lineHeight};
     font-weight: bold;
     text-transform: capitalize;
-    text-align: center;
+    margin: 0;
+  }
+
+  span {
+    color: ${c.neutral200};
+    font-family: montserrat, sans-serif;
+    font-size: ${f.caption.fontSize};
+    line-height: ${f.caption.lineHeight};
   }
 `;
 
 export const Preview = styled.div`
+  padding: 20px;
+
+  transition: transform 0.3s ease-in-out;
+
+  :hover {
+    transform: scale(1.02);
+  }
+
   img {
     width: 100%;
     max-height: 350px;

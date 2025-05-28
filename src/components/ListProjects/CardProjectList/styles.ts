@@ -3,20 +3,28 @@ import styled from "styled-components";
 import c from "../../../styles/pallete.json";
 import f from "../../../styles/typography.json";
 
-export const Container = styled.div`
-  padding: 20px;
+interface ContainerProps {
+  isActive: boolean;
+}
 
+export const Container = styled.a<ContainerProps>`
   display: grid;
   grid-template-columns: 1fr;
   justify-content: space-between;
-  gap: 15px;
+
+  overflow: hidden;
 
   border: 1px solid ${c.neutral500};
-  border-radius: 4px;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+
+  cursor: ${({ isActive }) => (isActive ? "pointer" : "not-allowed")};
+
+  text-decoration: none;
 
   :hover {
-    border: 1px solid ${c.neutral400};
-    transition: border 200ms !important;
+    background: ${c.neutral600};
+    transition: all 0.1s ease-in-out;
   }
 
   @media (min-width: 768px) {
@@ -29,14 +37,16 @@ export const Preview = styled.div`
 
   display: flex;
 
-  padding-right: 18px;
-  border-right: 1px solid ${c.neutral500};
+  padding: 12px;
 
-  @media (max-width: 768px) {
-    padding-right: 0px;
-    padding-bottom: 18px;
-    border-right: 0px;
-    border-bottom: 1px solid ${c.neutral500};
+  transition: transform 0.3s ease-in-out;
+
+  @media (min-width: 768px) {
+    padding: 20px;
+  }
+
+  :hover {
+    transform: scale(1.02);
   }
 
   img {
@@ -51,43 +61,26 @@ export const Preview = styled.div`
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
 `;
 
 export const Header = styled.header`
   font-family: montserrat, sans-serif;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  gap: 2rem;
+  align-items: center;
+  padding: 16px 20px;
 
-  > div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
+  background: ${c.neutral600};
 
-    > div {
-      display: flex;
-      gap: 10px;
-
-      p {
-        width: fit-content;
-        padding: 6px;
-        border-radius: 4px;
-        font-size: 14px;
-        color: #fff;
-        opacity: 0.9;
-      }
-    }
-  }
-
-  > p {
+  p {
     color: ${c.white};
     font-size: ${f.h4.fontSize};
     line-height: ${f.h4.lineHeight};
     font-weight: bold;
     text-transform: capitalize;
+    margin: 0;
   }
 
   span {
@@ -99,6 +92,7 @@ export const Header = styled.header`
 `;
 
 export const Description = styled.div`
+  margin: 20px;
   display: block;
   flex: 1;
   color: ${c.neutral200};
@@ -159,4 +153,20 @@ export const Footer = styled.footer`
     color: ${c.primary300};
     border: 1px solid ${c.primary300};
   }
+`;
+
+export const Tags = styled.div`
+  display: flex;
+  gap: 10px;
+
+  p {
+    margin: 0;
+  }
+`;
+
+export const IsNotActive = styled.span`
+  color: ${c.error} !important;
+  border: 1px solid ${c.error};
+  padding: 2px 10px;
+  border-radius: 4px;
 `;

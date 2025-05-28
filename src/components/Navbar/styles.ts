@@ -3,7 +3,7 @@ import c from "../../styles/pallete.json";
 import f from "../../styles/typography.json";
 
 export const Container = styled.header`
-  height: 60px;
+  height: 70px;
   width: 100%;
   position: fixed;
 
@@ -56,7 +56,7 @@ export const NavLinks = styled.nav`
 
   a {
     padding: 0px 10px;
-    
+
     color: ${c.neutral100};
     font-family: montserrat, sans-serif;
     font-size: ${f.paragraphLarge.fontSize};
@@ -75,7 +75,7 @@ export const NavLinks = styled.nav`
       bottom: 0;
       width: 0px;
       height: 2px;
-      background: ${c.primary300};
+      background: ${c.info};
 
       transition: all 0.2s;
     }
@@ -88,14 +88,8 @@ export const NavLinks = styled.nav`
     }
 
     &:active {
-      color: ${c.primary300};
+      color: ${c.white};
     }
-  }
-
-  a:nth-child(4) {
-    background-color: ${c.primary300};
-    color: white;
-    margin-right: 10px;
   }
 `;
 

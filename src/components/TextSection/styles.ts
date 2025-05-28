@@ -8,12 +8,13 @@ export const Container = styled.div`
   padding: 1rem 0.5rem;
   position: relative;
 
-  h1, h2 {
+  h1,
+  h2 {
     position: relative;
 
     font-family: "Roboto", sans-serif;
     font-size: ${f.h1.fontSize};
-    line-height: ${f.h1.lineHeight};
+    line-height: ${f.h2.lineHeight};
     color: ${c.white};
 
     z-index: 1;
@@ -22,21 +23,23 @@ export const Container = styled.div`
       content: "";
       display: block;
       position: absolute;
-      bottom: 0.2rem;
+      bottom: 0.3rem;
+      left: 0;
       width: 40%;
-      height: 13px;
+      height: 8px;
       border-radius: 50px;
 
       background: ${c.primary300};
-
       z-index: -1;
     }
 
     @media (min-width: 768px) {
       font-size: ${f.display1.fontSize};
+      line-height: ${f.display2.lineHeight};
 
       &::before {
-        bottom: -0.2rem;
+        height: 10px;
+        bottom: 0.4rem;
       }
     }
   }

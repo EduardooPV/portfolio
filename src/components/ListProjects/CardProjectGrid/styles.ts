@@ -3,32 +3,56 @@ import styled from "styled-components";
 import c from "../../../styles/pallete.json";
 import f from "../../../styles/typography.json";
 
-export const Container = styled.div`
+interface ContainerProps {
+  isActive: boolean;
+}
+
+export const Container = styled.a<ContainerProps>`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 15px;
+  position: relative;
+  overflow: hidden;
 
-  border-radius: 4px;
+  border: 1px solid ${c.neutral600};
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+
+  text-decoration: none;
+
+  cursor: ${({ isActive }) => (isActive ? "pointer" : "not-allowed")};
 
   @media (min-width: 768px) {
-    padding: 20px;
-
-    border: 1px solid ${c.neutral500};
+    border: 1px solid ${c.neutral600};
 
     :hover {
-      border: 1px solid ${c.neutral400};
-      transition: border 200ms !important;
+      background: ${c.neutral600};
     }
   }
 `;
 
 export const Header = styled.header`
   font-family: montserrat, sans-serif;
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
+
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  gap: 2rem;
+  align-items: center;
+
+  padding: 16px 20px;
+
+  background: ${c.neutral600};
+
+  > div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 
   p {
     color: ${c.white};
@@ -36,6 +60,7 @@ export const Header = styled.header`
     line-height: ${f.h5.lineHeight};
     font-weight: bold;
     text-transform: capitalize;
+    margin: 0;
   }
 
   span {
@@ -47,8 +72,7 @@ export const Header = styled.header`
 `;
 
 export const Preview = styled.div`
-  padding-top: 18px;
-  border-top: 1px solid ${c.neutral500};
+  padding: 8px;
 
   img {
     width: 100%;
@@ -56,78 +80,52 @@ export const Preview = styled.div`
     object-fit: cover;
     object-position: center top;
   }
+
+  @media (min-width: 768px) {
+    padding: 20px;
+  }
 `;
 
 export const Tags = styled.div`
   display: flex;
-  gap: 10px;
+  justify-content: flex-end;
+  gap: 0.6rem;
 
   p {
-    width: fit-content;
-    padding: 6px;
-    border-radius: 4px;
-    color: #fff;
-    font-size: 14px;
-    opacity: 0.9;
+    margin: 0;
+  }
+
+  img {
+    width: 22px;
+    height: 22px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  @media (min-width: 768px) {
+    gap: 1rem;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
   }
 `;
 
 export const Description = styled.div`
-  margin: 10px 0;
+  padding: 0 20px 20px 20px;
 
   display: block;
   flex: 1;
   color: ${c.neutral200};
   font-size: ${f.paragraphSmall.fontSize};
   line-height: ${f.paragraphSmall.lineHeight};
+  text-align: justify;
 `;
 
-export const Footer = styled.footer`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-
-  button,
-  a {
-    flex: 1;
-    min-width: max-content;
-    padding: 8px 20px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-
-    background: transparent;
-
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: 500;
-
-    transition: filter 0.2s;
-
-    svg {
-      font-size: 25px;
-      stroke-width: 1;
-    }
-
-    :hover {
-      filter: brightness(0.8);
-    }
-
-    :active {
-      background: ${c.primary400};
-    }
-  }
-
-  a:first-child {
-    color: ${c.black} !important;
-    background-color: ${c.primary300};
-  }
-
-  button:last-child,
-  a:last-child {
-    color: ${c.primary300};
-    border: 1px solid ${c.primary300};
-  }
+export const IsNotActive = styled.span`
+  color: ${c.error} !important;
+  border: 1px solid ${c.error};
+  padding: 2px 10px;
+  border-radius: 4px;
 `;

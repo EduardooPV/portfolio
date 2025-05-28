@@ -12,6 +12,6 @@ export const List = styled.div`
   gap: 10px;
 
   @media (min-width: 768px) {
-    padding: 120px 20px 40px 20px;
+    padding: 120px 20px 0px 20px;
   }
 `;

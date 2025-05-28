@@ -2,13 +2,11 @@ import Head from "next/head";
 import React from "react";
 import { GetStaticProps } from "next";
 
-import { ListProjects } from "../components/ListProjects";
-import { Breadcrumb } from "../components/Breadcrumb";
+import { ListProjects } from "../components/ListProjects/index";
 import { initializeApollo } from "../services/apolloClient";
 import { gql } from "@apollo/client";
 import { format } from "date-fns";
 import { createSlug } from "../utils/formatterSlug";
-import { tagColors } from "../utils/tagColors";
 import { Diviser } from "../components/Diviser";
 import { Contact } from "../components/Contact";
 
@@ -22,15 +20,13 @@ export interface ProjectProps {
     height: string;
     description: string;
   };
-  tags: {
-    text: string;
-    color: string;
-  }[];
+  type: string;
+  tags?: string[];
   description: string;
-  linkGithub: string;
   linkPreview: string;
+  isActive: boolean;
   content: {
-    json: any;
+    json: unknown;
   };
 }
 
@@ -52,7 +48,7 @@ export default function Projetos({ projects, error }: ProjectsProps) {
         <link rel="canonical" href="https://luizeduardo.vercel.app/projetos" />
       </Head>
 
-      <Breadcrumb />
+      {/* <Breadcrumb /> */}
 
       <ListProjects projects={projects} />
 
@@ -78,10 +74,11 @@ export const getStaticProps: GetStaticProps = async () => {
             height
             description
           }
+          type
           tags
           description
-          linkGithub
           linkPreview
+          isActive
           content {
             json
           }
@@ -103,15 +100,13 @@ export const getStaticProps: GetStaticProps = async () => {
       };
     }
 
-    const projects = data.projectCollection?.items.map((project) => ({
-      ...project,
-      tags: (project.tags || []).map((tag: string) => ({
-        text: tag,
-        color: tagColors[tag],
-      })),
-      published: format(new Date(project.published), "dd/MM/yyyy"),
-      slug: createSlug(project.title),
-    }));
+    const projects = data.projectCollection?.items.map(
+      (project: ProjectProps) => ({
+        ...project,
+        published: format(new Date(project.published), "dd/MM/yyyy"),
+        slug: createSlug(project.title),
+      })
+    );
 
     return {
       props: {

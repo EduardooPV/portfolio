@@ -8,9 +8,7 @@ import { HelloView } from "../components/HelloView";
 
 import { initializeApollo } from "../services/apolloClient";
 import { gql } from "@apollo/client";
-import { format } from "date-fns";
 import { createSlug } from "../utils/formatterSlug";
-import { tagColors } from "../utils/tagColors";
 
 import ReactGA from "react-ga4";
 
@@ -30,14 +28,16 @@ const BackToHome = dynamic(() =>
   import("../components/BackToHome").then((mod) => mod.BackToHome)
 );
 
-import { hotjar } from "react-hotjar";
+// import { hotjar } from "react-hotjar";
 import { GetStaticProps } from "next";
-import { ProjectsProps } from "./projetos";
+import { ProjectProps, ProjectsProps } from "./projetos";
 import { Contact } from "../components/Contact";
 
 export default function Home({ projects, error }: ProjectsProps) {
-  const hjid = Number(process.env.NEXT_PUBLIC_HOTJAR_ID);
-  const hjsv = Number(process.env.NEXT_PUBLIC_HOTJAR_SV);
+  const [showHelloView, setShowHelloView] = React.useState(false);
+
+  // const hjid = Number(process.env.NEXT_PUBLIC_HOTJAR_ID);
+  // const hjsv = Number(process.env.NEXT_PUBLIC_HOTJAR_SV);
 
   useEffect(() => {
     ReactGA.send({
@@ -46,12 +46,20 @@ export default function Home({ projects, error }: ProjectsProps) {
       title: "Home",
     });
 
-    hotjar.initialize(hjid, hjsv);
+    // hotjar.initialize(hjid, hjsv);
   });
 
   if (error) {
     return <div>Ocorreu um erro: {error}</div>;
   }
+
+  useEffect(() => {
+    const helloViewed = sessionStorage.getItem("helloViewed");
+    if (!helloViewed) {
+      setShowHelloView(true);
+      sessionStorage.setItem("helloViewed", "true");
+    }
+  }, []);
 
   return (
     <>
@@ -66,7 +74,7 @@ export default function Home({ projects, error }: ProjectsProps) {
         <link rel="canonical" href="https://luizeduardo.vercel.app/" />
       </Head>
 
-      <HelloView />
+      {showHelloView && <HelloView />}
       <BackToHome />
       <Hero />
       <About />
@@ -93,9 +101,11 @@ export const getStaticProps: GetStaticProps = async () => {
             height
             description
           }
+          type
+          tags
           description
-          linkGithub
           linkPreview
+          isActive
           content {
             json
           }
@@ -117,10 +127,12 @@ export const getStaticProps: GetStaticProps = async () => {
       };
     }
 
-    const projects = data.projectCollection?.items.map((project) => ({
-      ...project,
-      slug: createSlug(project.title),
-    }));
+    const projects = data.projectCollection?.items.map(
+      (project: ProjectProps) => ({
+        ...project,
+        slug: createSlug(project.title),
+      })
+    );
 
     return {
       props: {

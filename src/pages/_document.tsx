@@ -50,28 +50,43 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
 
-          <link rel="shortcut icon" href="../../public/favicon.png" />
+          <link rel="shortcut icon" href="/favicon.png" />
 
           <meta name="theme-color" content="#232222" />
 
           <meta property="og:locale" content="pt_BR" />
 
-          <meta property="og:image" content="../../public/assets/ilustration.webp" />
+          <meta
+            property="og:image"
+            content="https://luizeduardo.vercel.app/assets/ilustration.webp"
+          />
+          
+          <meta
+            property="og:image:alt"
+            content="Ilustração de um desenvolvedor trabalhando em um site"
+          />
 
           <meta
             name="description"
-            content="Meu portfolio, contando um pouco sobre mim, projetos e carreira."
+            content="Desenvolvedor especializado em criação e manutenção de sites profissionais com foco em performance, design e conversão. Atendo projetos com WordPress, React.js e Next.js."
           />
 
           <meta
             property="og:title"
-            content="Portfolio Luiz Eduardo Prado Veltroni"
+            content="Desenvolvedor | Sites Profissionais com WordPress, React e Next.js"
           />
 
           <meta
             property="og:description"
-            content="Meu portfolio, contando um pouco sobre mim, projetos e carreira."
+            content="Ajudo empresas e profissionais a conquistarem presença online com sites rápidos, bonitos e que geram resultados. Veja meu portfólio e solicite um orçamento!"
           />
+
+          <meta
+            name="keywords"
+            content="desenvolvedor front-end, criação de sites, wordpress, react, nextjs, freelancer, portfólio"
+          />
+
+          <meta name="robots" content="index, follow" />
         </Head>
         <body>
           <Main />

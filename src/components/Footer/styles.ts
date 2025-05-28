@@ -19,7 +19,7 @@ export const Content = styled.div`
   align-items: center;
   gap: 60px;
 
- @media (min-width: 1000px) {
+  @media (min-width: 1000px) {
     padding: 80px 40px;
   }
 
@@ -30,7 +30,7 @@ export const Content = styled.div`
     justify-content: center;
     align-items: center;
     gap: 40px;
-    
+
     div a {
       position: relative;
 
@@ -51,12 +51,14 @@ export const Content = styled.div`
         bottom: 0;
         width: 0px;
         height: 2px;
-        background: ${c.neutral100};
+        background: ${c.info};
 
         transition: all 0.2s;
       }
 
       &:hover {
+        color: ${c.info};
+
         ::after {
           left: 0;
           width: 100%;
@@ -64,7 +66,6 @@ export const Content = styled.div`
       }
     }
   }
-
 
   span {
     font-size: ${f.caption.fontSize};

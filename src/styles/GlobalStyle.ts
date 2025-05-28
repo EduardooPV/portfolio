@@ -49,13 +49,13 @@ button {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(50, 50, 50, 0.8);  
+  background: rgba(50, 50, 50, 0.4);  
 }
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 8px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #F89D24; 
+  background: white; 
   border-radius: 10px;
 }
 

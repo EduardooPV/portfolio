@@ -8,13 +8,14 @@ interface Layout {
 export const Container = styled.main`
   max-width: 1240px;
   margin: 0 auto;
-  padding: 40px 20px 80px 20px;
+  padding: 80px 20px 80px 20px;
 
   display: flex;
   flex-direction: column;
   gap: 20px;
 
   @media (min-width: 768px) {
+    padding: 100px 20px 80px 20px;
     gap: 60px;
   }
 
@@ -37,7 +38,7 @@ export const Header = styled.div`
     gap: 14px;
 
     button {
-      background: ${c.background};
+      background: ${c.neutral500};
       border: 0;
       border-radius: 6px;
       padding: 10px;
@@ -45,8 +46,15 @@ export const Header = styled.div`
       align-items: center;
       justify-content: center;
 
+      :hover {
+        svg path {
+          fill: ${c.white};
+        }
+      }
+
       svg path {
         fill: ${c.neutral300};
+        transition: all 0.2s ease-in-out;
       }
     }
   }

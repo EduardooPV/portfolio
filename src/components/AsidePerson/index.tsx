@@ -15,7 +15,10 @@ export function AsidePerson() {
 
       <Details>
         <p>Resumo</p>
-        <span>Desenvolvedor Front-end, focado nas principais tecnologias do ecossistema do React.js.</span>
+        <span>
+          Desenvolvedor Front-end, focado nas principais tecnologias do
+          ecossistema do Javascript.
+        </span>
       </Details>
 
       <Details>
@@ -25,7 +28,7 @@ export function AsidePerson() {
 
       <Details>
         <p>Organização</p>
-        <span>Web Developer | Rocky.Monks.</span>
+        <span>Web Developer | Warren Investimentos</span>
       </Details>
     </Container>
   );

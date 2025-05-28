@@ -5,6 +5,7 @@ import { Media } from "../MediaScreen";
 import Link from "next/link";
 
 import useAnalyticsEventTracker from "../../hooks/useAnalyticsEventTracker";
+import { ButtonGeneric } from "../ButtonGeneric";
 
 export function Navbar() {
   const [active, setActive] = useState(false);
@@ -67,27 +68,21 @@ export function Navbar() {
                   Projetos
                 </a>
               </Link>
-              <Link href="/blog" passHref>
-                <a
-                  onClick={() =>
-                    useAnalyticsEventTracker("Header", "click", "blog")
-                  }
-                >
-                  Blog
-                </a>
+              <Link href="#contact" passHref>
+                <ButtonGeneric>Contato</ButtonGeneric>
               </Link>
-              <a
-                href="/CV-Luiz-Eduardo-Front-End.pdf/"
-                download="CV-Luiz-Eduardo-Front-End"
-                onClick={() =>
-                  useAnalyticsEventTracker("Header", "click", "curriculo")
-                }
-              >
-                Curriculo
-              </a>
             </NavLinks>
           </Media>
+
           <Media at="sm">
+            <NavLinks>
+              <Link href="#contact" passHref>
+                <ButtonGeneric>Contato</ButtonGeneric>
+              </Link>
+            </NavLinks>
+          </Media>
+
+          {/* <Media at="sm">
             <MenuIcon
               className={active ? "open" : "menuClose"}
               onClick={Toggle}
@@ -133,24 +128,19 @@ export function Navbar() {
                 >
                   Blog
                 </a>
-              </Link>
+              </Link> 
               <a
                 className="menu-item"
-                href="/CV-Luiz-Eduardo-Front-End.pdf/"
-                download="CV-Luiz-Eduardo-Front-End"
+                href="#contact"
                 onClick={() => {
                   Toggle();
-                  useAnalyticsEventTracker(
-                    "Header",
-                    "click",
-                    "curriculo-mobile"
-                  );
+                  useAnalyticsEventTracker("Header", "click", "contato");
                 }}
               >
-                Curriculo
+                Contato
               </a>
             </Menu>
-          </Media>
+          </Media> */}
         </div>
       </Content>
     </Container>

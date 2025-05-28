@@ -25,9 +25,10 @@ export const Content = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 2rem;
 
   p {
-    margin: 3rem auto;
+    margin-bottom: 1rem;
 
     color: ${c.neutral200};
     font-size: ${f.paragraphSmall.fontSize};
@@ -44,7 +45,6 @@ export const Content = styled.div`
     align-items: end;
 
     p {
-      margin: 3rem 0;
       text-align: right;
     }
   }
@@ -73,6 +73,8 @@ export const ContainerButton = styled.div`
 `;
 
 export const Figure = styled.div`
+  position: relative;
+
   img {
     width: 100%;
   }

@@ -13,12 +13,7 @@ import useAnalyticsEventTracker from "../../hooks/useAnalyticsEventTracker";
 export function Projects({ projects }: ProjectsProps) {
   return (
     <Container>
-      <TextSection
-        tag="<h2>"
-        tabIndex={0}
-        data-aos="fade-up"
-        data-aos-duration="400"
-      >
+      <TextSection tabIndex={0} data-aos="fade-up" data-aos-duration="400">
         Ultimos Projetos
       </TextSection>
 

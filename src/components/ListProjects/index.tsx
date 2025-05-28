@@ -30,7 +30,6 @@ export function ListProjects({ projects }: ProjectsProps) {
     <Container>
       <Header>
         <TextSection
-          tag="<h1>"
           tabIndex={0}
           data-aos="fade-up"
           data-aos-duration="600"
@@ -115,34 +114,17 @@ export function ListProjects({ projects }: ProjectsProps) {
         </div>
       </Header>
 
-      <Content
-        data-aos="fade-up"
-        data-aos-duration="600"
-        data-aos-delay="1600"
-        layout={gridLayout}
-      >
-        {sortedProjects.map((project) =>
-          gridLayout ? (
-            <CardProjectGrid
-              project={project}
-              key={project.title}
-              data-aos="fade-up"
-              data-aos-offset="10"
-              data-aos-duration="600"
-              data-aos-delay="400"
-            />
-          ) : (
-            <CardProjectList
-              project={project}
-              key={project.title}
-              data-aos="fade-up"
-              data-aos-offset="10"
-              data-aos-duration="600"
-              data-aos-delay="400"
-            />
-          )
-        )}
-      </Content>
+      <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="1600">
+        <Content layout={gridLayout}>
+          {sortedProjects.map((project) =>
+            gridLayout ? (
+              <CardProjectGrid project={project} key={project.title} />
+            ) : (
+              <CardProjectList project={project} key={project.title} />
+            )
+          )}
+        </Content>
+      </div>
     </Container>
   );
 }

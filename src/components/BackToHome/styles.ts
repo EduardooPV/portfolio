@@ -3,8 +3,8 @@ import c from "../../styles/pallete.json";
 
 export const Container = styled.span`
   position: fixed;
-  right: 9%;
-  bottom: 5.5rem;
+  right: 16px;
+  bottom: 16px;
 
   z-index: 10;
 
@@ -17,7 +17,7 @@ export const Container = styled.span`
     bottom: 1.5rem;
 
     &:hover {
-      animation: toping 0.2s alternate infinite;
+      animation: toping 0.4s alternate infinite;
 
       @keyframes toping {
         from {

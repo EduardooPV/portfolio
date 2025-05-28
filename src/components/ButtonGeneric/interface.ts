@@ -1,4 +1,4 @@
-export interface Props {
+export interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: string;
   invisible?: boolean;
 }

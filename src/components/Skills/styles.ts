@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import c from "../../styles/pallete.json";
-import t from "../../styles/typography.json";
 
 export const Container = styled.section`
   max-width: 1240px;
@@ -24,6 +23,7 @@ export const Content = styled.section`
   align-items: center;
   justify-content: center;
   gap: 40px;
+  position: relative;
 
   @media (min-width: 768px) {
     gap: 60px;
@@ -34,26 +34,63 @@ export const Content = styled.section`
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    p {
+    position: relative;
+
+    /* Sombra/blur branca atrás da imagem, apenas no hover e menor */
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      filter: blur(8px);
+      z-index: 0;
       opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+    }
+
+
+    p,
+    img {
+      position: relative;
+      z-index: 1;
+    }
+
+    p {
+      position: absolute;
+      bottom: 0;
+      opacity: 0;
+      color: ${c.info};
     }
 
     :hover {
       p {
         opacity: 1;
-        transition: all 0.2s;
+        bottom: -30px;
+        color: ${c.white};
+        transition: all 0.3s;
       }
 
       img {
         transform: scale(1.1);
-        transition: all 0.2s;
+        transition: all 0.4s;
+      }
+
+      &::before {
+        opacity: 1;
       }
     }
 
     img {
       width: 50px;
       height: 50px;
-      object-fit: contain;
+      aspect-ratio: 1 / 1;
+      border-radius: 20%;
 
       @media (min-width: 768px) {
         width: 80px;

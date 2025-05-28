@@ -9,17 +9,32 @@ export const Container = styled.section`
   display: grid;
   grid-template-columns: 1fr;
 
-  margin: 50px auto;
-  padding: 0 20px;
+  margin: 0px auto;
+  padding: 50px 20px;
+  position: relative;
 
-  overflow-x: hidden;
+  @media (max-width: 767px) {
+    div img {
+      position: absolute;
+      transform: scaleX(-1) rotate(100deg);
+
+      height: 30px;
+
+      right: 10px;
+      top: 100px;
+    }
+  }
 
   @media (min-width: 768px) {
-    margin: 120px auto;
+    padding: 120px 20px;
 
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     align-items: center;
+
+    div img {
+      position: relative;
+    }
   }
 `;
 
@@ -30,24 +45,17 @@ export const Header = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 20px;
+
+  div {
+    align-self: center;
+  }
+
+  img {
+    align-self: flex-end;
+  }
 
   @media (min-width: 768px) {
     align-items: flex-start;
-  }
-
-  p {
-    text-align: center;
-    line-height: ${f.caption.lineHeight};
-
-    @media (min-width: 768px) {
-      text-align: start;
-    }
-  }
-
-  strong {
-    color: ${c.primary300};
-    font-weight: 500;
   }
 `;
 
@@ -55,6 +63,7 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   gap: 14px;
+  position: relative;
 
   label {
     position: absolute;
@@ -69,8 +78,9 @@ export const Form = styled.form`
 
   input,
   textarea {
+    font-size: ${f.paragraphSmall.fontSize};
     background: transparent;
-    border-radius: 4px;
+    border-radius: 10px;
     border: 1px solid ${c.neutral300};
     color: ${c.neutral100};
     width: 100%;
@@ -93,27 +103,13 @@ export const Form = styled.form`
     }
   }
 
-  button[type="submit"] {
-    border: 2px solid transparent;
-    transition: all 2s;
-    margin-top: 10px;
-    padding: 8px 20px;
-    background: ${c.primary300};
-    color: ${c.black};
-    cursor: pointer;
-    transition: filter 0.2s;
+  > div:last-child {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
 
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: 600;
-    font-size: 16px;
-
-    :hover {
-      filter: brightness(0.8);
-    }
-
-    :active {
-      background: ${c.primary400};
+    button {
+      max-width: none;
     }
   }
 
@@ -139,16 +135,10 @@ export const Form = styled.form`
     font-size: 12px;
   }
 
-  button.loading {
-    border: 2px solid #936a33;
-    background: transparent;
-  }
-
   .success {
     text-align: center;
     padding: 10px 0;
     color: ${c.primary300};
-    font-weight: 600;
   }
 
   .spinner {

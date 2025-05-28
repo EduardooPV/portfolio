@@ -1,17 +1,18 @@
 import styled from "styled-components";
 
-import c from "../../styles/pallete.json";
-import t from "../../styles/typography.json";
-
 export const Container = styled.section`
   max-width: 1240px;
   margin: 0 auto;
 
-  padding: 40px 20px 80px 20px;
+  padding: 40px 20px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: 768px) {
+    padding: 100px 20px 120px 20px;
+  }
 
   a {
     /* width: 100%; */

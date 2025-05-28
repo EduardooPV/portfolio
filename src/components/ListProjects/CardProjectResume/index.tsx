@@ -1,64 +1,48 @@
 import React from "react";
 import Link from "next/link";
 
-import { AiFillGithub } from "react-icons/ai";
-import { FiExternalLink } from "react-icons/fi";
 import "react-loading-skeleton/dist/skeleton.css";
 
-import {
-  Container,
-  Header,
-  Preview,
-  Description,
-  Footer,
-} from "./styles";
+import { Container, Header, Preview } from "./styles";
 import { ProjectProps } from "../../../pages/projetos";
+
+import { TagsProject } from "../../TagsProject";
+import { ProjectTypeTag } from "../../ProjectType";
 
 interface CardProjectResumeProps {
   project: ProjectProps;
-  [key: string]: any;
 }
 
 export function CardProjectResume({
   project,
   ...rest
 }: CardProjectResumeProps) {
-
-
   return (
-    <Container {...rest}>
-      <Header>
-        <p>{project.title}</p>
-      </Header>
+    <a
+      href={project.isActive && project.linkPreview}
+      target="_blank"
+      rel="noopener noreferrer"
+      {...rest}
+    >
+      <Container>
+        <Header>
+          <div>
+            <p>{project.title}</p>
 
-      <Preview>
-        <img src={project.image.url} alt={project.image.description} />
-      </Preview>
+            <ProjectTypeTag type={project?.type} />
+          </div>
 
-      {project.description && <Description>{project.description}</Description>}
+          {project.tags && <TagsProject tags={project.tags} />}
+        </Header>
 
-      <Footer>
-        {project.linkPreview && (
-          <Link href={`projeto/${project.slug}`} passHref>
-            <a title="Visite a página do projeto">
-              Detalhes do projeto
-              <FiExternalLink />
-            </a>
-          </Link>
-        )}
-        {project.linkGithub && (
-          <Link href={project.linkGithub}>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              title="Visite o projeto no Github"
-            >
-              Veja no Github
-              <AiFillGithub />
-            </a>
-          </Link>
-        )}
-      </Footer>
-    </Container>
+        <Preview>
+          <img src={project.image.url} alt={project.image.description} />
+        </Preview>
+
+        {/* {project.description && (
+          <Description>{project.description}</Description>
+        )} */}
+      </Container>
+    </a>
   );
 }

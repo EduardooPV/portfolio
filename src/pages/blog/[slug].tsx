@@ -92,7 +92,12 @@ export default function PostPage({ post }: PostProps) {
             </li>
             <li>
               <Tag size={20} color="#F89D24" />
-              {post?.tags && post?.tags.map((tag) => <p key={tag}>{tag}</p>)}
+              {post?.tags &&
+                post?.tags.map((tag, index) => (
+                  <p key={index}>
+                    {tag} {index < post.tags.length - 1 && "- "}
+                  </p>
+                ))}
             </li>
           </Infos>
 

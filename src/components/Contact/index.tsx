@@ -7,6 +7,7 @@ import { TextSection } from "../TextSection";
 
 import * as yup from "yup";
 import { Formik, Field, Form as FormikForm, ErrorMessage } from "formik";
+import { ButtonGeneric } from "../ButtonGeneric";
 
 export function Contact() {
   const [charCount, setCharCount] = useState(0);
@@ -30,27 +31,29 @@ export function Contact() {
 
   return (
     <>
-      <Container>
+      <Container id="contact">
         <Header>
-          <TextSection
-            tag="<h2>"
-            tabIndex={0}
+          <div>
+            <TextSection
+              tabIndex={0}
+              data-aos="fade-right"
+              data-aos-duration="400"
+              data-aos-offset="-20"
+            >
+              Fale comigo
+            </TextSection>
+          </div>
+
+          <img
+            src="./assets/arrow-right.svg"
+            alt="Seta para a direita"
             data-aos="fade-right"
             data-aos-duration="400"
-          >
-            Fale comigo
-          </TextSection>
-          <p data-aos="fade-right" data-aos-duration="500">
-            Gostaria de saber mais sobre os meus projetos ou discutir uma
-            possível colaboração? Use o formulário para enviar uma mensagem
-            diretamente para mim.
-          </p>
-          <strong data-aos="fade-right" data-aos-duration="600">
-            Vamos construir algo incrível juntos!
-          </strong>
+            data-aos-offset="-20"
+          />
         </Header>
 
-        <div data-aos="fade-left" data-aos-duration="600">
+        <div data-aos="fade-left" data-aos-duration="600" data-aos-offset="-20">
           <Formik
             initialValues={{
               name: "",
@@ -160,23 +163,31 @@ export function Contact() {
                     )}
                   </div>
 
-                  {loading ? (
-                    <div className="spinner">
-                      <span />
-                    </div>
-                  ) : success ? (
-                    <p className="success">Mensagem enviada, obrigado!</p>
-                  ) : (
-                    <button
-                      type="submit"
-                      disabled={loading || success}
-                      onClick={() =>
-                        useAnalyticsEventTracker("Form", "click", "send-email")
-                      }
-                    >
-                      Enviar
-                    </button>
-                  )}
+                  <div>
+                    {loading ? (
+                      <div className="spinner">
+                        <span />
+                      </div>
+                    ) : success ? (
+                      <p className="success">
+                        Mensagem enviada, entrarei em contato!
+                      </p>
+                    ) : (
+                      <ButtonGeneric
+                        type="submit"
+                        disabled={loading || success}
+                        onClick={() =>
+                          useAnalyticsEventTracker(
+                            "Form",
+                            "click",
+                            "send-email"
+                          )
+                        }
+                      >
+                        Solicitar proposta
+                      </ButtonGeneric>
+                    )}
+                  </div>
                 </Form>
               </>
             )}

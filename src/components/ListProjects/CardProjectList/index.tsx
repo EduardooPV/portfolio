@@ -1,8 +1,5 @@
 import React from "react";
-import Link from "next/link";
 
-import { AiFillGithub } from "react-icons/ai";
-import { FiExternalLink } from "react-icons/fi";
 import "react-loading-skeleton/dist/skeleton.css";
 
 import {
@@ -11,18 +8,25 @@ import {
   Header,
   Preview,
   Description,
-  Footer,
+  IsNotActive,
 } from "./styles";
 import { ProjectProps } from "../../../pages/projetos";
+import { TagsProject } from "../../TagsProject";
+import { ProjectTypeTag } from "../../ProjectType";
 
 interface CardProjectProps {
   project: ProjectProps;
-  [key: string]: any;
 }
 
 export function CardProjectList({ project, ...rest }: CardProjectProps) {
   return (
-    <Container {...rest}>
+    <Container
+      {...rest}
+      href={project.isActive && project.linkPreview}
+      target="_blank"
+      rel="noopener noreferrer"
+      isActive={project.isActive}
+    >
       <Preview>
         <img src={project.image.url} alt={project.image.description} />
       </Preview>
@@ -30,53 +34,21 @@ export function CardProjectList({ project, ...rest }: CardProjectProps) {
       <Content>
         <Header>
           <div>
-            {project.published && <span>Criado em: {project.published}</span>}
+            <p>{project.title}</p>
 
-            {/* {project.tags && (
-              <div>
-                {project.tags.map(({ text, color }) => (
-                  <p
-                    key={text}
-                    style={{
-                      backgroundColor: color,
-                    }}
-                  >
-                    {text}
-                  </p>
-                ))}
-              </div>
-            )} */}
+            <ProjectTypeTag type={project?.type} />
           </div>
 
-          <p>{project.title}</p>
+          {/* {!project.isActive && (
+            <IsNotActive>{!project.isActive && "Inativo"}</IsNotActive>
+          )} */}
+
+          {project.tags && <TagsProject tags={project.tags} />}
         </Header>
 
         {project.description && (
           <Description>{project.description}</Description>
         )}
-
-        <Footer>
-          {project.linkPreview && (
-            <Link href={`projeto/${project.slug}`} passHref>
-              <a title="Visite a página do projeto">
-                Detalhes do projeto
-                <FiExternalLink />
-              </a>
-            </Link>
-          )}
-          {project.linkGithub && (
-            <Link href={project.linkGithub} passHref>
-              <a
-                target="_blank"
-                rel="noreferrer"
-                title="Visite o projeto no Github"
-              >
-                Veja no Github
-                <AiFillGithub />
-              </a>
-            </Link>
-          )}
-        </Footer>
       </Content>
     </Container>
   );

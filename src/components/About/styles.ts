@@ -28,6 +28,7 @@ export const Content = styled.div`
     font-size: ${f.paragraphSmall.fontSize};
     line-height: ${f.paragraphSmall.lineHeight};
     text-align: center;
+    margin-bottom: 1rem;
 
     > span {
       color: ${c.primary300};
@@ -90,6 +91,8 @@ export const ContainerButton = styled.div`
 
 export const Figure = styled.div`
   grid-column: 1;
+  position: relative;
+
   img {
     width: 100%;
   }

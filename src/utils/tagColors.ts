@@ -1,10 +1,10 @@
 export const tagColors = {
-  "React.js": "#61DBFB",
-  "Next.js": "#000000",
-  Tailwind: "#38B2AC",
+  Elementor: "#92003B",
   Figma: "#A259FF",
-  "React Native": "#61DBFB",
-  HTML: "#E34C26",
-  CSS: "#264DE4",
-  JavaScript: "#F7DF1E",
+  "Next.js": "#767676",
+  "React.js": "#61DAFB",
+  Shopify: "#96BF48",
+  Wordpress: "#21759B",
+  Vtex: "#FF004F",
+  // "Deco.cx": "#02f67c",
 };

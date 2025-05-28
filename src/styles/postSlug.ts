@@ -45,6 +45,10 @@ export const Infos = styled.ul`
     gap: 0.5rem;
 
     color: ${c.info};
+
+    > p {
+      margin: 0;
+    }
   }
 `;
 

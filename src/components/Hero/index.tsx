@@ -14,7 +14,6 @@ export function Hero() {
       <Container id="hero">
         <Content>
           <TextSection
-            tag="<h1>"
             tabIndex={0}
             data-aos="fade-up"
             data-aos-duration="600"
@@ -23,14 +22,25 @@ export function Hero() {
             Seja bem vindo
           </TextSection>
 
-          <p data-aos="fade-up" data-aos-delay="400" data-aos-duration="600">
-            <span>Desenvolvedor Front-End com 4 anos</span> de experiência
-            focados no desenvolvimento web utilizando
-            <span> JavaScript, React.js e Next.js.</span> Este portfólio foi
-            criado para aplicar e demonstrar os conceitos que adquiri, além de
-            compartilhar meu trabalho e inspiração. Sinta-se à vontade para
-            explorar e entrar em contato.
-          </p>
+          <section
+            data-aos="fade-up"
+            data-aos-delay="400"
+            data-aos-duration="600"
+          >
+            <p>
+              Sou especialista em desenvolvimento web com foco em performance,
+              design responsivo e{" "}
+              <span>estratégias que geram resultados reais.</span>
+            </p>
+            <p>
+              Tenho experiência criando e mantendo sites profissionais usando
+              <span> WordPress, React.js e Next.js</span>.
+            </p>
+            <p>
+              Se você busca um site moderno, rápido e que converta visitantes em
+              clientes, está no lugar certo.
+            </p>
+          </section>
 
           <ContainerButton>
             <a
