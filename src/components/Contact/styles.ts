@@ -18,12 +18,12 @@ export const Container = styled.section`
   @media (max-width: 767px) {
     div img {
       position: absolute;
-      transform: scaleX(-1) rotate(100deg);
+      transform: scaleX(-1) rotate(110deg) !important;
 
       height: 30px;
 
-      right: 10px;
-      top: 100px;
+      right: 16px;
+      top: 110px;
     }
   }
 

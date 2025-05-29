@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 
 import "react-loading-skeleton/dist/skeleton.css";
 
@@ -38,10 +37,6 @@ export function CardProjectResume({
         <Preview>
           <img src={project.image.url} alt={project.image.description} />
         </Preview>
-
-        {/* {project.description && (
-          <Description>{project.description}</Description>
-        )} */}
       </Container>
     </a>
   );

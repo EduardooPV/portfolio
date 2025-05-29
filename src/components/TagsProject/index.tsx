@@ -6,7 +6,7 @@ import { Tags, IconWrapper } from "./styles";
 export function TagsProject({ tags }: { tags: string[] }) {
   return (
     <Tags>
-      {tags.map((tag) => {
+      {tags?.map((tag) => {
         const tech = techIcons.find(
           (icon) => icon.title.toLowerCase() === tag.toLowerCase()
         );

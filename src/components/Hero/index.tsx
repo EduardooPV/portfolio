@@ -1,14 +1,22 @@
 import React from "react";
-import { Media } from "../MediaScreen";
 
 import { TextSection } from "../TextSection";
 import { ButtonGeneric } from "../ButtonGeneric";
 
-import { Container, Content, Figure, ContainerButton } from "./styles";
+import {
+  Container,
+  ProjectContainer,
+  Content,
+  ContainerButton,
+} from "./styles";
 
 import useAnalyticsEventTracker from "../../hooks/useAnalyticsEventTracker";
+import { SubTextSection } from "../SubTextSection";
+import { ProjectTypeTag } from "../ProjectType";
 
 export function Hero() {
+  const projects = ["Landing Page", "Institucional", "Blog", "E-commerce"];
+
   return (
     <>
       <Container id="hero">
@@ -19,10 +27,28 @@ export function Hero() {
             data-aos-duration="600"
             h1
           >
-            Seja bem vindo
+            Web Developer
           </TextSection>
+          <SubTextSection
+            tabIndex={0}
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="600"
+          >
+            Luiz Eduardo Prado Veltroni
+          </SubTextSection>
 
-          <section
+          <ProjectContainer
+            data-aos="fade-up"
+            data-aos-delay="400"
+            data-aos-duration="600"
+          >
+            {projects.map((project) => (
+              <ProjectTypeTag key={project} type={project} hero />
+            ))}
+          </ProjectContainer>
+
+          {/* <section
             data-aos="fade-up"
             data-aos-delay="400"
             data-aos-duration="600"
@@ -40,7 +66,7 @@ export function Hero() {
               Se você busca um site moderno, rápido e que converta visitantes em
               clientes, está no lugar certo.
             </p>
-          </section>
+          </section> */}
 
           <ContainerButton>
             <a
@@ -52,11 +78,11 @@ export function Hero() {
                 useAnalyticsEventTracker("Hero", "click", "sobre-mim")
               }
             >
-              <ButtonGeneric>Sobre mim</ButtonGeneric>
+              <ButtonGeneric>Sobre mim </ButtonGeneric>
             </a>
           </ContainerButton>
         </Content>
-        <Media greaterThan="sm">
+        {/* <Media greaterThan="sm">
           <Figure
             data-aos="fade-left"
             data-aos-delay="800"
@@ -69,7 +95,7 @@ export function Hero() {
               decoding="async"
             />
           </Figure>
-        </Media>
+        </Media> */}
       </Container>
     </>
   );

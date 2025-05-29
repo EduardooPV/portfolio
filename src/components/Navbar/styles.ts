@@ -23,15 +23,15 @@ export const Container = styled.header<ContainerProps>`
     $visible ? "translateY(0)" : "translateY(-100%)"};
 
   background: ${({ $currentScroll, $visible }) =>
-    $visible && $currentScroll > 0 ? "rgba(9, 9, 10, 0.6)" : "transparent"};
+    $visible && $currentScroll > 50 ? "rgba(9, 9, 10, 0.6)" : "transparent"};
 
   border-bottom: ${({ $currentScroll, $visible }) =>
-    $visible && $currentScroll > 0
+    $visible && $currentScroll > 50
       ? "1px solid rgba(114, 114, 126, 0.4)"
       : "none"};
 
   backdrop-filter: ${({ $currentScroll, $visible }) =>
-    $visible && $currentScroll > 0 ? "blur(10px)" : "none"};
+    $visible && $currentScroll > 50 ? "blur(10px)" : "none"};
 `;
 
 export const Content = styled.div`

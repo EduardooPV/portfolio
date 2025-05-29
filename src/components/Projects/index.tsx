@@ -12,7 +12,7 @@ import useAnalyticsEventTracker from "../../hooks/useAnalyticsEventTracker";
 
 export function Projects({ projects }: ProjectsProps) {
   return (
-    <Container>
+    <Container id="projects">
       <TextSection tabIndex={0} data-aos="fade-up" data-aos-duration="400">
         Ultimos Projetos
       </TextSection>
@@ -31,12 +31,14 @@ export function Projects({ projects }: ProjectsProps) {
       </Content>
       <Link href="/projetos" passHref>
         <a
+          data-aos="fade-up"
+          data-aos-duration="400"
           onClick={() =>
             useAnalyticsEventTracker("Projects Home", "click", "ver-todos")
           }
           style={{ zIndex: 2 }}
         >
-          <ButtonGeneric>Ver todos</ButtonGeneric>
+          <ButtonGeneric>Ver todos projetos</ButtonGeneric>
         </a>
       </Link>
     </Container>

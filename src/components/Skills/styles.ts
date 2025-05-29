@@ -22,8 +22,10 @@ export const Content = styled.section`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
   position: relative;
+
+  z-index: 2;
 
   @media (min-width: 768px) {
     gap: 60px;
@@ -36,7 +38,6 @@ export const Content = styled.section`
     gap: 10px;
     position: relative;
 
-    /* Sombra/blur branca atrás da imagem, apenas no hover e menor */
     &::before {
       content: "";
       position: absolute;
@@ -53,7 +54,6 @@ export const Content = styled.section`
       transition: opacity 0.3s;
       pointer-events: none;
     }
-
 
     p,
     img {
@@ -87,8 +87,8 @@ export const Content = styled.section`
     }
 
     img {
-      width: 50px;
-      height: 50px;
+      width: 60px;
+      height: 60px;
       aspect-ratio: 1 / 1;
       border-radius: 20%;
 

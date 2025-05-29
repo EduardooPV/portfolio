@@ -1,5 +1,5 @@
 export interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: string;
+  children: React.ReactNode;
   invisible?: boolean;
 }
 

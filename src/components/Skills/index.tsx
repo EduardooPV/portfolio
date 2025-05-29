@@ -12,7 +12,7 @@ export function Skills() {
         Conhecimento
       </TextSection>
 
-      <Content>
+      <Content data-aos="fade-up" data-aos-duration="400">
         {skillsIcon.slice(0, 5).map((icon) => (
           <div key={icon.title}>
             <img
@@ -26,7 +26,7 @@ export function Skills() {
           </div>
         ))}
       </Content>
-      <Content>
+      <Content data-aos="fade-up" data-aos-duration="400">
         {skillsIcon.slice(10, 15).map((icon) => (
           <div key={icon.title}>
             <img

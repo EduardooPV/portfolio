@@ -11,7 +11,7 @@ export const Container = styled.section`
   @media (min-width: 768px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
+    align-items: flex-start;
     grid-auto-flow: dense;
   }
 `;
@@ -39,6 +39,11 @@ export const Content = styled.div`
 
   @media (min-width: 768px) {
     align-items: start;
+    padding-top: 4rem;
+
+    .figure-mobile {
+      display: none;
+    }
 
     p {
       text-align: left;
@@ -93,10 +98,32 @@ export const ContainerButton = styled.div`
 export const Figure = styled.div`
   grid-column: 1;
   position: relative;
+  display: flex;
+  justify-content: center;
 
   z-index: 2;
 
   img {
-    width: 100%;
+    width: 50%;
+    transition: all 0.4s ease;
+    border-radius: 1rem;
+  }
+
+  &:hover img {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+    transform: scale(1.02) rotate3d(1, 1, 0, 8deg);
+  }
+
+  @media (min-width: 768px) {
+    padding: 3rem;
+
+    img {
+      width: 100%;
+      -webkit-filter: grayscale(0%);
+      filter: grayscale(100%);
+      -webkit-transition: 0.3s ease-in-out;
+      transition: 0.3s ease-in-out;
+    }
   }
 `;

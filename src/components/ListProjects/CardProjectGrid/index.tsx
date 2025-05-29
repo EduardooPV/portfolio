@@ -2,7 +2,7 @@ import React from "react";
 
 import "react-loading-skeleton/dist/skeleton.css";
 
-import { Container, Header, Preview, Description } from "./styles";
+import { Container, Header, Preview } from "./styles";
 import { ProjectProps } from "../../../pages/projetos";
 import { TagsProject } from "../../TagsProject";
 import { ProjectTypeTag } from "../../ProjectType";
@@ -35,10 +35,6 @@ export function CardProjectGrid({
 
           <ProjectTypeTag type={project?.type} />
         </div>
-        {/* 
-        {!project.isActive && (
-          <IsNotActive>{!project.isActive && "Inativo"}</IsNotActive>
-        )} */}
 
         {project.tags && <TagsProject tags={project.tags} />}
       </Header>
@@ -46,8 +42,6 @@ export function CardProjectGrid({
       <Preview>
         <img src={project.image.url} alt={project.image.description} />
       </Preview>
-
-      {/* {project.description && <Description>{project.description}</Description>} */}
     </Container>
   );
 }

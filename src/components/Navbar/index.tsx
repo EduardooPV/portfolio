@@ -17,7 +17,7 @@ export function Navbar() {
       const scrollY = window.scrollY;
       setCurrentScroll(scrollY);
 
-      if (scrollY > lastScrollY.current && scrollY > 0) {
+      if (scrollY > lastScrollY.current && scrollY > 50) {
         setIsVisible(false);
       } else {
         setIsVisible(true);
@@ -32,7 +32,6 @@ export function Navbar() {
   }, []);
   return (
     <Container $visible={isVisible} $currentScroll={currentScroll}>
-      {/* <Container data-aos="fade-down" data-aos-duration="800"> */}
       <Content>
         <a
           href="/"

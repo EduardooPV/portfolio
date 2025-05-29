@@ -19,6 +19,10 @@ export const Container = styled.div`
   :hover {
     background: ${c.neutral600};
     transition: all 0.1s ease-in-out;
+
+    img {
+      transform: scale(1.02);
+    }
   }
 `;
 
@@ -58,17 +62,12 @@ export const Header = styled.header`
 export const Preview = styled.div`
   padding: 20px;
 
-  transition: transform 0.3s ease-in-out;
-
-  :hover {
-    transform: scale(1.02);
-  }
-
   img {
     width: 100%;
     max-height: 350px;
     object-fit: cover;
     object-position: center top;
+    transition: transform 0.3s ease-in-out;
   }
 `;
 

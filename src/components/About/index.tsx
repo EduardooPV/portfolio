@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Media } from "../MediaScreen";
 import Link from "next/link";
 
@@ -8,17 +8,53 @@ import { ButtonGeneric } from "../ButtonGeneric";
 import useAnalyticsEventTracker from "../../hooks/useAnalyticsEventTracker";
 
 import { Container, Content, Figure, ContainerButton } from "./styles";
+import { Accordion } from "../Accordion";
 
 export function About() {
+  const figureRef = useRef<HTMLDivElement>(null);
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    const el = figureRef.current;
+    if (!el) return;
+
+    const rect = el.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const rotateX = ((y - centerY) / centerY) * -10;
+    const rotateY = ((x - centerX) / centerX) * 10;
+
+    el.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  };
+
+  const resetTransform = () => {
+    const el = figureRef.current;
+    if (el) {
+      el.style.transform = "rotateX(0deg) rotateY(0deg)";
+    }
+  };
+
   return (
     <Container id="about">
       <Content>
         <TextSection tabIndex={0} data-aos="fade-up" data-aos-duration="400">
-          Prazer, sou Luiz Eduardo
+          Sobre mim
         </TextSection>
 
+        <Media lessThan="lg" className="figure-mobile">
+          <Figure data-aos="fade-right" data-aos-duration="600">
+            <img
+              src="/assets/person.png"
+              alt="Fotografia do Desenvolvedor"
+              loading="lazy"
+            />
+          </Figure>
+        </Media>
+
         <div data-aos="fade-up" data-aos-duration="600">
-          <p>
+          {/* <p>
             Desenvolvedor Front-end com experiência em{" "}
             <span>sites, blogs, plataformas e ecommerces </span>, graduado em
             Análise e Desenvolvimento de Sistemas.
@@ -32,26 +68,33 @@ export function About() {
             Trabalho tanto com plataformas acessíveis como WordPress, ideais
             para quem quer agilidade e autonomia, quanto com tecnologias
             modernas como React e Next.js.
-          </p>
+          </p> */}
+          <Accordion />
         </div>
 
         <ContainerButton data-aos="fade-up" data-aos-duration="600">
-          <Link href="/projetos" passHref>
+          <Link href="#projects" passHref>
             <a
               onClick={() =>
                 useAnalyticsEventTracker("About", "click", "meus-projetos")
               }
             >
-              <ButtonGeneric>Meus serviços</ButtonGeneric>
+              <ButtonGeneric>Últimos projetos</ButtonGeneric>
             </a>
           </Link>
         </ContainerButton>
       </Content>
       <Media greaterThan="sm">
-        <Figure data-aos="fade-right" data-aos-duration="600">
+        <Figure
+          data-aos="fade-right"
+          data-aos-duration="600"
+          ref={figureRef}
+          onMouseMove={handleMouseMove}
+          onMouseLeave={resetTransform}
+        >
           <img
-            src="/assets/person.webp"
-            alt="Homem com ficha técnica ao lado"
+            src="/assets/person.png"
+            alt="Fotografia do Desenvolvedor"
             loading="lazy"
           />
         </Figure>

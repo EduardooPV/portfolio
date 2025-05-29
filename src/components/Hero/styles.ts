@@ -19,9 +19,22 @@ export const Container = styled.section`
   }
 `;
 
+export const ProjectContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem 0.5rem;
+  z-index: 2;
+
+  @media (min-width: 768px) {
+    justify-content: flex-start;
+  }
+`;
+
 export const Content = styled.div`
   height: 100%;
-  max-width: 600px;
+  max-width: 100%;
 
   display: flex;
   flex-direction: column;
@@ -31,26 +44,35 @@ export const Content = styled.div`
 
   z-index: 2;
 
-  p {
-    margin-bottom: 1rem;
-
-    color: ${c.neutral200};
-    font-size: ${f.paragraphSmall.fontSize};
-    line-height: ${f.paragraphSmall.lineHeight};
+  h1 {
+    font-size: ${f.display1.fontSize};
     text-align: center;
 
-    > span {
-      color: ${c.primary300};
-      font-weight: bold;
+    ::before {
+      bottom: -0.3rem;
+      left: 10%;
+      @media (min-width: 768px) {
+        bottom: 0.4rem;
+        left: 0;
+      }
     }
   }
 
-  @media (min-width: 768px) {
-    align-items: end;
+  h4 {
+    text-align: center;
+  }
 
-    p {
-      text-align: right;
+  @media (min-width: 768px) {
+    max-width: 600px;
+    h1 {
+      text-align: start;
     }
+
+    h4 {
+      text-align: start;
+    }
+    align-items: start;
+    gap: 1rem;
   }
 `;
 
@@ -60,6 +82,7 @@ export const ContainerButton = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  padding: 1rem 0.5rem;
 
   a {
     width: 100%;
@@ -76,12 +99,12 @@ export const ContainerButton = styled.div`
   }
 `;
 
-export const Figure = styled.div`
-  position: relative;
+// export const Figure = styled.div`
+//   position: relative;
 
-  z-index: 2;
+//   z-index: 2;
 
-  img {
-    width: 100%;
-  }
-`;
+//   img {
+//     width: 100%;
+//   }
+// `;
