@@ -17,7 +17,7 @@ export const Container = styled.span`
     bottom: 1.5rem;
 
     &:hover {
-      animation: toping 0.4s alternate infinite;
+      animation: toping 0.6s alternate infinite;
 
       @keyframes toping {
         from {

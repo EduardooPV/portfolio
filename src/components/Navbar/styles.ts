@@ -2,18 +2,36 @@ import styled, { keyframes } from "styled-components";
 import c from "../../styles/pallete.json";
 import f from "../../styles/typography.json";
 
-export const Container = styled.header`
+interface ContainerProps {
+  $visible: boolean;
+  $currentScroll: number;
+}
+
+export const Container = styled.header<ContainerProps>`
   height: 70px;
   width: 100%;
   position: fixed;
 
-  background: rgb(9, 9, 10, 0.6);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(114, 114, 126, 0.5);
-
   color: ${c.neutral200};
 
   z-index: 99;
+
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.4s ease,
+    border-bottom 0.4s ease;
+
+  transform: ${({ $visible }) =>
+    $visible ? "translateY(0)" : "translateY(-100%)"};
+
+  background: ${({ $currentScroll, $visible }) =>
+    $visible && $currentScroll > 0 ? "rgba(9, 9, 10, 0.6)" : "transparent"};
+
+  border-bottom: ${({ $currentScroll, $visible }) =>
+    $visible && $currentScroll > 0
+      ? "1px solid rgba(114, 114, 126, 0.4)"
+      : "none"};
+
+  backdrop-filter: ${({ $currentScroll, $visible }) =>
+    $visible && $currentScroll > 0 ? "blur(10px)" : "none"};
 `;
 
 export const Content = styled.div`
@@ -26,24 +44,40 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+`;
 
-  > a {
+export const Logo = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 50px;
+
+  > img:last-child {
     display: flex;
-    align-items: center;
   }
-  > a,
-  > a svg {
-    height: 80%;
-    width: fit-content;
+  > img:first-child {
+    display: none;
+  }
 
-    path:nth-child(1) {
-      fill: ${c.neutral100};
+  img {
+    height: 50px;
+    object-fit: contain;
+    padding: 4px 0;
+    transition: filter 0.3s ease;
+  }
+
+  :hover {
+    img {
+      filter: brightness(0.8);
     }
-    path:nth-child(2) {
-      fill: ${c.primary300};
+  }
+
+  @media (min-width: 768px) {
+    > img:last-child {
+      display: none;
     }
-    path:nth-child(3) {
-      fill: ${c.neutral100};
+    > img:first-child {
+      display: flex;
     }
   }
 `;

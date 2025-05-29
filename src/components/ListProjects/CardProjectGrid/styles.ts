@@ -15,6 +15,8 @@ export const Container = styled.a<ContainerProps>`
   position: relative;
   overflow: hidden;
 
+  z-index: 2;
+
   border: 1px solid ${c.neutral600};
   border-radius: 20px;
   transition: all 0.3s ease-in-out;

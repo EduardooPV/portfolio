@@ -13,6 +13,8 @@ export const Container = styled.section`
   padding: 50px 20px;
   position: relative;
 
+  z-index: 2;
+
   @media (max-width: 767px) {
     div img {
       position: absolute;
@@ -79,7 +81,7 @@ export const Form = styled.form`
   input,
   textarea {
     font-size: ${f.paragraphSmall.fontSize};
-    background: transparent;
+    background: ${c.neutral700};
     border-radius: 10px;
     border: 1px solid ${c.neutral300};
     color: ${c.neutral100};

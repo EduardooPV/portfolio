@@ -27,9 +27,10 @@ export const Container = styled.button<PropsStyled>`
   transition: all 0.2s;
 
   &:hover {
-    background: ${(props) => (props.types ? "transparent" : `${c.neutral700}`)};
+    background: ${(props) => (props.types ? "transparent" : `${c.neutral600}`)};
     color: ${(props) => (props.types ? c.primary400 : c.white)};
     border: 2px solid ${c.white};
+    filter: drop-shadow(0 0 20px rgba(252, 252, 252, 0.2));
   }
 
   &:active {

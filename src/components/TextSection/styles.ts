@@ -16,6 +16,7 @@ export const Container = styled.div`
     font-size: ${f.h1.fontSize};
     line-height: ${f.h2.lineHeight};
     color: ${c.white};
+    filter: drop-shadow(0 0 30px rgba(252, 252, 252, 0.2));
 
     z-index: 1;
 

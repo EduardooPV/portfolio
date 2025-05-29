@@ -39,6 +39,8 @@ export const Preview = styled.div`
 
   padding: 12px;
 
+  z-index: 2;
+
   transition: transform 0.3s ease-in-out;
 
   @media (min-width: 768px) {
@@ -61,6 +63,8 @@ export const Preview = styled.div`
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
+
+  z-index: 2;
 `;
 
 export const Header = styled.header`

@@ -4,6 +4,8 @@ export const Container = styled.section`
   max-width: 1240px;
   margin: 0 auto;
 
+  z-index: 2;
+
   padding: 40px 20px;
 
   display: flex;
@@ -26,6 +28,8 @@ export const Content = styled.div`
   width: 100%;
 
   margin: 4rem 0;
+
+  z-index: 2;
 
   display: grid;
   grid-template-columns: 1fr;

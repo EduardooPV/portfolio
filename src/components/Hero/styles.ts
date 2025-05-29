@@ -7,6 +7,8 @@ export const Container = styled.section`
   max-width: 1240px;
   height: 100vh;
 
+  z-index: 2;
+
   margin: 0 auto;
   padding: 0 20px;
 
@@ -26,6 +28,8 @@ export const Content = styled.div`
   align-items: center;
   justify-content: center;
   gap: 2rem;
+
+  z-index: 2;
 
   p {
     margin-bottom: 1rem;
@@ -74,6 +78,8 @@ export const ContainerButton = styled.div`
 
 export const Figure = styled.div`
   position: relative;
+
+  z-index: 2;
 
   img {
     width: 100%;

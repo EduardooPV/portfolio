@@ -9,6 +9,7 @@ export const Container = styled.main`
   max-width: 1240px;
   margin: 0 auto;
   padding: 80px 20px 80px 20px;
+  z-index: 2;
 
   display: flex;
   flex-direction: column;
@@ -32,6 +33,7 @@ export const Header = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 2;
 
   div {
     display: flex;
@@ -64,6 +66,8 @@ export const Content = styled.section<Layout>`
   display: grid;
   grid-template-columns: 1fr;
   gap: 60px;
+
+  z-index: 2;
 
   position: relative;
 

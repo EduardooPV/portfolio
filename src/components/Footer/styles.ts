@@ -57,8 +57,6 @@ export const Content = styled.div`
       }
 
       &:hover {
-        color: ${c.info};
-
         ::after {
           left: 0;
           width: 100%;

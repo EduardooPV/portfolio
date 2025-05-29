@@ -34,6 +34,7 @@ export function Projects({ projects }: ProjectsProps) {
           onClick={() =>
             useAnalyticsEventTracker("Projects Home", "click", "ver-todos")
           }
+          style={{ zIndex: 2 }}
         >
           <ButtonGeneric>Ver todos</ButtonGeneric>
         </a>

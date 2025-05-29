@@ -17,6 +17,7 @@ export const Container = styled.section`
 `;
 
 export const Content = styled.div`
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,6 +93,8 @@ export const ContainerButton = styled.div`
 export const Figure = styled.div`
   grid-column: 1;
   position: relative;
+
+  z-index: 2;
 
   img {
     width: 100%;

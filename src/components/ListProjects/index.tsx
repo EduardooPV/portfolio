@@ -114,7 +114,12 @@ export function ListProjects({ projects }: ProjectsProps) {
         </div>
       </Header>
 
-      <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="1600">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="600"
+        data-aos-delay="1600"
+        style={{ zIndex: 2 }}
+      >
         <Content layout={gridLayout}>
           {sortedProjects.map((project) =>
             gridLayout ? (
