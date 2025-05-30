@@ -11,7 +11,7 @@ export const AccordionContainer = styled.div`
 `;
 
 export const AccordionItem = styled.div`
-  /* border-bottom: 1px solid #e2e8f0; */
+  padding: 0.25rem 0;
 `;
 
 export const AccordionHeader = styled.div<{ isOpen: boolean }>`
@@ -57,13 +57,12 @@ export const AccordionContent = styled.div<{ isOpen: boolean }>`
     text-align: start;
     margin: 0;
   }
-  p {
-    padding: 1rem;
-  }
 
-  span {
-    font-weight: 600;
-    color: #2b6cb0;
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
   }
 `;
 

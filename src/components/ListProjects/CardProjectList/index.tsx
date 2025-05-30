@@ -20,6 +20,11 @@ interface CardProjectProps {
 
 export function CardProjectList({ project, ...rest }: CardProjectProps) {
   return (
+    // <Container
+    //   {...rest}
+    //   href={`/projeto/${project.slug}`}
+    //   isActive={project.isActive}
+    // ></Container>
     <Container
       {...rest}
       href={project.isActive && project.linkPreview}

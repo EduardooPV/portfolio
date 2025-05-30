@@ -2,131 +2,207 @@ import React from "react";
 import Head from "next/head";
 import { GetStaticProps } from "next";
 
-import * as prismic from "@prismicio/client";
-import { client } from "../../services/prismic";
-import { RichText } from "prismic-dom";
-
 import { ParsedUrlQuery } from "querystring";
 
-import { Link, GithubLogo } from "phosphor-react";
+import { Link } from "phosphor-react";
 
-import { Container, Section, Aside } from "../../styles/projectSlug";
+import { Container, Section, Aside, Content } from "../../styles/projectSlug";
 import { Breadcrumb } from "../../components/Breadcrumb";
+import { initializeApollo } from "../../services/apolloClient";
+import { gql } from "@apollo/client";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { Document } from "@contentful/rich-text-types";
+import { Diviser } from "../../components/Diviser";
+import { Contact } from "../../components/Contact";
+import { ProjectsProps } from "../projetos";
+import { ListProjects } from "../../components/ListProjects";
+import { CardProjectResume } from "../../components/ListProjects/CardProjectResume";
+import { Projects } from "../../components/Projects";
+import { ProjectTypeTag } from "../../components/ProjectType";
+import { TagsProject } from "../../components/TagsProject";
 
 interface Project {
-  slug: string;
   title: string;
-  description: string;
-  created_at: string;
-  preview: {
+  slug: string;
+  published: string;
+  image: {
     url: string;
-    alt: string;
+    width: string;
+    height: string;
+    description: string;
   };
-  github_url: string;
-  project_url?: string;
-  readme: string;
+  type: string;
+  tags?: string[];
+  description: string;
+  linkPreview: string;
+  isActive: boolean;
+  content: {
+    json: Document;
+  };
 }
 
-interface ProjectProps {
+interface IProjectProps {
   project: Project;
+  otherProjects: Project[];
 }
 
 interface IParams extends ParsedUrlQuery {
   slug: string;
 }
 
-export default function ProjectPage({ project }: ProjectProps) {
+export default function ProjectPage({ project, otherProjects }: IProjectProps) {
   return (
     <>
       <Head>
-        <title>Projeto: {project?.title} | Luiz Eduardo</title>
+        <title> {project?.title} | Luiz Eduardo</title>
       </Head>
 
       <Breadcrumb />
 
       <Container>
-        <h1>{project?.title}</h1>
+        <Content>
+          <Section>
+            {project?.content?.json && (
+              <div>{documentToReactComponents(project.content.json)}</div>
+            )}
+          </Section>
 
-        <div>
           <Aside>
-            <p>Resumo:</p>
-
-            <div
-              dangerouslySetInnerHTML={{
-                __html: RichText.asHtml(project?.description),
-              }}
-            />
-
-            <p>Criado em:</p>
-
-            <span>{project?.created_at}</span>
-
-            <p>Veja o projeto no:</p>
-
             <div>
-              <GithubLogo size={20} />
-              <a href={project?.github_url}>Github</a>
+              <p>{project?.title}</p>
+
+              <ProjectTypeTag type={project.type} />
             </div>
 
+            <span>{project?.description}</span>
+
             <div>
-              <Link size={20} />
-              <a href={project?.project_url}>Projeto no ar</a>
+              <a href={project?.linkPreview} target="_blank" rel="noreferrer">
+                <Link size={20} />
+                Acessar site
+              </a>
+
+              <TagsProject tags={project.tags} />
             </div>
           </Aside>
-          <Section>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: RichText.asHtml(project?.readme),
-              }}
-            />
-          </Section>
-        </div>
+        </Content>
       </Container>
+
+      <Diviser />
+
+      {otherProjects && <Projects projects={otherProjects} simplified={true} />}
+
+      <Contact />
     </>
   );
 }
 
 export const getStaticPaths = async () => {
-  const response = await client.get({
-    predicates: prismic.predicate.at("document.type", "projects"),
-  });
-
-  const paths = response?.results?.map((post) => ({
-    params: { slug: post.uid },
-  }));
-
   return {
-    paths,
-    fallback: false,
+    paths: [],
+    fallback: "blocking",
   };
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const { slug } = context.params as IParams;
 
-  const response = await client.getByUID("projects", String(slug), {});
-  
-  const project = {
-    slug,
-    title: response.data.title,
-    description: response.data.description,
-    created_at: new Date(response.data.created_at).toLocaleDateString("pt-br", {
-      day: "2-digit",
-      month: "2-digit",
-      year: "numeric",
-    }),
-    preview: {
-      url: response.data.preview.url,
-      alt: response.data.preview.alt,
-    },
-    github_url: response.data.github.url,
-    project_url: response.data?.projeto.url,
-    readme: response.data.readme,
-  };
+  const apolloClient = initializeApollo();
 
-  return {
-    props: {
-      project,
-    },
-  };
+  const queryProject = gql`
+    {
+      projectCollection(
+        where: { slug: "${slug}" }
+        limit: 1
+      ) {
+        items {
+          title
+          published
+
+          image {
+            url
+            width
+            height
+            description
+          }
+          type
+          tags
+          description
+          linkPreview
+          isActive
+          content {
+            json
+          }
+        }
+      }
+    }
+  `;
+
+  const queryOtherProjects = gql`
+    {
+      projectCollection(
+        where: { slug_not: "${slug}" }
+        limit: 2
+      ) {
+        items {
+          title
+          published
+
+          image {
+            url
+            width
+            height
+            description
+          }
+          type
+          tags
+          description
+          linkPreview
+          isActive
+          content {
+            json
+          }
+        }
+      }
+    }
+  `;
+
+  try {
+    const { data: projectData, error: projectError } = await apolloClient.query(
+      {
+        query: queryProject,
+      }
+    );
+
+    const { data: otherProjectsData, error: otherProjectsError } =
+      await apolloClient.query({
+        query: queryOtherProjects,
+      });
+
+    if (projectError || otherProjectsError) {
+      return {
+        props: {
+          error: "Erro ao carregar os dados dos projetos.",
+        },
+      };
+    }
+
+    const project = projectData.projectCollection?.items[0];
+    const otherProjects = otherProjectsData.projectCollection?.items;
+
+    return {
+      props: {
+        project,
+        otherProjects,
+      },
+      revalidate: 60 * 60 * 24, // 24 horas
+    };
+  } catch (error) {
+    console.error("Apollo Client Error:", error);
+    return {
+      props: {
+        error: "Erro de rede ao carregar os projetos.",
+      },
+    };
+  }
 };

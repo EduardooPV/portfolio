@@ -8,34 +8,27 @@ export const Container = styled.main`
 
   margin: 0 auto;
   padding: 40px 20px;
+`;
 
-  h1 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: ${c.white};
-  }
+export const Content = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
 
-  > div {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+  @media (min-width: 1024px) {
+    grid-template-columns: 1fr 400px;
 
-    @media (min-width: 1024px) {
-      flex-direction: row-reverse;
-    }
+    align-items: start;
   }
 `;
 
 export const Section = styled.section`
+  z-index: 2;
   > div {
     padding: 2rem;
 
     border-radius: 10px;
-    background: #181a1d;
-
-    @media (min-width: 1024px) {
-      margin-top: 1rem;
-    }
+    background: ${c.neutral600};
   }
 
   h3 {
@@ -89,44 +82,65 @@ export const Section = styled.section`
 `;
 
 export const Aside = styled.aside`
-  max-width: auto;
-  height: fit-content;
-
-  padding: 0 1rem 1rem;
+  padding: 1rem;
 
   position: static;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 
   border-radius: 10px;
-  background: #181a1d;
+  background: ${c.neutral600};
+
+  z-index: 99;
 
   @media (min-width: 1024px) {
-    max-width: 400px;
-    margin-top: 1rem;
-
     position: sticky;
-    top: 80px;
+    position: -webkit-sticky;
+    top: 0;
   }
 
-  > p {
-    margin: 1rem 0;
-    color: ${c.white};
-    font-weight: bold;
-    font-size: ${f.h5.fontSize};
+  > span {
+    color: ${c.neutral100};
+    font-size: ${f.paragraphSmall.fontSize};
+    line-height: ${f.paragraphSmall.lineHeight};
   }
 
-  > div {
-    margin: 0.5rem 0;
+  > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+    > span {
+      padding: 6px 20px;
+    }
+
+    > p {
+      color: ${c.neutral200};
+      font-weight: bold;
+      font-size: ${f.paragraphLarge.fontSize};
+      line-height: ${f.paragraphLarge.lineHeight};
+    }
+  }
+
+  > div:last-child {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 0.25rem;
 
     a {
-      color: ${c.white};
-      transition: opacity 0.1s;
+      font-size: ${f.paragraphLarge.fontSize};
+      line-height: ${f.paragraphLarge.lineHeight};
+      color: ${c.neutral200};
+      transition: all 0.2s;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.2rem;
 
       :hover {
-        opacity: 0.7;
+        color: ${c.white};
       }
     }
   }

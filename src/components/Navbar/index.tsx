@@ -42,8 +42,8 @@ export function Navbar() {
           }
         >
           <Logo>
-            <img src="./assets/logo.png" />
-            <img src="./assets/logo-mobile.png" />
+            <img src="/assets/logo.png" />
+            <img src="/assets/logo-mobile.png" />
           </Logo>
         </a>
 

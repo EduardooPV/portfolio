@@ -8,7 +8,7 @@ interface Layout {
 export const Container = styled.main`
   max-width: 1240px;
   margin: 0 auto;
-  padding: 80px 20px 80px 20px;
+  padding: 0px 20px 80px 20px;
   z-index: 2;
 
   display: flex;
@@ -16,7 +16,7 @@ export const Container = styled.main`
   gap: 20px;
 
   @media (min-width: 768px) {
-    padding: 100px 20px 80px 20px;
+    padding: 0px 20px 80px 20px;
     gap: 60px;
   }
 

@@ -9,6 +9,7 @@ import useAnalyticsEventTracker from "../../hooks/useAnalyticsEventTracker";
 
 import { Container, Content, Figure, ContainerButton } from "./styles";
 import { Accordion } from "../Accordion";
+import { AccordionProps } from "../Accordion/interface";
 
 export function About() {
   const figureRef = useRef<HTMLDivElement>(null);
@@ -36,6 +37,78 @@ export function About() {
     }
   };
 
+  const accordionItems = [
+    {
+      title: "Quem sou",
+      content: (
+        <div>
+          <p>
+            Sou <span>desenvolvedor web</span>, apaixonado por transformar
+            ideias em experiências digitais.
+          </p>
+          <p>
+            Atuo com foco em <span>tecnologias modernas</span> como TypeScript,
+            React, Next.js e WordPress — sempre buscando entregar soluções{" "}
+            <span>eficientes, seguras e visualmente atrativas</span>.
+          </p>
+        </div>
+      ),
+    },
+    {
+      title: "Experiências",
+      content: (
+        <div>
+          <p>
+            Ao longo da minha jornada, tive a oportunidade de atuar em uma
+            agência de marketing digital, onde desenvolvi{" "}
+            <span>
+              sites otimizados para SEO, com foco em performance e usabilidade
+            </span>
+            .
+          </p>
+          <p>
+            Atualmente, trabalho em uma corretora nacional, onde contribuo na
+            criação de{" "}
+            <span>
+              plataformas robustas, escaláveis e com foco total na experiência
+              do usuário
+            </span>
+            .
+          </p>
+        </div>
+      ),
+    },
+    {
+      title: "Formação",
+      content: (
+        <div>
+          <p>
+            Sou formado em <span>ADS</span> (Análise e Desenvolvimento de
+            Sistemas) pela <span>UNOPAR</span> (Universidade do Norte do
+            Paraná).
+          </p>
+        </div>
+      ),
+    },
+    {
+      title: "Especialidades",
+      content: (
+        <div>
+          <p>
+            Posso te ajudar a tirar sua ideia do papel e transformá-la em um{" "}
+            <span>site incrível e funcional</span>, seja para um{" "}
+            <span>negócio local, uma loja virtua</span>.
+          </p>
+          <p>
+            Tenho experiência em criar desde{" "}
+            <span>landing pages de alta conversão</span> até{" "}
+            <span>e-commerces profissionais</span>.
+          </p>
+        </div>
+      ),
+    },
+  ];
+
   return (
     <Container id="about">
       <Content>
@@ -46,7 +119,7 @@ export function About() {
         <Media lessThan="lg" className="figure-mobile">
           <Figure data-aos="fade-right" data-aos-duration="600">
             <img
-              src="/assets/person.png"
+              src="/assets/person-mobile.png"
               alt="Fotografia do Desenvolvedor"
               loading="lazy"
             />
@@ -54,22 +127,7 @@ export function About() {
         </Media>
 
         <div data-aos="fade-up" data-aos-duration="600">
-          {/* <p>
-            Desenvolvedor Front-end com experiência em{" "}
-            <span>sites, blogs, plataformas e ecommerces </span>, graduado em
-            Análise e Desenvolvimento de Sistemas.
-          </p>
-          <p>
-            Ao longo da minha carreira, ajudei empresas e empreendedores a
-            criarem sites profissionais, modernos e funcionais, sempre com{" "}
-            <span>foco em desempenho, SEO e experiência do usuário</span>.
-          </p>
-          <p>
-            Trabalho tanto com plataformas acessíveis como WordPress, ideais
-            para quem quer agilidade e autonomia, quanto com tecnologias
-            modernas como React e Next.js.
-          </p> */}
-          <Accordion />
+          <Accordion items={accordionItems} />
         </div>
 
         <ContainerButton data-aos="fade-up" data-aos-duration="600">
@@ -93,7 +151,7 @@ export function About() {
           onMouseLeave={resetTransform}
         >
           <img
-            src="/assets/person.png"
+            src="/assets/person-desktop.png"
             alt="Fotografia do Desenvolvedor"
             loading="lazy"
           />

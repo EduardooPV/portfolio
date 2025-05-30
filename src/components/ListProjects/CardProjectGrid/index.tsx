@@ -22,6 +22,11 @@ export function CardProjectGrid({
   };
 
   return (
+    //   <Container
+    //   {...rest}
+    //   href={`/projeto/${project.slug}`}
+    //   isActive={project.isActive}
+    // >
     <Container
       {...rest}
       href={project.isActive ? project.linkPreview : ""}

@@ -52,18 +52,18 @@ class MyDocument extends Document {
 
           <link rel="shortcut icon" href="/favicon.png" />
 
-          <meta name="theme-color" content="#232222" />
+          <meta name="theme-color" content="#171515" />
 
           <meta property="og:locale" content="pt_BR" />
 
           <meta
             property="og:image"
-            content="https://luizeduardo.vercel.app/assets/ilustration.webp"
+            content="https://luizeduardo.vercel.app/assets/person-mobile.png"
           />
-          
+
           <meta
             property="og:image:alt"
-            content="Ilustração de um desenvolvedor trabalhando em um site"
+            content="Fotografia do desenvolvedor."
           />
 
           <meta
@@ -73,7 +73,7 @@ class MyDocument extends Document {
 
           <meta
             property="og:title"
-            content="Desenvolvedor | Sites Profissionais com WordPress, React e Next.js"
+            content="Luiz Eduardo | Sites Profissionais com WordPress, React e Next.js"
           />
 
           <meta
@@ -83,7 +83,7 @@ class MyDocument extends Document {
 
           <meta
             name="keywords"
-            content="desenvolvedor front-end, criação de sites, wordpress, react, nextjs, freelancer, portfólio"
+            content="desenvolvedor front-end, criação de sites, wordpress, react, nextjs, freelancer, portfólio, site, blog, plataforma, ecommerce"
           />
 
           <meta name="robots" content="index, follow" />

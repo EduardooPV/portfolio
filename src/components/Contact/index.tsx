@@ -45,7 +45,7 @@ export function Contact() {
           </div>
 
           <img
-            src="./assets/arrow-right.svg"
+            src="/assets/arrow-right.svg"
             alt="Seta para a direita"
             data-aos="fade-right"
             data-aos-duration="400"

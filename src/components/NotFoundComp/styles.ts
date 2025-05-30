@@ -5,6 +5,7 @@ import c from "../../styles/pallete.json";
 export const Container = styled.main`
   min-height: 100vh;
   width: 100vw;
+  padding: 1rem;
 
   display: flex;
   flex-direction: column;
@@ -35,6 +36,7 @@ export const Container = styled.main`
     font-size: ${f.h4.fontSize};
     color: ${c.white};
     transition: all 0.2;
+    text-decoration: none;
 
     display: flex;
     align-items: center;

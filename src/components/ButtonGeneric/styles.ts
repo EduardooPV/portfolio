@@ -7,6 +7,10 @@ export const Container = styled.button<PropsStyled>`
   width: 100%;
   /* min-width: 250px; */
   /* max-width: 400px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 
   margin: 0 auto;
   padding: 5px 40px;

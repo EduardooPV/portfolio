@@ -5,9 +5,9 @@ import Image from "next/image";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
 import { Container } from "./styles";
+import { ButtonGeneric } from "../ButtonGeneric";
 
 export function NotFoundComp() {
-
   return (
     <Container>
       <>
@@ -19,10 +19,16 @@ export function NotFoundComp() {
       </>
 
       <Link href="/" passHref>
-        <a>
+        {/* <a>
           <AiOutlineArrowLeft />
           Voltar para o início
-        </a>
+        </a> */}
+
+        <ButtonGeneric>
+          {" "}
+          <AiOutlineArrowLeft size={20}/>
+          Voltar para o início{" "}
+        </ButtonGeneric>
       </Link>
     </Container>
   );

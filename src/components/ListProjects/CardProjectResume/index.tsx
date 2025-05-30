@@ -17,6 +17,7 @@ export function CardProjectResume({
   ...rest
 }: CardProjectResumeProps) {
   return (
+    // <Link href={`/projeto/${project.slug}`} {...rest}></Link>
     <a
       href={project.isActive && project.linkPreview}
       target="_blank"

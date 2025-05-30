@@ -130,4 +130,9 @@ CONTENTFUL_SPACE_ID=
 CONTENTFUL_ACCESS_TOKEN=
 ```
 
+### Tasks
+
+- Adicionar filtro por tipo de projeto na listagem de projetos
+- Criar a página de detalhe por projeto
+
 _\*Irá abrir na porta 3000, ex: https://localhost:3000_

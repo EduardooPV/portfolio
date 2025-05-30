@@ -14,7 +14,7 @@ export const Container = styled.section`
 
   @media (min-width: 768px) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     align-items: center;
   }
 `;
@@ -63,7 +63,7 @@ export const Content = styled.div`
   }
 
   @media (min-width: 768px) {
-    max-width: 600px;
+    max-width: 700px;
     h1 {
       text-align: start;
     }

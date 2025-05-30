@@ -31,6 +31,7 @@ export interface ProjectProps {
 }
 
 export interface ProjectsProps {
+  simplified?: boolean;
   projects: ProjectProps[];
   error?: string;
 }

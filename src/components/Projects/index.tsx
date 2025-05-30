@@ -10,11 +10,11 @@ import { CardProjectResume } from "../ListProjects/CardProjectResume";
 
 import useAnalyticsEventTracker from "../../hooks/useAnalyticsEventTracker";
 
-export function Projects({ projects }: ProjectsProps) {
+export function Projects({ projects, simplified = false }: ProjectsProps) {
   return (
-    <Container id="projects">
+    <Container id="projects" $simplified={simplified}>
       <TextSection tabIndex={0} data-aos="fade-up" data-aos-duration="400">
-        Ultimos Projetos
+        {simplified ? "Outros projetos" : "Ultimos Projetos"}
       </TextSection>
 
       <Content>
@@ -29,18 +29,20 @@ export function Projects({ projects }: ProjectsProps) {
           />
         ))}
       </Content>
-      <Link href="/projetos" passHref>
-        <a
-          data-aos="fade-up"
-          data-aos-duration="400"
-          onClick={() =>
-            useAnalyticsEventTracker("Projects Home", "click", "ver-todos")
-          }
-          style={{ zIndex: 2 }}
-        >
-          <ButtonGeneric>Ver todos projetos</ButtonGeneric>
-        </a>
-      </Link>
+      {simplified ? null : (
+        <Link href="/projetos" passHref>
+          <a
+            data-aos="fade-up"
+            data-aos-duration="400"
+            onClick={() =>
+              useAnalyticsEventTracker("Projects Home", "click", "ver-todos")
+            }
+            style={{ zIndex: 2 }}
+          >
+            <ButtonGeneric>Ver todos projetos</ButtonGeneric>
+          </a>
+        </Link>
+      )}
     </Container>
   );
 }

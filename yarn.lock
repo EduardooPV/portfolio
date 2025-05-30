@@ -1023,17 +1023,19 @@
     "@babel/helper-string-parser" "^7.27.1"
     "@babel/helper-validator-identifier" "^7.27.1"
 
-"@contentful/rich-text-react-renderer@^15.21.2":
-  version "15.21.2"
-  resolved "https://registry.yarnpkg.com/@contentful/rich-text-react-renderer/-/rich-text-react-renderer-15.21.2.tgz#3f04104a5abf20ed256b2009146d880a79b66d0e"
-  integrity sha512-4JhqntPTVUyCisvA9KskQcrOQrhmohX0VfDWgc79USJFdp+ZF44Zqxt68xgIIOv/H/qkE2UVsNzO1kinpenHQA==
+"@contentful/rich-text-react-renderer@^16.0.1":
+  version "16.0.1"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-react-renderer/-/rich-text-react-renderer-16.0.1.tgz#9029eac735cdc3dfb5bd83d9e231506b1c66ac32"
+  integrity sha512-7wZZBMgwbq5Udp2KebKCJoh9K+EPGlgRkudhXSp+OxtAIdBC6JUz3Oi9kXXKYKLeSg7iTBpkO1dd0/xFjHHKbg==
   dependencies:
-    "@contentful/rich-text-types" "^16.5.2"
+    "@contentful/rich-text-types" "^17.0.0"
 
-"@contentful/rich-text-types@^16.5.2":
-  version "16.5.2"
-  resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-16.5.2.tgz#924641091d5ae83b9fb34908745a62d652b44d68"
-  integrity sha512-qD98Amp/vWxCYMtv7yprh4Ry3QHFX50sf+i3E6e/WRquz+aUW2ilqmQqW6ucb4F2dlatUxMbOOhZOFazv2XLjg==
+"@contentful/rich-text-types@^17.0.0":
+  version "17.0.0"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-17.0.0.tgz#f58badfe01fa10860e065c02fd584f428a70ecc6"
+  integrity sha512-x50t6sILzFHBdFpAo0foJRnH8fHWyidheWhAv3uwt9aOnNqTh893gxyoc3Q0RVEZxXfHpTi+O9gmakHcdlRdTA==
+  dependencies:
+    is-plain-obj "^3.0.0"
 
 "@emotion/is-prop-valid@^0.8.2", "@emotion/is-prop-valid@^0.8.8":
   version "0.8.8"
@@ -2815,6 +2817,11 @@ is-number@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/is-number/-/is-number-7.0.0.tgz#7535345b896734d5f80c4d06c50955527a14f12b"
   integrity sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==
+
+is-plain-obj@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/is-plain-obj/-/is-plain-obj-3.0.0.tgz#af6f2ea14ac5a646183a5bbdb5baabbc156ad9d7"
+  integrity sha512-gwsOE28k+23GP1B6vFl1oVh/WOzmawBrKwo5Ev6wMKzPkaXaCDIQKzLnvsA42DRlbVTWorkgTKIviAKCWkfUwA==
 
 is-regex@^1.1.4:
   version "1.1.4"

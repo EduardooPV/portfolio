@@ -5,6 +5,7 @@ import { CardProjectGrid } from "./CardProjectGrid";
 import { TextSection } from "../TextSection";
 
 import { ProjectProps, ProjectsProps } from "../../pages/projetos";
+import { Breadcrumb } from "../Breadcrumb";
 
 export function ListProjects({ projects }: ProjectsProps) {
   const [sortByAsc, setSortByAsc] = useState<boolean>(true);
@@ -28,6 +29,7 @@ export function ListProjects({ projects }: ProjectsProps) {
 
   return (
     <Container>
+      <Breadcrumb />
       <Header>
         <TextSection
           tabIndex={0}

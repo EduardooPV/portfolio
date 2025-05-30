@@ -37,9 +37,13 @@ export const Content = styled.div`
     }
   }
 
+  > div:first-child {
+    padding: 0 1rem;
+  }
+
   @media (min-width: 768px) {
     align-items: start;
-    padding-top: 4rem;
+    gap: 1rem;
 
     .figure-mobile {
       display: none;
@@ -104,26 +108,16 @@ export const Figure = styled.div`
   z-index: 2;
 
   img {
-    width: 50%;
+    width: 80%;
     transition: all 0.4s ease;
     border-radius: 1rem;
   }
 
-  &:hover img {
-    -webkit-filter: grayscale(0);
-    filter: grayscale(0);
-    transform: scale(1.02) rotate3d(1, 1, 0, 8deg);
-  }
-
   @media (min-width: 768px) {
-    padding: 3rem;
+    padding: 0 2rem;
 
     img {
       width: 100%;
-      -webkit-filter: grayscale(0%);
-      filter: grayscale(100%);
-      -webkit-transition: 0.3s ease-in-out;
-      transition: 0.3s ease-in-out;
     }
   }
 `;

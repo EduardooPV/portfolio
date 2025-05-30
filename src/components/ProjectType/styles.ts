@@ -26,7 +26,7 @@ export const Tag = styled.span<TagProps>`
 `;
 
 export const TagHero = styled.span<TagProps>`
-  width: fit-content;
+  width: 140px;
   display: inline-block;
   font-family: "Roboto", sans-serif;
   font-size: ${f.paragraphSmall.fontSize};
@@ -37,9 +37,15 @@ export const TagHero = styled.span<TagProps>`
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 
+  text-align: center;
+
   :hover {
     color: ${({ $color }) => $color};
     border: 1px solid ${({ $color }) => $color};
     background-color: ${({ $color }) => $color}22;
+  }
+
+  @media (min-width: 768px) {
+    width: auto;
   }
 `;
